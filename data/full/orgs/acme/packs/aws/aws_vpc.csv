@@ -1,0 +1,10 @@
+entity_id,entity_type,organization_id,vpc_id,cidr_block,state,is_default,flow_log_group,valid_from,valid_to,system_from,system_to,revision,operation
+acme:aws.aws_vpc:vpc-00000000~c6996b97dc3c,aws.aws_vpc,acme,vpc-00000000,10.100.0.0/16,available,true,/acme/vpc-flowlogs/0,2026-09-15T03:45:06Z,\N,2026-09-15T03:45:06Z,\N,1,assert
+acme:aws.aws_vpc:vpc-00000001~8ecf8f04704e,aws.aws_vpc,acme,vpc-00000001,10.101.0.0/16,available,false,/acme/vpc-flowlogs/1,2026-09-15T07:56:08Z,\N,2026-09-15T07:56:08Z,\N,1,assert
+acme:aws.aws_vpc:vpc-00000002~e61beb5c2cdc,aws.aws_vpc,acme,vpc-00000002,10.102.0.0/16,available,false,/acme/vpc-flowlogs/2,2026-09-15T07:26:31Z,\N,2026-09-15T07:26:31Z,\N,1,assert
+acme:aws.aws_vpc:vpc-00000003~168f77bc3b6d,aws.aws_vpc,acme,vpc-00000003,10.103.0.0/16,available,false,/acme/vpc-flowlogs/3,2026-09-15T08:38:07Z,\N,2026-09-15T08:38:07Z,\N,1,assert
+acme:aws.aws_vpc:vpc-00000004~d7e9a3da2153,aws.aws_vpc,acme,vpc-00000004,10.104.0.0/16,available,false,/acme/vpc-flowlogs/4,2026-09-15T04:17:52Z,\N,2026-09-15T04:17:52Z,\N,1,assert
+acme:aws.aws_vpc:vpc-00000005~682e302167a5,aws.aws_vpc,acme,vpc-00000005,10.105.0.0/16,available,false,/acme/vpc-flowlogs/5,2026-09-15T18:30:55Z,\N,2026-09-15T18:30:55Z,\N,1,assert
+acme:aws.aws_vpc:vpc-00000006~35108c270bc4,aws.aws_vpc,acme,vpc-00000006,10.106.0.0/16,available,false,/acme/vpc-flowlogs/6,2026-09-15T03:41:39Z,\N,2026-09-20T01:15:53Z,\N,1,assert
+acme:aws.aws_vpc:vpc-00000007~7ec9605ab1f2,aws.aws_vpc,acme,vpc-00000007,10.107.0.0/16,available,false,/acme/vpc-flowlogs/7,2026-09-15T17:35:31Z,\N,2026-10-09T04:36:17Z,\N,1,assert
+acme:aws.aws_vpc:vpc-00000008~b17f2b3314e5,aws.aws_vpc,acme,vpc-00000008,10.108.0.0/16,available,false,/acme/vpc-flowlogs/8,2026-09-15T11:19:56Z,\N,2026-10-15T22:36:12Z,\N,1,assert

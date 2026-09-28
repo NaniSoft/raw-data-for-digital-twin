@@ -1,0 +1,19 @@
+entity_id,entity_type,organization_id,security_group_id,group_name,description,is_default,valid_from,valid_to,system_from,system_to,revision,operation
+acme:aws.aws_security_group:sg-00000000~f8d17d019edd,aws.aws_security_group,acme,sg-00000000,tier-0,Security group 0,true,2026-09-15T03:45:06Z,\N,2026-09-15T03:45:06Z,\N,1,assert
+acme:aws.aws_security_group:sg-00000001~9e8713cb2335,aws.aws_security_group,acme,sg-00000001,tier-1,Security group 1,false,2026-09-15T07:56:08Z,\N,2026-09-15T07:56:08Z,\N,1,assert
+acme:aws.aws_security_group:sg-00000002~ee39e2739b96,aws.aws_security_group,acme,sg-00000002,tier-2,Security group 2,false,2026-09-15T07:26:31Z,\N,2026-09-15T07:26:31Z,\N,1,assert
+acme:aws.aws_security_group:sg-00000003~ce812458a704,aws.aws_security_group,acme,sg-00000003,tier-3,Security group 3,false,2026-09-15T08:38:07Z,\N,2026-09-15T08:38:07Z,\N,1,assert
+acme:aws.aws_security_group:sg-00000004~80acf9506523,aws.aws_security_group,acme,sg-00000004,tier-4,Security group 4,false,2026-09-15T04:17:52Z,\N,2026-09-15T04:17:52Z,\N,1,assert
+acme:aws.aws_security_group:sg-00000005~0ec4af5f7d33,aws.aws_security_group,acme,sg-00000005,tier-0,Security group 5,true,2026-09-15T18:30:55Z,\N,2026-09-15T18:30:55Z,\N,1,assert
+acme:aws.aws_security_group:sg-00000012~1a2a2caf51c0,aws.aws_security_group,acme,sg-00000012,tier-2,Security group 12,false,2026-09-15T05:53:40Z,\N,2026-09-16T06:35:51Z,\N,1,assert
+acme:aws.aws_security_group:sg-00000007~0aed8d96b820,aws.aws_security_group,acme,sg-00000007,tier-2,Security group 7,false,2026-09-15T17:35:31Z,\N,2026-09-17T23:12:28Z,\N,1,assert
+acme:aws.aws_security_group:sg-00000017~556ffd3aa177,aws.aws_security_group,acme,sg-00000017,tier-2,Security group 17,false,2026-09-15T02:08:55Z,\N,2026-09-22T06:51:15Z,\N,1,assert
+acme:aws.aws_security_group:sg-00000015~3514fc4b8847,aws.aws_security_group,acme,sg-00000015,tier-0,Security group 15,true,2026-09-15T06:40:19Z,\N,2026-09-24T04:25:53Z,\N,1,assert
+acme:aws.aws_security_group:sg-00000008~ff73ab3105c6,aws.aws_security_group,acme,sg-00000008,tier-3,Security group 8,false,2026-09-15T11:19:56Z,\N,2026-09-28T10:53:01Z,\N,1,assert
+acme:aws.aws_security_group:sg-00000009~7d7c83600853,aws.aws_security_group,acme,sg-00000009,tier-4,Security group 9,false,2026-09-15T12:56:40Z,\N,2026-10-03T22:17:45Z,\N,1,assert
+acme:aws.aws_security_group:sg-00000006~5a52dd92f2b7,aws.aws_security_group,acme,sg-00000006,tier-1,Security group 6,false,2026-09-15T03:41:39Z,\N,2026-10-13T00:49:13Z,\N,1,assert
+acme:aws.aws_security_group:sg-00000016~207e7e0b16a9,aws.aws_security_group,acme,sg-00000016,tier-1,Security group 16,false,2026-09-15T14:52:18Z,\N,2026-10-14T00:32:46Z,\N,1,assert
+acme:aws.aws_security_group:sg-00000014~17abdbbd9f16,aws.aws_security_group,acme,sg-00000014,tier-4,Security group 14,false,2026-09-15T19:22:12Z,\N,2026-10-27T14:18:08Z,\N,1,assert
+acme:aws.aws_security_group:sg-00000011~13bca4afc4fc,aws.aws_security_group,acme,sg-00000011,tier-1,Security group 11,false,2026-09-15T22:20:41Z,\N,2026-10-28T08:35:43Z,\N,1,assert
+acme:aws.aws_security_group:sg-00000010~f7e33002a6ec,aws.aws_security_group,acme,sg-00000010,tier-0,Security group 10,true,2027-01-12T23:11:33Z,\N,2027-01-13T02:27:24Z,\N,1,assert
+acme:aws.aws_security_group:sg-00000013~59f08101daae,aws.aws_security_group,acme,sg-00000013,tier-3,Security group 13,false,2027-02-23T16:24:53Z,\N,2027-04-02T09:02:55Z,\N,1,assert

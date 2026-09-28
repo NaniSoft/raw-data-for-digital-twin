@@ -1,0 +1,15 @@
+entity_id,entity_type,organization_id,system_key,display_name,source_kind,valid_from,valid_to,system_from,system_to,revision,operation
+acme:source_system:cmdb-primary~c902d8335625,source_system,acme,cmdb_primary,ServiceNow (production),cmdb,2021-01-02T02:35:13Z,\N,2021-01-02T02:35:13Z,\N,1,assert
+acme:source_system:cmdb-dc2-legacy~4c63646d6078,source_system,acme,cmdb_dc2_legacy,"ServiceNow (decommissioned DC2 instance, retained for provenance)",cmdb,2021-01-02T06:36:40Z,\N,2021-01-02T06:36:40Z,\N,1,assert
+acme:source_system:hr-workday~1390a88c18f8,source_system,acme,hr_workday,Workday (HR system of record),hr,2021-01-02T03:52:03Z,\N,2021-01-02T03:52:03Z,\N,1,assert
+acme:source_system:sweep-active~109a94e8519c,source_system,acme,sweep_active,"Authenticated network sweep (scheduled, off-peak)",network_scan,2021-01-02T07:08:01Z,\N,2021-01-02T07:08:01Z,\N,1,assert
+acme:source_system:scanner-vuln~5e912e477c14,source_system,acme,scanner_vuln,Vulnerability scanner (authenticated),scanner,2021-01-03T15:53:50Z,\N,2021-01-03T15:53:50Z,\N,1,assert
+acme:source_system:walkdown-sites~d4fc30691224,source_system,acme,walkdown_sites,Site walkdowns (recorded by the site engineering lead),manual,2021-01-03T16:36:54Z,\N,2021-01-03T16:36:54Z,\N,1,assert
+acme:source_system:ticket-bridge~77ac6940d0b4,source_system,acme,ticket_bridge,Change management bridge (CMDB to identity),ticketing,2021-01-03T15:36:02Z,\N,2021-01-03T15:36:02Z,\N,1,assert
+acme:source_system:pentest-external~ae7acfd1ffac,source_system,acme,pentest_external,Annual external penetration test,ticketing,2021-01-03T21:57:29Z,\N,2021-01-03T21:57:29Z,\N,1,assert
+acme:source_system:iam-corp~09e42672555d,source_system,acme,iam_corp,Corporate Entra ID,directory,2021-01-04T20:38:06Z,\N,2021-01-04T20:38:06Z,\N,1,assert
+acme:source_system:vcenter-readonly~b602e829e731,source_system,acme,vcenter_readonly,vCenter read-only inventory export,hypervisor,2021-01-04T08:30:03Z,\N,2021-01-04T08:30:03Z,\N,1,assert
+acme:source_system:flow-netflow~69050d4209de,source_system,acme,flow_netflow,NetFlow collector,network_scan,2021-01-04T12:49:34Z,\N,2021-01-04T12:49:34Z,\N,1,assert
+acme:source_system:aws-org-control-tower~b5c83222a3f6,source_system,acme,aws_org_control_tower,AWS Organizations control tower (read-only),cloud_api,2021-01-04T07:28:49Z,\N,2021-01-04T07:28:49Z,\N,1,assert
+acme:source_system:cmdb-contractor~29997cbbc3a1,source_system,acme,cmdb_contractor,Supplier portal (managed estate),manual,2021-01-05T05:51:29Z,\N,2021-01-05T05:51:29Z,\N,1,assert
+acme:source_system:iam-emea~165ad3d676e1,source_system,acme,iam_emea,EMEA Entra ID (acquired 2026-04),directory,2027-01-01T06:02:10Z,\N,2027-01-01T06:02:10Z,\N,1,assert

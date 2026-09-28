@@ -1,0 +1,1465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns">
+  <key id="schema_version" for="graph" attr.name="schema_version" attr.type="int"/>
+  <key id="schema_digest" for="graph" attr.name="schema_digest" attr.type="string"/>
+  <key id="core_contract" for="graph" attr.name="core_contract" attr.type="string"/>
+  <key id="packs" for="graph" attr.name="packs" attr.type="string"/>
+  <key id="as_of_valid" for="graph" attr.name="as_of_valid" attr.type="string"/>
+  <key id="as_of_system" for="graph" attr.name="as_of_system" attr.type="string"/>
+  <key id="as_of_coordinate_class" for="graph" attr.name="as_of_coordinate_class" attr.type="string"/>
+  <key id="identity_scheme" for="graph" attr.name="identity_scheme" attr.type="string"/>
+  <key id="attributes_declared" for="node" attr.name="attributes_declared" attr.type="boolean"/>
+  <key id="entity_type" for="node" attr.name="entity_type" attr.type="string"/>
+  <key id="from_open" for="node" attr.name="from_open" attr.type="boolean"/>
+  <key id="from_types" for="node" attr.name="from_types" attr.type="string"/>
+  <key id="inverse_label" for="node" attr.name="inverse_label" attr.type="string"/>
+  <key id="name" for="node" attr.name="name" attr.type="string"/>
+  <key id="natural_key" for="node" attr.name="natural_key" attr.type="string"/>
+  <key id="origin" for="node" attr.name="origin" attr.type="string"/>
+  <key id="overrides" for="node" attr.name="overrides" attr.type="string"/>
+  <key id="parent" for="node" attr.name="parent" attr.type="string"/>
+  <key id="polymorphic" for="node" attr.name="polymorphic" attr.type="boolean"/>
+  <key id="reserved" for="node" attr.name="reserved" attr.type="boolean"/>
+  <key id="scope" for="node" attr.name="scope" attr.type="string"/>
+  <key id="structural" for="node" attr.name="structural" attr.type="boolean"/>
+  <key id="tier" for="node" attr.name="tier" attr.type="string"/>
+  <key id="to_open" for="node" attr.name="to_open" attr.type="boolean"/>
+  <key id="to_types" for="node" attr.name="to_types" attr.type="string"/>
+  <key id="type_name" for="node" attr.name="type_name" attr.type="string"/>
+  <key id="undeclared" for="node" attr.name="undeclared" attr.type="boolean"/>
+  <key id="vocabulary" for="node" attr.name="vocabulary" attr.type="string"/>
+  <key id="label" for="edge" attr.name="label" attr.type="string"/>
+  <key id="origin" for="edge" attr.name="origin" attr.type="string"/>
+  <graph id="schema" edgedefault="directed">
+    <data key="schema_version">7</data>
+    <data key="schema_digest">e3db04f5d1cd7a90aba9a6a2</data>
+    <data key="core_contract">1.7</data>
+    <data key="packs">cloud-aws@1.0</data>
+    <data key="as_of_valid">2027-04-25T23:59:59Z</data>
+    <data key="as_of_system">2027-04-25T23:59:59Z</data>
+    <data key="as_of_coordinate_class">current</data>
+    <data key="identity_scheme">id-v1</data>
+    <!-- the six temporal columns appear in no graph artifact (D19 3.2); the coordinate and the model are declared once, on this graph; a node carries provenance by inheritance and never a copy of the coordinate -->
+    <node id="type:access_rule">
+      <data key="entity_type">access_rule</data>
+      <data key="tier">I</data>
+      <data key="scope">organization</data>
+      <data key="origin">core</data>
+      <data key="natural_key">[&quot;rule_key&quot;]</data>
+      <data key="attributes_declared">false</data>
+      <data key="reserved">false</data>
+      <data key="vocabulary">{}</data>
+    </node>
+    <node id="type:affected_product">
+      <data key="entity_type">affected_product</data>
+      <data key="tier">P</data>
+      <data key="scope">global</data>
+      <data key="origin">core</data>
+      <data key="natural_key">[&quot;cve_id&quot;, &quot;product_model_id&quot;]</data>
+      <data key="attributes_declared">false</data>
+      <data key="reserved">false</data>
+      <data key="vocabulary">{}</data>
+    </node>
+    <node id="type:aws.aws_account">
+      <data key="entity_type">aws.aws_account</data>
+      <data key="tier">I</data>
+      <data key="scope">organization</data>
+      <data key="origin">pack:cloud-aws</data>
+      <data key="natural_key">[&quot;account_id&quot;]</data>
+      <data key="attributes_declared">true</data>
+      <data key="reserved">false</data>
+      <data key="vocabulary">{}</data>
+    </node>
+    <node id="type:aws.aws_security_group">
+      <data key="entity_type">aws.aws_security_group</data>
+      <data key="tier">I</data>
+      <data key="scope">organization</data>
+      <data key="origin">pack:cloud-aws</data>
+      <data key="natural_key">[&quot;security_group_id&quot;]</data>
+      <data key="attributes_declared">true</data>
+      <data key="reserved">false</data>
+      <data key="vocabulary">{}</data>
+    </node>
+    <node id="type:aws.aws_subscription">
+      <data key="entity_type">aws.aws_subscription</data>
+      <data key="tier">I</data>
+      <data key="scope">organization</data>
+      <data key="origin">pack:cloud-aws</data>
+      <data key="natural_key">[&quot;subscription_id&quot;]</data>
+      <data key="attributes_declared">true</data>
+      <data key="reserved">false</data>
+      <data key="vocabulary">{}</data>
+    </node>
+    <node id="type:aws.aws_vpc">
+      <data key="entity_type">aws.aws_vpc</data>
+      <data key="tier">I</data>
+      <data key="scope">organization</data>
+      <data key="origin">pack:cloud-aws</data>
+      <data key="natural_key">[&quot;vpc_id&quot;]</data>
+      <data key="attributes_declared">true</data>
+      <data key="reserved">false</data>
+      <data key="vocabulary">{}</data>
+    </node>
+    <node id="type:blind_spot">
+      <data key="entity_type">blind_spot</data>
+      <data key="tier">I</data>
+      <data key="scope">organization</data>
+      <data key="origin">core</data>
+      <data key="natural_key">[&quot;spot_key&quot;]</data>
+      <data key="attributes_declared">false</data>
+      <data key="reserved">true</data>
+      <data key="vocabulary">{&quot;attribute_class&quot;: {&quot;open&quot;: false, &quot;values&quot;: [&quot;inventory&quot;, &quot;ownership&quot;, &quot;patch_state&quot;, &quot;reachability&quot;, &quot;encryption&quot;, &quot;classification&quot;, &quot;sensitivity&quot;, &quot;membership&quot;, &quot;lifecycle&quot;, &quot;none&quot;]}, &quot;cause_kind&quot;: {&quot;open&quot;: false, &quot;values&quot;: [&quot;never_connected&quot;, &quot;scan_not_run&quot;, &quot;import_failed&quot;, &quot;agent_absent&quot;, &quot;permission_denied&quot;, &quot;route_unreachable&quot;, &quot;decommissioned_before_import&quot;, &quot;not_yet_inventoried&quot;, &quot;undisclosed_third_party&quot;, &quot;not_yet_classified&quot;, &quot;unresolved_schema_version&quot;]}, &quot;confidence_in_declaration&quot;: {&quot;open&quot;: false, &quot;values&quot;: [&quot;asserted_by_owner&quot;, &quot;inferred_from_absence&quot;, &quot;externally_grounded&quot;]}, &quot;region_kind&quot;: {&quot;open&quot;: false, &quot;values&quot;: [&quot;site&quot;, &quot;network_segment&quot;, &quot;source_system&quot;, &quot;cloud_account&quot;, &quot;directory&quot;, &quot;attribute_class&quot;, &quot;organization&quot;]}, &quot;scope_basis&quot;: {&quot;open&quot;: false, &quot;values&quot;: [&quot;cidr_host_count&quot;, &quot;licence_cap&quot;, &quot;account_asset_limit&quot;, &quot;prior_census&quot;, &quot;none&quot;]}, &quot;spot_class&quot;: {&quot;open&quot;: false, &quot;values&quot;: [&quot;unconnected_account&quot;, &quot;unscanned_segment&quot;, &quot;unimported_source&quot;, &quot;unmanaged_third_party&quot;, &quot;unattributable_entity&quot;, &quot;unclassified_attribute_class&quot;, &quot;stale_source&quot;, &quot;residual_unquantified&quot;]}}</data>
+    </node>
+    <node id="type:certificate">
+      <data key="entity_type">certificate</data>
+      <data key="tier">I</data>
+      <data key="scope">organization</data>
+      <data key="origin">core</data>
+      <data key="natural_key">[&quot;subject&quot;, &quot;serial_number&quot;]</data>
+      <data key="attributes_declared">false</data>
+      <data key="reserved">false</data>
+      <data key="vocabulary">{}</data>
+    </node>
+    <node id="type:compute_node">
+      <data key="entity_type">compute_node</data>
+      <data key="tier">I</data>
+      <data key="scope">organization</data>
+      <data key="origin">core</data>
+      <data key="natural_key">[&quot;node_key&quot;]</data>
+      <data key="attributes_declared">false</data>
+      <data key="reserved">false</data>
+      <data key="vocabulary">{&quot;lifecycle_stage&quot;: {&quot;open&quot;: true, &quot;values&quot;: []}, &quot;lifecycle_stage_status&quot;: {&quot;open&quot;: true, &quot;values&quot;: []}, &quot;node_kind&quot;: {&quot;open&quot;: true, &quot;values&quot;: [&quot;physical_server&quot;, &quot;virtual_machine&quot;, &quot;container_host&quot;, &quot;cluster_node&quot;, &quot;endpoint&quot;]}}</data>
+    </node>
+    <node id="type:contract">
+      <data key="entity_type">contract</data>
+      <data key="tier">R</data>
+      <data key="scope">organization</data>
+      <data key="origin">core</data>
+      <data key="natural_key">[&quot;vendor_code&quot;, &quot;contract_ref&quot;]</data>
+      <data key="attributes_declared">false</data>
+      <data key="reserved">false</data>
+      <data key="vocabulary">{&quot;contract_kind&quot;: {&quot;open&quot;: true, &quot;values&quot;: [&quot;msa&quot;, &quot;licence&quot;, &quot;support&quot;, &quot;saas&quot;, &quot;lease&quot;]}}</data>
+    </node>
+    <node id="type:data_flow">
+      <data key="entity_type">data_flow</data>
+      <data key="tier">I</data>
+      <data key="scope">organization</data>
+      <data key="origin">core</data>
+      <data key="natural_key">[&quot;flow_source&quot;, &quot;flow_destination&quot;, &quot;protocol&quot;, &quot;dst_port&quot;]</data>
+      <data key="attributes_declared">false</data>
+      <data key="reserved">false</data>
+      <data key="vocabulary">{}</data>
+    </node>
+    <node id="type:data_row">
+      <data key="entity_type">data_row</data>
+      <data key="tier">I</data>
+      <data key="scope">organization</data>
+      <data key="origin">core</data>
+      <data key="natural_key">[&quot;data_store_id&quot;, &quot;schema_name&quot;, &quot;table_name&quot;, &quot;row_key&quot;]</data>
+      <data key="attributes_declared">false</data>
+      <data key="reserved">false</data>
+      <data key="vocabulary">{}</data>
+    </node>
+    <node id="type:data_store">
+      <data key="entity_type">data_store</data>
+      <data key="tier">I</data>
+      <data key="scope">organization</data>
+      <data key="origin">core</data>
+      <data key="natural_key">[&quot;store_key&quot;]</data>
+      <data key="attributes_declared">false</data>
+      <data key="reserved">false</data>
+      <data key="vocabulary">{&quot;store_kind&quot;: {&quot;open&quot;: true, &quot;values&quot;: [&quot;dbms&quot;, &quot;file_share&quot;, &quot;object_store&quot;, &quot;warehouse&quot;, &quot;queue&quot;]}}</data>
+    </node>
+    <node id="type:database_column">
+      <data key="entity_type">database_column</data>
+      <data key="tier">I</data>
+      <data key="scope">organization</data>
+      <data key="origin">core</data>
+      <data key="natural_key">[&quot;data_store_id&quot;, &quot;schema_name&quot;, &quot;table_name&quot;, &quot;column_name&quot;]</data>
+      <data key="attributes_declared">false</data>
+      <data key="reserved">false</data>
+      <data key="vocabulary">{}</data>
+    </node>
+    <node id="type:database_table">
+      <data key="entity_type">database_table</data>
+      <data key="tier">I</data>
+      <data key="scope">organization</data>
+      <data key="origin">core</data>
+      <data key="natural_key">[&quot;data_store_id&quot;, &quot;schema_name&quot;, &quot;table_name&quot;]</data>
+      <data key="attributes_declared">false</data>
+      <data key="reserved">false</data>
+      <data key="vocabulary">{}</data>
+    </node>
+    <node id="type:discovery_run">
+      <data key="entity_type">discovery_run</data>
+      <data key="tier">I</data>
+      <data key="scope">organization</data>
+      <data key="origin">core</data>
+      <data key="natural_key">[&quot;run_key&quot;]</data>
+      <data key="attributes_declared">false</data>
+      <data key="reserved">true</data>
+      <data key="vocabulary">{&quot;attribute_classes&quot;: {&quot;open&quot;: false, &quot;values&quot;: [&quot;inventory&quot;, &quot;ownership&quot;, &quot;patch_state&quot;, &quot;reachability&quot;, &quot;encryption&quot;, &quot;classification&quot;, &quot;sensitivity&quot;, &quot;membership&quot;, &quot;lifecycle&quot;, &quot;none&quot;]}, &quot;coverage_outcome&quot;: {&quot;open&quot;: false, &quot;values&quot;: [&quot;completed&quot;, &quot;partial&quot;, &quot;failed&quot;, &quot;timed_out&quot;]}, &quot;observation_method&quot;: {&quot;open&quot;: false, &quot;values&quot;: [&quot;authoritative_declaration&quot;, &quot;active_discovery&quot;, &quot;passive_observation&quot;, &quot;third_party_attestation&quot;, &quot;human_attestation&quot;, &quot;none&quot;]}, &quot;region_kind&quot;: {&quot;open&quot;: false, &quot;values&quot;: [&quot;site&quot;, &quot;network_segment&quot;, &quot;source_system&quot;, &quot;cloud_account&quot;, &quot;directory&quot;, &quot;attribute_class&quot;, &quot;organization&quot;]}}</data>
+    </node>
+    <node id="type:entitlement">
+      <data key="entity_type">entitlement</data>
+      <data key="tier">I</data>
+      <data key="scope">organization</data>
+      <data key="origin">core</data>
+      <data key="natural_key">[&quot;subject&quot;, &quot;grant&quot;, &quot;scope&quot;]</data>
+      <data key="attributes_declared">false</data>
+      <data key="reserved">false</data>
+      <data key="vocabulary">{}</data>
+    </node>
+    <node id="type:identity_group">
+      <data key="entity_type">identity_group</data>
+      <data key="tier">I</data>
+      <data key="scope">organization</data>
+      <data key="origin">core</data>
+      <data key="natural_key">[&quot;group_key&quot;]</data>
+      <data key="attributes_declared">false</data>
+      <data key="reserved">false</data>
+      <data key="vocabulary">{}</data>
+    </node>
+    <node id="type:ip_address">
+      <data key="entity_type">ip_address</data>
+      <data key="tier">I</data>
+      <data key="scope">organization</data>
+      <data key="origin">core</data>
+      <data key="natural_key">[&quot;address&quot;]</data>
+      <data key="attributes_declared">false</data>
+      <data key="reserved">false</data>
+      <data key="vocabulary">{}</data>
+    </node>
+    <node id="type:network_device">
+      <data key="entity_type">network_device</data>
+      <data key="tier">I</data>
+      <data key="scope">organization</data>
+      <data key="origin">core</data>
+      <data key="natural_key">[&quot;device_key&quot;]</data>
+      <data key="attributes_declared">false</data>
+      <data key="reserved">false</data>
+      <data key="vocabulary">{&quot;device_kind&quot;: {&quot;open&quot;: true, &quot;values&quot;: [&quot;switch&quot;, &quot;router&quot;, &quot;firewall&quot;, &quot;load_balancer&quot;, &quot;waf&quot;, &quot;proxy&quot;]}}</data>
+    </node>
+    <node id="type:network_port">
+      <data key="entity_type">network_port</data>
+      <data key="tier">I</data>
+      <data key="scope">organization</data>
+      <data key="origin">core</data>
+      <data key="natural_key">[&quot;owning_node&quot;, &quot;port_name&quot;]</data>
+      <data key="attributes_declared">false</data>
+      <data key="reserved">false</data>
+      <data key="vocabulary">{}</data>
+    </node>
+    <node id="type:network_segment">
+      <data key="entity_type">network_segment</data>
+      <data key="tier">I</data>
+      <data key="scope">organization</data>
+      <data key="origin">core</data>
+      <data key="natural_key">[&quot;cidr&quot;]</data>
+      <data key="attributes_declared">false</data>
+      <data key="reserved">false</data>
+      <data key="vocabulary">{}</data>
+    </node>
+    <node id="type:observation">
+      <data key="entity_type">observation</data>
+      <data key="tier">I</data>
+      <data key="scope">organization</data>
+      <data key="origin">core</data>
+      <data key="natural_key">[&quot;source_system&quot;, &quot;observed_at&quot;, &quot;kind&quot;, &quot;subject&quot;]</data>
+      <data key="attributes_declared">false</data>
+      <data key="reserved">false</data>
+      <data key="vocabulary">{}</data>
+    </node>
+    <node id="type:org_unit">
+      <data key="entity_type">org_unit</data>
+      <data key="tier">R</data>
+      <data key="scope">organization</data>
+      <data key="origin">core</data>
+      <data key="natural_key">[&quot;parent_org_unit&quot;, &quot;unit_code&quot;]</data>
+      <data key="attributes_declared">false</data>
+      <data key="reserved">false</data>
+      <data key="vocabulary">{&quot;unit_kind&quot;: {&quot;open&quot;: true, &quot;values&quot;: [&quot;division&quot;, &quot;department&quot;, &quot;cost_centre&quot;]}}</data>
+    </node>
+    <node id="type:organization">
+      <data key="entity_type">organization</data>
+      <data key="tier">R</data>
+      <data key="scope">global</data>
+      <data key="origin">core</data>
+      <data key="natural_key">[&quot;org_slug&quot;]</data>
+      <data key="attributes_declared">false</data>
+      <data key="reserved">false</data>
+      <data key="vocabulary">{}</data>
+    </node>
+    <node id="type:person">
+      <data key="entity_type">person</data>
+      <data key="tier">R</data>
+      <data key="scope">organization</data>
+      <data key="origin">core</data>
+      <data key="natural_key">[&quot;employee_ref&quot;]</data>
+      <data key="attributes_declared">false</data>
+      <data key="reserved">false</data>
+      <data key="vocabulary">{}</data>
+    </node>
+    <node id="type:principal">
+      <data key="entity_type">principal</data>
+      <data key="tier">I</data>
+      <data key="scope">organization</data>
+      <data key="origin">core</data>
+      <data key="natural_key">[&quot;principal_key&quot;]</data>
+      <data key="attributes_declared">false</data>
+      <data key="reserved">false</data>
+      <data key="vocabulary">{&quot;account_type&quot;: {&quot;open&quot;: true, &quot;values&quot;: [&quot;person&quot;, &quot;service&quot;, &quot;workload&quot;, &quot;break_glass&quot;]}}</data>
+    </node>
+    <node id="type:privilege">
+      <data key="entity_type">privilege</data>
+      <data key="tier">R</data>
+      <data key="scope">organization</data>
+      <data key="origin">core</data>
+      <data key="natural_key">[&quot;privilege_name&quot;]</data>
+      <data key="attributes_declared">false</data>
+      <data key="reserved">false</data>
+      <data key="vocabulary">{&quot;privilege_kind&quot;: {&quot;open&quot;: true, &quot;values&quot;: [&quot;directory&quot;, &quot;system&quot;, &quot;network&quot;, &quot;database&quot;, &quot;cloud&quot;]}}</data>
+    </node>
+    <node id="type:product_model">
+      <data key="entity_type">product_model</data>
+      <data key="tier">P</data>
+      <data key="scope">global</data>
+      <data key="origin">core</data>
+      <data key="natural_key">[&quot;vendor_code&quot;, &quot;model_code&quot;, &quot;model_kind&quot;]</data>
+      <data key="attributes_declared">false</data>
+      <data key="reserved">false</data>
+      <data key="vocabulary">{&quot;model_kind&quot;: {&quot;open&quot;: true, &quot;values&quot;: [&quot;hardware&quot;, &quot;software&quot;, &quot;service&quot;, &quot;consumable&quot;]}, &quot;support_status&quot;: {&quot;open&quot;: true, &quot;values&quot;: [&quot;supported&quot;, &quot;eol&quot;, &quot;unsupported&quot;, &quot;unknown&quot;]}}</data>
+    </node>
+    <node id="type:security_zone">
+      <data key="entity_type">security_zone</data>
+      <data key="tier">R</data>
+      <data key="scope">organization</data>
+      <data key="origin">core</data>
+      <data key="natural_key">[&quot;zone_code&quot;]</data>
+      <data key="attributes_declared">false</data>
+      <data key="reserved">false</data>
+      <data key="vocabulary">{&quot;zone_class&quot;: {&quot;open&quot;: true, &quot;values&quot;: [&quot;internet&quot;, &quot;dmz&quot;, &quot;user&quot;, &quot;server&quot;, &quot;management&quot;, &quot;restricted&quot;, &quot;unknown&quot;]}}</data>
+    </node>
+    <node id="type:service">
+      <data key="entity_type">service</data>
+      <data key="tier">I</data>
+      <data key="scope">organization</data>
+      <data key="origin">core</data>
+      <data key="natural_key">[&quot;service_key&quot;]</data>
+      <data key="attributes_declared">false</data>
+      <data key="reserved">false</data>
+      <data key="vocabulary">{}</data>
+    </node>
+    <node id="type:site">
+      <data key="entity_type">site</data>
+      <data key="tier">R</data>
+      <data key="scope">organization</data>
+      <data key="origin">core</data>
+      <data key="natural_key">[&quot;parent_site&quot;, &quot;site_code&quot;]</data>
+      <data key="attributes_declared">false</data>
+      <data key="reserved">false</data>
+      <data key="vocabulary">{&quot;site_kind&quot;: {&quot;open&quot;: true, &quot;values&quot;: [&quot;region&quot;, &quot;campus&quot;, &quot;building&quot;, &quot;floor&quot;, &quot;room&quot;, &quot;rack&quot;, &quot;colo&quot;, &quot;remote&quot;, &quot;cloud_region&quot;]}}</data>
+    </node>
+    <node id="type:software_installation">
+      <data key="entity_type">software_installation</data>
+      <data key="tier">I</data>
+      <data key="scope">organization</data>
+      <data key="origin">core</data>
+      <data key="natural_key">[&quot;compute_node&quot;, &quot;product_model&quot;, &quot;install_path&quot;]</data>
+      <data key="attributes_declared">false</data>
+      <data key="reserved">false</data>
+      <data key="vocabulary">{}</data>
+    </node>
+    <node id="type:source_system">
+      <data key="entity_type">source_system</data>
+      <data key="tier">R</data>
+      <data key="scope">organization</data>
+      <data key="origin">core</data>
+      <data key="natural_key">[&quot;system_key&quot;]</data>
+      <data key="attributes_declared">false</data>
+      <data key="reserved">false</data>
+      <data key="vocabulary">{&quot;source_kind&quot;: {&quot;open&quot;: true, &quot;values&quot;: [&quot;cmdb&quot;, &quot;directory&quot;, &quot;hypervisor&quot;, &quot;cloud_api&quot;, &quot;scanner&quot;, &quot;network_scan&quot;, &quot;hr&quot;, &quot;ticketing&quot;, &quot;manual&quot;]}}</data>
+    </node>
+    <node id="type:storage_volume">
+      <data key="entity_type">storage_volume</data>
+      <data key="tier">I</data>
+      <data key="scope">organization</data>
+      <data key="origin">core</data>
+      <data key="natural_key">[&quot;volume_key&quot;]</data>
+      <data key="attributes_declared">false</data>
+      <data key="reserved">false</data>
+      <data key="vocabulary">{}</data>
+    </node>
+    <node id="type:team">
+      <data key="entity_type">team</data>
+      <data key="tier">R</data>
+      <data key="scope">organization</data>
+      <data key="origin">core</data>
+      <data key="natural_key">[&quot;team_code&quot;]</data>
+      <data key="attributes_declared">false</data>
+      <data key="reserved">false</data>
+      <data key="vocabulary">{&quot;function&quot;: {&quot;open&quot;: true, &quot;values&quot;: [&quot;owns&quot;, &quot;operates&quot;, &quot;security&quot;, &quot;identity&quot;]}}</data>
+    </node>
+    <node id="type:vendor">
+      <data key="entity_type">vendor</data>
+      <data key="tier">R</data>
+      <data key="scope">global</data>
+      <data key="origin">core</data>
+      <data key="natural_key">[&quot;vendor_code&quot;]</data>
+      <data key="attributes_declared">false</data>
+      <data key="reserved">false</data>
+      <data key="vocabulary">{}</data>
+    </node>
+    <node id="type:vulnerability">
+      <data key="entity_type">vulnerability</data>
+      <data key="tier">P</data>
+      <data key="scope">global</data>
+      <data key="origin">core</data>
+      <data key="natural_key">[&quot;cve_id&quot;]</data>
+      <data key="attributes_declared">false</data>
+      <data key="reserved">false</data>
+      <data key="vocabulary">{}</data>
+    </node>
+    <node id="relationship:about">
+      <data key="entity_type">relationship</data>
+      <data key="name">about</data>
+      <data key="structural">false</data>
+      <data key="polymorphic">true</data>
+      <data key="from_open">false</data>
+      <data key="to_open">true</data>
+      <data key="origin">core</data>
+      <data key="inverse_label">observations_of</data>
+      <data key="from_types">[&quot;observation&quot;]</data>
+      <data key="to_types">[&quot;*&quot;, &quot;aws.aws_account&quot;, &quot;aws.aws_security_group&quot;, &quot;aws.aws_subscription&quot;, &quot;aws.aws_vpc&quot;]</data>
+    </node>
+    <node id="relationship:assigned_to">
+      <data key="entity_type">relationship</data>
+      <data key="name">assigned_to</data>
+      <data key="structural">false</data>
+      <data key="polymorphic">false</data>
+      <data key="from_open">false</data>
+      <data key="to_open">false</data>
+      <data key="origin">core</data>
+      <data key="inverse_label">has_address</data>
+      <data key="from_types">[&quot;ip_address&quot;]</data>
+      <data key="to_types">[&quot;compute_node&quot;, &quot;network_device&quot;, &quot;network_port&quot;]</data>
+    </node>
+    <node id="relationship:attached_to">
+      <data key="entity_type">relationship</data>
+      <data key="name">attached_to</data>
+      <data key="structural">false</data>
+      <data key="polymorphic">false</data>
+      <data key="from_open">false</data>
+      <data key="to_open">false</data>
+      <data key="origin">core</data>
+      <data key="inverse_label">attaches</data>
+      <data key="from_types">[&quot;storage_volume&quot;]</data>
+      <data key="to_types">[&quot;compute_node&quot;, &quot;network_device&quot;, &quot;data_store&quot;]</data>
+    </node>
+    <node id="relationship:authorised_by">
+      <data key="entity_type">relationship</data>
+      <data key="name">authorised_by</data>
+      <data key="structural">false</data>
+      <data key="polymorphic">false</data>
+      <data key="from_open">false</data>
+      <data key="to_open">false</data>
+      <data key="origin">core</data>
+      <data key="inverse_label">authorises</data>
+      <data key="from_types">[&quot;entitlement&quot;]</data>
+      <data key="to_types">[&quot;person&quot;, &quot;team&quot;]</data>
+    </node>
+    <node id="relationship:certificate_on">
+      <data key="entity_type">relationship</data>
+      <data key="name">certificate_on</data>
+      <data key="structural">false</data>
+      <data key="polymorphic">true</data>
+      <data key="from_open">false</data>
+      <data key="to_open">true</data>
+      <data key="origin">core</data>
+      <data key="inverse_label">certificates</data>
+      <data key="from_types">[&quot;certificate&quot;]</data>
+      <data key="to_types">[&quot;compute_node&quot;, &quot;network_device&quot;, &quot;network_port&quot;, &quot;service&quot;, &quot;principal&quot;]</data>
+    </node>
+    <node id="relationship:column_references">
+      <data key="entity_type">relationship</data>
+      <data key="name">column_references</data>
+      <data key="structural">false</data>
+      <data key="polymorphic">false</data>
+      <data key="from_open">false</data>
+      <data key="to_open">false</data>
+      <data key="origin">core</data>
+      <data key="inverse_label">referenced_by</data>
+      <data key="from_types">[&quot;database_column&quot;]</data>
+      <data key="to_types">[&quot;database_column&quot;]</data>
+    </node>
+    <node id="relationship:contains">
+      <data key="entity_type">relationship</data>
+      <data key="name">contains</data>
+      <data key="structural">true</data>
+      <data key="polymorphic">false</data>
+      <data key="from_open">true</data>
+      <data key="to_open">true</data>
+      <data key="origin">core</data>
+      <data key="inverse_label">contained_in</data>
+      <data key="from_types">[&quot;*&quot;]</data>
+      <data key="to_types">[&quot;*&quot;]</data>
+    </node>
+    <node id="relationship:contract_with">
+      <data key="entity_type">relationship</data>
+      <data key="name">contract_with</data>
+      <data key="structural">false</data>
+      <data key="polymorphic">false</data>
+      <data key="from_open">false</data>
+      <data key="to_open">false</data>
+      <data key="origin">core</data>
+      <data key="inverse_label">supplies</data>
+      <data key="from_types">[&quot;contract&quot;]</data>
+      <data key="to_types">[&quot;vendor&quot;]</data>
+    </node>
+    <node id="relationship:depends_on">
+      <data key="entity_type">relationship</data>
+      <data key="name">depends_on</data>
+      <data key="structural">false</data>
+      <data key="polymorphic">true</data>
+      <data key="from_open">true</data>
+      <data key="to_open">true</data>
+      <data key="origin">core</data>
+      <data key="inverse_label">depended_on_by</data>
+      <data key="from_types">[&quot;software_installation&quot;, &quot;service&quot;, &quot;data_store&quot;, &quot;compute_node&quot;]</data>
+      <data key="to_types">[&quot;software_installation&quot;, &quot;service&quot;, &quot;data_store&quot;, &quot;compute_node&quot;]</data>
+    </node>
+    <node id="relationship:designated_data_tier">
+      <data key="entity_type">relationship</data>
+      <data key="name">designated_data_tier</data>
+      <data key="structural">false</data>
+      <data key="polymorphic">false</data>
+      <data key="from_open">false</data>
+      <data key="to_open">false</data>
+      <data key="origin">core</data>
+      <data key="inverse_label">designates_data_tier</data>
+      <data key="from_types">[&quot;database_table&quot;]</data>
+      <data key="to_types">[&quot;team&quot;]</data>
+    </node>
+    <node id="relationship:enforced_by">
+      <data key="entity_type">relationship</data>
+      <data key="name">enforced_by</data>
+      <data key="structural">false</data>
+      <data key="polymorphic">false</data>
+      <data key="from_open">false</data>
+      <data key="to_open">true</data>
+      <data key="origin">core</data>
+      <data key="inverse_label">enforces</data>
+      <data key="from_types">[&quot;access_rule&quot;]</data>
+      <data key="to_types">[&quot;aws.aws_security_group&quot;, &quot;network_device&quot;]</data>
+    </node>
+    <node id="relationship:exposes">
+      <data key="entity_type">relationship</data>
+      <data key="name">exposes</data>
+      <data key="structural">false</data>
+      <data key="polymorphic">false</data>
+      <data key="from_open">false</data>
+      <data key="to_open">false</data>
+      <data key="origin">core</data>
+      <data key="inverse_label">exposed_by</data>
+      <data key="from_types">[&quot;data_flow&quot;]</data>
+      <data key="to_types">[&quot;data_store&quot;]</data>
+    </node>
+    <node id="relationship:flow_destination">
+      <data key="entity_type">relationship</data>
+      <data key="name">flow_destination</data>
+      <data key="structural">false</data>
+      <data key="polymorphic">true</data>
+      <data key="from_open">false</data>
+      <data key="to_open">true</data>
+      <data key="origin">core</data>
+      <data key="inverse_label">receives</data>
+      <data key="from_types">[&quot;data_flow&quot;]</data>
+      <data key="to_types">[&quot;service&quot;, &quot;network_segment&quot;]</data>
+    </node>
+    <node id="relationship:flow_source">
+      <data key="entity_type">relationship</data>
+      <data key="name">flow_source</data>
+      <data key="structural">false</data>
+      <data key="polymorphic">false</data>
+      <data key="from_open">false</data>
+      <data key="to_open">false</data>
+      <data key="origin">core</data>
+      <data key="inverse_label">feeds</data>
+      <data key="from_types">[&quot;data_flow&quot;]</data>
+      <data key="to_types">[&quot;service&quot;]</data>
+    </node>
+    <node id="relationship:governs">
+      <data key="entity_type">relationship</data>
+      <data key="name">governs</data>
+      <data key="structural">false</data>
+      <data key="polymorphic">true</data>
+      <data key="from_open">false</data>
+      <data key="to_open">false</data>
+      <data key="origin">pack:cloud-aws</data>
+      <data key="inverse_label">governed_by</data>
+      <data key="from_types">[&quot;aws.aws_security_group&quot;]</data>
+      <data key="to_types">[&quot;network_segment&quot;]</data>
+    </node>
+    <node id="relationship:granted_on">
+      <data key="entity_type">relationship</data>
+      <data key="name">granted_on</data>
+      <data key="structural">false</data>
+      <data key="polymorphic">true</data>
+      <data key="from_open">false</data>
+      <data key="to_open">true</data>
+      <data key="origin">core</data>
+      <data key="inverse_label">scopes</data>
+      <data key="from_types">[&quot;entitlement&quot;]</data>
+      <data key="to_types">[&quot;compute_node&quot;, &quot;network_device&quot;, &quot;network_port&quot;, &quot;network_segment&quot;, &quot;security_zone&quot;, &quot;data_store&quot;, &quot;database_table&quot;, &quot;service&quot;, &quot;product_model&quot;, &quot;site&quot;, &quot;org_unit&quot;, &quot;team&quot;, &quot;identity_group&quot;, &quot;principal&quot;, &quot;certificate&quot;, &quot;access_rule&quot;, &quot;storage_volume&quot;, &quot;software_installation&quot;, &quot;network_segment&quot;]</data>
+    </node>
+    <node id="relationship:granted_to">
+      <data key="entity_type">relationship</data>
+      <data key="name">granted_to</data>
+      <data key="structural">false</data>
+      <data key="polymorphic">true</data>
+      <data key="from_open">false</data>
+      <data key="to_open">true</data>
+      <data key="origin">core</data>
+      <data key="inverse_label">entitlements_of</data>
+      <data key="from_types">[&quot;entitlement&quot;]</data>
+      <data key="to_types">[&quot;principal&quot;, &quot;identity_group&quot;, &quot;team&quot;, &quot;compute_node&quot;, &quot;service&quot;]</data>
+    </node>
+    <node id="relationship:grants">
+      <data key="entity_type">relationship</data>
+      <data key="name">grants</data>
+      <data key="structural">false</data>
+      <data key="polymorphic">false</data>
+      <data key="from_open">false</data>
+      <data key="to_open">true</data>
+      <data key="origin">core</data>
+      <data key="inverse_label">held_under</data>
+      <data key="from_types">[&quot;entitlement&quot;]</data>
+      <data key="to_types">[&quot;privilege&quot;, &quot;product_model&quot;]</data>
+    </node>
+    <node id="relationship:in_segment">
+      <data key="entity_type">relationship</data>
+      <data key="name">in_segment</data>
+      <data key="structural">false</data>
+      <data key="polymorphic">false</data>
+      <data key="from_open">false</data>
+      <data key="to_open">false</data>
+      <data key="origin">core</data>
+      <data key="inverse_label">segment_contains</data>
+      <data key="from_types">[&quot;ip_address&quot;]</data>
+      <data key="to_types">[&quot;network_segment&quot;]</data>
+    </node>
+    <node id="relationship:in_zone">
+      <data key="entity_type">relationship</data>
+      <data key="name">in_zone</data>
+      <data key="structural">false</data>
+      <data key="polymorphic">false</data>
+      <data key="from_open">false</data>
+      <data key="to_open">false</data>
+      <data key="origin">core</data>
+      <data key="inverse_label">zones</data>
+      <data key="from_types">[&quot;network_segment&quot;]</data>
+      <data key="to_types">[&quot;security_zone&quot;]</data>
+    </node>
+    <node id="relationship:instance_of">
+      <data key="entity_type">relationship</data>
+      <data key="name">instance_of</data>
+      <data key="structural">false</data>
+      <data key="polymorphic">false</data>
+      <data key="from_open">true</data>
+      <data key="to_open">false</data>
+      <data key="origin">core</data>
+      <data key="inverse_label">has_instances</data>
+      <data key="from_types">[&quot;software_installation&quot;, &quot;compute_node&quot;, &quot;network_device&quot;, &quot;storage_volume&quot;, &quot;data_store&quot;, &quot;service&quot;]</data>
+      <data key="to_types">[&quot;product_model&quot;]</data>
+    </node>
+    <node id="relationship:member_of">
+      <data key="entity_type">relationship</data>
+      <data key="name">member_of</data>
+      <data key="structural">false</data>
+      <data key="polymorphic">true</data>
+      <data key="from_open">false</data>
+      <data key="to_open">false</data>
+      <data key="origin">core</data>
+      <data key="inverse_label">has_member</data>
+      <data key="from_types">[&quot;principal&quot;, &quot;identity_group&quot;, &quot;person&quot;]</data>
+      <data key="to_types">[&quot;identity_group&quot;, &quot;team&quot;]</data>
+    </node>
+    <node id="relationship:mirrors">
+      <data key="entity_type">relationship</data>
+      <data key="name">mirrors</data>
+      <data key="structural">false</data>
+      <data key="polymorphic">false</data>
+      <data key="from_open">false</data>
+      <data key="to_open">false</data>
+      <data key="origin">core</data>
+      <data key="inverse_label">mirrored_by</data>
+      <data key="from_types">[&quot;team&quot;]</data>
+      <data key="to_types">[&quot;identity_group&quot;]</data>
+    </node>
+    <node id="relationship:operated_by">
+      <data key="entity_type">relationship</data>
+      <data key="name">operated_by</data>
+      <data key="structural">false</data>
+      <data key="polymorphic">false</data>
+      <data key="from_open">true</data>
+      <data key="to_open">false</data>
+      <data key="origin">core</data>
+      <data key="inverse_label">operates</data>
+      <data key="from_types">[&quot;compute_node&quot;, &quot;network_device&quot;, &quot;network_port&quot;, &quot;storage_volume&quot;, &quot;data_store&quot;, &quot;database_table&quot;, &quot;service&quot;, &quot;principal&quot;, &quot;access_rule&quot;, &quot;entitlement&quot;]</data>
+      <data key="to_types">[&quot;team&quot;]</data>
+    </node>
+    <node id="relationship:reports_to">
+      <data key="entity_type">relationship</data>
+      <data key="name">reports_to</data>
+      <data key="structural">false</data>
+      <data key="polymorphic">false</data>
+      <data key="from_open">false</data>
+      <data key="to_open">false</data>
+      <data key="origin">core</data>
+      <data key="inverse_label">direct_reports</data>
+      <data key="from_types">[&quot;person&quot;]</data>
+      <data key="to_types">[&quot;person&quot;]</data>
+    </node>
+    <node id="relationship:rule_destination">
+      <data key="entity_type">relationship</data>
+      <data key="name">rule_destination</data>
+      <data key="structural">false</data>
+      <data key="polymorphic">false</data>
+      <data key="from_open">false</data>
+      <data key="to_open">false</data>
+      <data key="origin">core</data>
+      <data key="inverse_label">destination_for_rule</data>
+      <data key="from_types">[&quot;access_rule&quot;]</data>
+      <data key="to_types">[&quot;network_segment&quot;]</data>
+    </node>
+    <node id="relationship:rule_source">
+      <data key="entity_type">relationship</data>
+      <data key="name">rule_source</data>
+      <data key="structural">false</data>
+      <data key="polymorphic">false</data>
+      <data key="from_open">false</data>
+      <data key="to_open">false</data>
+      <data key="origin">core</data>
+      <data key="inverse_label">source_for_rule</data>
+      <data key="from_types">[&quot;access_rule&quot;]</data>
+      <data key="to_types">[&quot;network_segment&quot;]</data>
+    </node>
+    <node id="relationship:runs_on">
+      <data key="entity_type">relationship</data>
+      <data key="name">runs_on</data>
+      <data key="structural">false</data>
+      <data key="polymorphic">false</data>
+      <data key="from_open">true</data>
+      <data key="to_open">false</data>
+      <data key="origin">core</data>
+      <data key="inverse_label">hosts</data>
+      <data key="from_types">[&quot;service&quot;, &quot;data_store&quot;]</data>
+      <data key="to_types">[&quot;compute_node&quot;]</data>
+    </node>
+    <node id="relationship:succeeds">
+      <data key="entity_type">relationship</data>
+      <data key="name">succeeds</data>
+      <data key="structural">false</data>
+      <data key="polymorphic">false</data>
+      <data key="from_open">false</data>
+      <data key="to_open">false</data>
+      <data key="origin">core</data>
+      <data key="inverse_label">succeeded_by</data>
+      <data key="from_types">[&quot;*&quot;]</data>
+      <data key="to_types">[&quot;*&quot;]</data>
+    </node>
+    <node id="relationship:under_contract">
+      <data key="entity_type">relationship</data>
+      <data key="name">under_contract</data>
+      <data key="structural">false</data>
+      <data key="polymorphic">false</data>
+      <data key="from_open">false</data>
+      <data key="to_open">false</data>
+      <data key="origin">core</data>
+      <data key="inverse_label">covers</data>
+      <data key="from_types">[&quot;entitlement&quot;]</data>
+      <data key="to_types">[&quot;contract&quot;]</data>
+    </node>
+    <node id="relationship:within_unit">
+      <data key="entity_type">relationship</data>
+      <data key="name">within_unit</data>
+      <data key="structural">false</data>
+      <data key="polymorphic">false</data>
+      <data key="from_open">false</data>
+      <data key="to_open">false</data>
+      <data key="origin">core</data>
+      <data key="inverse_label">contains_team</data>
+      <data key="from_types">[&quot;team&quot;]</data>
+      <data key="to_types">[&quot;org_unit&quot;]</data>
+    </node>
+    <node id="spine:access_rule">
+      <data key="entity_type">spine</data>
+      <data key="type_name">access_rule</data>
+      <data key="parent">organization</data>
+      <data key="origin">core</data>
+      <data key="overrides">\N</data>
+      <data key="undeclared">false</data>
+    </node>
+    <node id="spine:affected_product">
+      <data key="entity_type">spine</data>
+      <data key="type_name">affected_product</data>
+      <data key="parent">\N</data>
+      <data key="origin">core</data>
+      <data key="overrides">\N</data>
+      <data key="undeclared">false</data>
+    </node>
+    <node id="spine:aws.aws_account">
+      <data key="entity_type">spine</data>
+      <data key="type_name">aws.aws_account</data>
+      <data key="parent">\N</data>
+      <data key="origin">\N</data>
+      <data key="overrides">\N</data>
+      <data key="undeclared">true</data>
+    </node>
+    <node id="spine:aws.aws_security_group">
+      <data key="entity_type">spine</data>
+      <data key="type_name">aws.aws_security_group</data>
+      <data key="parent">\N</data>
+      <data key="origin">\N</data>
+      <data key="overrides">\N</data>
+      <data key="undeclared">true</data>
+    </node>
+    <node id="spine:aws.aws_subscription">
+      <data key="entity_type">spine</data>
+      <data key="type_name">aws.aws_subscription</data>
+      <data key="parent">\N</data>
+      <data key="origin">\N</data>
+      <data key="overrides">\N</data>
+      <data key="undeclared">true</data>
+    </node>
+    <node id="spine:aws.aws_vpc">
+      <data key="entity_type">spine</data>
+      <data key="type_name">aws.aws_vpc</data>
+      <data key="parent">\N</data>
+      <data key="origin">\N</data>
+      <data key="overrides">\N</data>
+      <data key="undeclared">true</data>
+    </node>
+    <node id="spine:blind_spot">
+      <data key="entity_type">spine</data>
+      <data key="type_name">blind_spot</data>
+      <data key="parent">organization</data>
+      <data key="origin">core</data>
+      <data key="overrides">\N</data>
+      <data key="undeclared">false</data>
+    </node>
+    <node id="spine:certificate">
+      <data key="entity_type">spine</data>
+      <data key="type_name">certificate</data>
+      <data key="parent">compute_node</data>
+      <data key="origin">core</data>
+      <data key="overrides">\N</data>
+      <data key="undeclared">false</data>
+    </node>
+    <node id="spine:compute_node">
+      <data key="entity_type">spine</data>
+      <data key="type_name">compute_node</data>
+      <data key="parent">organization</data>
+      <data key="origin">core</data>
+      <data key="overrides">\N</data>
+      <data key="undeclared">false</data>
+    </node>
+    <node id="spine:contract">
+      <data key="entity_type">spine</data>
+      <data key="type_name">contract</data>
+      <data key="parent">organization</data>
+      <data key="origin">core</data>
+      <data key="overrides">\N</data>
+      <data key="undeclared">false</data>
+    </node>
+    <node id="spine:data_flow">
+      <data key="entity_type">spine</data>
+      <data key="type_name">data_flow</data>
+      <data key="parent">organization</data>
+      <data key="origin">core</data>
+      <data key="overrides">\N</data>
+      <data key="undeclared">false</data>
+    </node>
+    <node id="spine:data_row">
+      <data key="entity_type">spine</data>
+      <data key="type_name">data_row</data>
+      <data key="parent">database_table</data>
+      <data key="origin">core</data>
+      <data key="overrides">\N</data>
+      <data key="undeclared">false</data>
+    </node>
+    <node id="spine:data_store">
+      <data key="entity_type">spine</data>
+      <data key="type_name">data_store</data>
+      <data key="parent">compute_node</data>
+      <data key="origin">core</data>
+      <data key="overrides">\N</data>
+      <data key="undeclared">false</data>
+    </node>
+    <node id="spine:database_column">
+      <data key="entity_type">spine</data>
+      <data key="type_name">database_column</data>
+      <data key="parent">database_table</data>
+      <data key="origin">core</data>
+      <data key="overrides">\N</data>
+      <data key="undeclared">false</data>
+    </node>
+    <node id="spine:database_table">
+      <data key="entity_type">spine</data>
+      <data key="type_name">database_table</data>
+      <data key="parent">data_store</data>
+      <data key="origin">core</data>
+      <data key="overrides">\N</data>
+      <data key="undeclared">false</data>
+    </node>
+    <node id="spine:discovery_run">
+      <data key="entity_type">spine</data>
+      <data key="type_name">discovery_run</data>
+      <data key="parent">organization</data>
+      <data key="origin">core</data>
+      <data key="overrides">\N</data>
+      <data key="undeclared">false</data>
+    </node>
+    <node id="spine:entitlement">
+      <data key="entity_type">spine</data>
+      <data key="type_name">entitlement</data>
+      <data key="parent">organization</data>
+      <data key="origin">core</data>
+      <data key="overrides">\N</data>
+      <data key="undeclared">false</data>
+    </node>
+    <node id="spine:identity_group">
+      <data key="entity_type">spine</data>
+      <data key="type_name">identity_group</data>
+      <data key="parent">organization</data>
+      <data key="origin">core</data>
+      <data key="overrides">\N</data>
+      <data key="undeclared">false</data>
+    </node>
+    <node id="spine:ip_address">
+      <data key="entity_type">spine</data>
+      <data key="type_name">ip_address</data>
+      <data key="parent">network_segment</data>
+      <data key="origin">core</data>
+      <data key="overrides">\N</data>
+      <data key="undeclared">false</data>
+    </node>
+    <node id="spine:network_device">
+      <data key="entity_type">spine</data>
+      <data key="type_name">network_device</data>
+      <data key="parent">organization</data>
+      <data key="origin">core</data>
+      <data key="overrides">\N</data>
+      <data key="undeclared">false</data>
+    </node>
+    <node id="spine:network_port">
+      <data key="entity_type">spine</data>
+      <data key="type_name">network_port</data>
+      <data key="parent">compute_node</data>
+      <data key="origin">core</data>
+      <data key="overrides">\N</data>
+      <data key="undeclared">false</data>
+    </node>
+    <node id="spine:network_segment">
+      <data key="entity_type">spine</data>
+      <data key="type_name">network_segment</data>
+      <data key="parent">organization</data>
+      <data key="origin">core</data>
+      <data key="overrides">\N</data>
+      <data key="undeclared">false</data>
+    </node>
+    <node id="spine:observation">
+      <data key="entity_type">spine</data>
+      <data key="type_name">observation</data>
+      <data key="parent">organization</data>
+      <data key="origin">core</data>
+      <data key="overrides">\N</data>
+      <data key="undeclared">false</data>
+    </node>
+    <node id="spine:org_unit">
+      <data key="entity_type">spine</data>
+      <data key="type_name">org_unit</data>
+      <data key="parent">organization</data>
+      <data key="origin">core</data>
+      <data key="overrides">\N</data>
+      <data key="undeclared">false</data>
+    </node>
+    <node id="spine:organization">
+      <data key="entity_type">spine</data>
+      <data key="type_name">organization</data>
+      <data key="parent">\N</data>
+      <data key="origin">core</data>
+      <data key="overrides">\N</data>
+      <data key="undeclared">false</data>
+    </node>
+    <node id="spine:person">
+      <data key="entity_type">spine</data>
+      <data key="type_name">person</data>
+      <data key="parent">organization</data>
+      <data key="origin">core</data>
+      <data key="overrides">\N</data>
+      <data key="undeclared">false</data>
+    </node>
+    <node id="spine:principal">
+      <data key="entity_type">spine</data>
+      <data key="type_name">principal</data>
+      <data key="parent">organization</data>
+      <data key="origin">core</data>
+      <data key="overrides">\N</data>
+      <data key="undeclared">false</data>
+    </node>
+    <node id="spine:privilege">
+      <data key="entity_type">spine</data>
+      <data key="type_name">privilege</data>
+      <data key="parent">organization</data>
+      <data key="origin">core</data>
+      <data key="overrides">\N</data>
+      <data key="undeclared">false</data>
+    </node>
+    <node id="spine:product_model">
+      <data key="entity_type">spine</data>
+      <data key="type_name">product_model</data>
+      <data key="parent">\N</data>
+      <data key="origin">core</data>
+      <data key="overrides">\N</data>
+      <data key="undeclared">false</data>
+    </node>
+    <node id="spine:security_zone">
+      <data key="entity_type">spine</data>
+      <data key="type_name">security_zone</data>
+      <data key="parent">organization</data>
+      <data key="origin">core</data>
+      <data key="overrides">\N</data>
+      <data key="undeclared">false</data>
+    </node>
+    <node id="spine:service">
+      <data key="entity_type">spine</data>
+      <data key="type_name">service</data>
+      <data key="parent">compute_node</data>
+      <data key="origin">core</data>
+      <data key="overrides">\N</data>
+      <data key="undeclared">false</data>
+    </node>
+    <node id="spine:site">
+      <data key="entity_type">spine</data>
+      <data key="type_name">site</data>
+      <data key="parent">aws.aws_account</data>
+      <data key="origin">pack:cloud-aws</data>
+      <data key="overrides">organization</data>
+      <data key="undeclared">false</data>
+    </node>
+    <node id="spine:software_installation">
+      <data key="entity_type">spine</data>
+      <data key="type_name">software_installation</data>
+      <data key="parent">compute_node</data>
+      <data key="origin">core</data>
+      <data key="overrides">\N</data>
+      <data key="undeclared">false</data>
+    </node>
+    <node id="spine:source_system">
+      <data key="entity_type">spine</data>
+      <data key="type_name">source_system</data>
+      <data key="parent">organization</data>
+      <data key="origin">core</data>
+      <data key="overrides">\N</data>
+      <data key="undeclared">false</data>
+    </node>
+    <node id="spine:storage_volume">
+      <data key="entity_type">spine</data>
+      <data key="type_name">storage_volume</data>
+      <data key="parent">compute_node</data>
+      <data key="origin">core</data>
+      <data key="overrides">\N</data>
+      <data key="undeclared">false</data>
+    </node>
+    <node id="spine:team">
+      <data key="entity_type">spine</data>
+      <data key="type_name">team</data>
+      <data key="parent">organization</data>
+      <data key="origin">core</data>
+      <data key="overrides">\N</data>
+      <data key="undeclared">false</data>
+    </node>
+    <node id="spine:vendor">
+      <data key="entity_type">spine</data>
+      <data key="type_name">vendor</data>
+      <data key="parent">\N</data>
+      <data key="origin">core</data>
+      <data key="overrides">\N</data>
+      <data key="undeclared">false</data>
+    </node>
+    <node id="spine:vulnerability">
+      <data key="entity_type">spine</data>
+      <data key="type_name">vulnerability</data>
+      <data key="parent">\N</data>
+      <data key="origin">core</data>
+      <data key="overrides">\N</data>
+      <data key="undeclared">false</data>
+    </node>
+    <edge id="key:access_rule" source="type:access_rule" target="key:access_rule">
+      <data key="label">has_key</data>
+    </edge>
+    <edge id="key:affected_product" source="type:affected_product" target="key:affected_product">
+      <data key="label">has_key</data>
+    </edge>
+    <edge id="key:aws.aws_account" source="type:aws.aws_account" target="key:aws.aws_account">
+      <data key="label">has_key</data>
+    </edge>
+    <edge id="key:aws.aws_security_group" source="type:aws.aws_security_group" target="key:aws.aws_security_group">
+      <data key="label">has_key</data>
+    </edge>
+    <edge id="key:aws.aws_subscription" source="type:aws.aws_subscription" target="key:aws.aws_subscription">
+      <data key="label">has_key</data>
+    </edge>
+    <edge id="key:aws.aws_vpc" source="type:aws.aws_vpc" target="key:aws.aws_vpc">
+      <data key="label">has_key</data>
+    </edge>
+    <edge id="key:blind_spot" source="type:blind_spot" target="key:blind_spot">
+      <data key="label">has_key</data>
+    </edge>
+    <edge id="vocab:blind_spot" source="type:blind_spot" target="vocab:blind_spot">
+      <data key="label">has_vocabulary</data>
+    </edge>
+    <edge id="key:certificate" source="type:certificate" target="key:certificate">
+      <data key="label">has_key</data>
+    </edge>
+    <edge id="key:compute_node" source="type:compute_node" target="key:compute_node">
+      <data key="label">has_key</data>
+    </edge>
+    <edge id="vocab:compute_node" source="type:compute_node" target="vocab:compute_node">
+      <data key="label">has_vocabulary</data>
+    </edge>
+    <edge id="key:contract" source="type:contract" target="key:contract">
+      <data key="label">has_key</data>
+    </edge>
+    <edge id="vocab:contract" source="type:contract" target="vocab:contract">
+      <data key="label">has_vocabulary</data>
+    </edge>
+    <edge id="key:data_flow" source="type:data_flow" target="key:data_flow">
+      <data key="label">has_key</data>
+    </edge>
+    <edge id="key:data_row" source="type:data_row" target="key:data_row">
+      <data key="label">has_key</data>
+    </edge>
+    <edge id="key:data_store" source="type:data_store" target="key:data_store">
+      <data key="label">has_key</data>
+    </edge>
+    <edge id="vocab:data_store" source="type:data_store" target="vocab:data_store">
+      <data key="label">has_vocabulary</data>
+    </edge>
+    <edge id="key:database_column" source="type:database_column" target="key:database_column">
+      <data key="label">has_key</data>
+    </edge>
+    <edge id="key:database_table" source="type:database_table" target="key:database_table">
+      <data key="label">has_key</data>
+    </edge>
+    <edge id="key:discovery_run" source="type:discovery_run" target="key:discovery_run">
+      <data key="label">has_key</data>
+    </edge>
+    <edge id="vocab:discovery_run" source="type:discovery_run" target="vocab:discovery_run">
+      <data key="label">has_vocabulary</data>
+    </edge>
+    <edge id="key:entitlement" source="type:entitlement" target="key:entitlement">
+      <data key="label">has_key</data>
+    </edge>
+    <edge id="key:identity_group" source="type:identity_group" target="key:identity_group">
+      <data key="label">has_key</data>
+    </edge>
+    <edge id="key:ip_address" source="type:ip_address" target="key:ip_address">
+      <data key="label">has_key</data>
+    </edge>
+    <edge id="key:network_device" source="type:network_device" target="key:network_device">
+      <data key="label">has_key</data>
+    </edge>
+    <edge id="vocab:network_device" source="type:network_device" target="vocab:network_device">
+      <data key="label">has_vocabulary</data>
+    </edge>
+    <edge id="key:network_port" source="type:network_port" target="key:network_port">
+      <data key="label">has_key</data>
+    </edge>
+    <edge id="key:network_segment" source="type:network_segment" target="key:network_segment">
+      <data key="label">has_key</data>
+    </edge>
+    <edge id="key:observation" source="type:observation" target="key:observation">
+      <data key="label">has_key</data>
+    </edge>
+    <edge id="key:org_unit" source="type:org_unit" target="key:org_unit">
+      <data key="label">has_key</data>
+    </edge>
+    <edge id="vocab:org_unit" source="type:org_unit" target="vocab:org_unit">
+      <data key="label">has_vocabulary</data>
+    </edge>
+    <edge id="key:organization" source="type:organization" target="key:organization">
+      <data key="label">has_key</data>
+    </edge>
+    <edge id="key:person" source="type:person" target="key:person">
+      <data key="label">has_key</data>
+    </edge>
+    <edge id="key:principal" source="type:principal" target="key:principal">
+      <data key="label">has_key</data>
+    </edge>
+    <edge id="vocab:principal" source="type:principal" target="vocab:principal">
+      <data key="label">has_vocabulary</data>
+    </edge>
+    <edge id="key:privilege" source="type:privilege" target="key:privilege">
+      <data key="label">has_key</data>
+    </edge>
+    <edge id="vocab:privilege" source="type:privilege" target="vocab:privilege">
+      <data key="label">has_vocabulary</data>
+    </edge>
+    <edge id="key:product_model" source="type:product_model" target="key:product_model">
+      <data key="label">has_key</data>
+    </edge>
+    <edge id="vocab:product_model" source="type:product_model" target="vocab:product_model">
+      <data key="label">has_vocabulary</data>
+    </edge>
+    <edge id="key:security_zone" source="type:security_zone" target="key:security_zone">
+      <data key="label">has_key</data>
+    </edge>
+    <edge id="vocab:security_zone" source="type:security_zone" target="vocab:security_zone">
+      <data key="label">has_vocabulary</data>
+    </edge>
+    <edge id="key:service" source="type:service" target="key:service">
+      <data key="label">has_key</data>
+    </edge>
+    <edge id="key:site" source="type:site" target="key:site">
+      <data key="label">has_key</data>
+    </edge>
+    <edge id="vocab:site" source="type:site" target="vocab:site">
+      <data key="label">has_vocabulary</data>
+    </edge>
+    <edge id="key:software_installation" source="type:software_installation" target="key:software_installation">
+      <data key="label">has_key</data>
+    </edge>
+    <edge id="key:source_system" source="type:source_system" target="key:source_system">
+      <data key="label">has_key</data>
+    </edge>
+    <edge id="vocab:source_system" source="type:source_system" target="vocab:source_system">
+      <data key="label">has_vocabulary</data>
+    </edge>
+    <edge id="key:storage_volume" source="type:storage_volume" target="key:storage_volume">
+      <data key="label">has_key</data>
+    </edge>
+    <edge id="key:team" source="type:team" target="key:team">
+      <data key="label">has_key</data>
+    </edge>
+    <edge id="vocab:team" source="type:team" target="vocab:team">
+      <data key="label">has_vocabulary</data>
+    </edge>
+    <edge id="key:vendor" source="type:vendor" target="key:vendor">
+      <data key="label">has_key</data>
+    </edge>
+    <edge id="key:vulnerability" source="type:vulnerability" target="key:vulnerability">
+      <data key="label">has_key</data>
+    </edge>
+    <edge id="endpoints:about" source="relationship:about" target="endpoints:about">
+      <data key="label">declares_endpoints</data>
+    </edge>
+    <edge id="endpoints:assigned_to" source="relationship:assigned_to" target="endpoints:assigned_to">
+      <data key="label">declares_endpoints</data>
+    </edge>
+    <edge id="endpoints:attached_to" source="relationship:attached_to" target="endpoints:attached_to">
+      <data key="label">declares_endpoints</data>
+    </edge>
+    <edge id="endpoints:authorised_by" source="relationship:authorised_by" target="endpoints:authorised_by">
+      <data key="label">declares_endpoints</data>
+    </edge>
+    <edge id="endpoints:certificate_on" source="relationship:certificate_on" target="endpoints:certificate_on">
+      <data key="label">declares_endpoints</data>
+    </edge>
+    <edge id="endpoints:column_references" source="relationship:column_references" target="endpoints:column_references">
+      <data key="label">declares_endpoints</data>
+    </edge>
+    <edge id="endpoints:contains" source="relationship:contains" target="endpoints:contains">
+      <data key="label">declares_endpoints</data>
+    </edge>
+    <edge id="endpoints:contract_with" source="relationship:contract_with" target="endpoints:contract_with">
+      <data key="label">declares_endpoints</data>
+    </edge>
+    <edge id="endpoints:depends_on" source="relationship:depends_on" target="endpoints:depends_on">
+      <data key="label">declares_endpoints</data>
+    </edge>
+    <edge id="endpoints:designated_data_tier" source="relationship:designated_data_tier" target="endpoints:designated_data_tier">
+      <data key="label">declares_endpoints</data>
+    </edge>
+    <edge id="endpoints:enforced_by" source="relationship:enforced_by" target="endpoints:enforced_by">
+      <data key="label">declares_endpoints</data>
+    </edge>
+    <edge id="endpoints:exposes" source="relationship:exposes" target="endpoints:exposes">
+      <data key="label">declares_endpoints</data>
+    </edge>
+    <edge id="endpoints:flow_destination" source="relationship:flow_destination" target="endpoints:flow_destination">
+      <data key="label">declares_endpoints</data>
+    </edge>
+    <edge id="endpoints:flow_source" source="relationship:flow_source" target="endpoints:flow_source">
+      <data key="label">declares_endpoints</data>
+    </edge>
+    <edge id="endpoints:governs" source="relationship:governs" target="endpoints:governs">
+      <data key="label">declares_endpoints</data>
+    </edge>
+    <edge id="endpoints:granted_on" source="relationship:granted_on" target="endpoints:granted_on">
+      <data key="label">declares_endpoints</data>
+    </edge>
+    <edge id="endpoints:granted_to" source="relationship:granted_to" target="endpoints:granted_to">
+      <data key="label">declares_endpoints</data>
+    </edge>
+    <edge id="endpoints:grants" source="relationship:grants" target="endpoints:grants">
+      <data key="label">declares_endpoints</data>
+    </edge>
+    <edge id="endpoints:in_segment" source="relationship:in_segment" target="endpoints:in_segment">
+      <data key="label">declares_endpoints</data>
+    </edge>
+    <edge id="endpoints:in_zone" source="relationship:in_zone" target="endpoints:in_zone">
+      <data key="label">declares_endpoints</data>
+    </edge>
+    <edge id="endpoints:instance_of" source="relationship:instance_of" target="endpoints:instance_of">
+      <data key="label">declares_endpoints</data>
+    </edge>
+    <edge id="endpoints:member_of" source="relationship:member_of" target="endpoints:member_of">
+      <data key="label">declares_endpoints</data>
+    </edge>
+    <edge id="endpoints:mirrors" source="relationship:mirrors" target="endpoints:mirrors">
+      <data key="label">declares_endpoints</data>
+    </edge>
+    <edge id="endpoints:operated_by" source="relationship:operated_by" target="endpoints:operated_by">
+      <data key="label">declares_endpoints</data>
+    </edge>
+    <edge id="endpoints:reports_to" source="relationship:reports_to" target="endpoints:reports_to">
+      <data key="label">declares_endpoints</data>
+    </edge>
+    <edge id="endpoints:rule_destination" source="relationship:rule_destination" target="endpoints:rule_destination">
+      <data key="label">declares_endpoints</data>
+    </edge>
+    <edge id="endpoints:rule_source" source="relationship:rule_source" target="endpoints:rule_source">
+      <data key="label">declares_endpoints</data>
+    </edge>
+    <edge id="endpoints:runs_on" source="relationship:runs_on" target="endpoints:runs_on">
+      <data key="label">declares_endpoints</data>
+    </edge>
+    <edge id="endpoints:succeeds" source="relationship:succeeds" target="endpoints:succeeds">
+      <data key="label">declares_endpoints</data>
+    </edge>
+    <edge id="endpoints:under_contract" source="relationship:under_contract" target="endpoints:under_contract">
+      <data key="label">declares_endpoints</data>
+    </edge>
+    <edge id="endpoints:within_unit" source="relationship:within_unit" target="endpoints:within_unit">
+      <data key="label">declares_endpoints</data>
+    </edge>
+    <edge id="spine:access_rule" source="type:organization" target="type:access_rule">
+      <data key="label">structural_parent</data>
+      <data key="origin">default</data>
+    </edge>
+    <edge id="spine:blind_spot" source="type:organization" target="type:blind_spot">
+      <data key="label">structural_parent</data>
+      <data key="origin">default</data>
+    </edge>
+    <edge id="spine:certificate" source="type:compute_node" target="type:certificate">
+      <data key="label">structural_parent</data>
+      <data key="origin">default</data>
+    </edge>
+    <edge id="spine:compute_node" source="type:organization" target="type:compute_node">
+      <data key="label">structural_parent</data>
+      <data key="origin">default</data>
+    </edge>
+    <edge id="spine:contract" source="type:organization" target="type:contract">
+      <data key="label">structural_parent</data>
+      <data key="origin">default</data>
+    </edge>
+    <edge id="spine:data_flow" source="type:organization" target="type:data_flow">
+      <data key="label">structural_parent</data>
+      <data key="origin">default</data>
+    </edge>
+    <edge id="spine:data_row" source="type:database_table" target="type:data_row">
+      <data key="label">structural_parent</data>
+      <data key="origin">default</data>
+    </edge>
+    <edge id="spine:data_store" source="type:compute_node" target="type:data_store">
+      <data key="label">structural_parent</data>
+      <data key="origin">default</data>
+    </edge>
+    <edge id="spine:database_column" source="type:database_table" target="type:database_column">
+      <data key="label">structural_parent</data>
+      <data key="origin">default</data>
+    </edge>
+    <edge id="spine:database_table" source="type:data_store" target="type:database_table">
+      <data key="label">structural_parent</data>
+      <data key="origin">default</data>
+    </edge>
+    <edge id="spine:discovery_run" source="type:organization" target="type:discovery_run">
+      <data key="label">structural_parent</data>
+      <data key="origin">default</data>
+    </edge>
+    <edge id="spine:entitlement" source="type:organization" target="type:entitlement">
+      <data key="label">structural_parent</data>
+      <data key="origin">default</data>
+    </edge>
+    <edge id="spine:identity_group" source="type:organization" target="type:identity_group">
+      <data key="label">structural_parent</data>
+      <data key="origin">default</data>
+    </edge>
+    <edge id="spine:ip_address" source="type:network_segment" target="type:ip_address">
+      <data key="label">structural_parent</data>
+      <data key="origin">default</data>
+    </edge>
+    <edge id="spine:network_device" source="type:organization" target="type:network_device">
+      <data key="label">structural_parent</data>
+      <data key="origin">default</data>
+    </edge>
+    <edge id="spine:network_port" source="type:compute_node" target="type:network_port">
+      <data key="label">structural_parent</data>
+      <data key="origin">default</data>
+    </edge>
+    <edge id="spine:network_segment" source="type:organization" target="type:network_segment">
+      <data key="label">structural_parent</data>
+      <data key="origin">default</data>
+    </edge>
+    <edge id="spine:observation" source="type:organization" target="type:observation">
+      <data key="label">structural_parent</data>
+      <data key="origin">default</data>
+    </edge>
+    <edge id="spine:org_unit" source="type:organization" target="type:org_unit">
+      <data key="label">structural_parent</data>
+      <data key="origin">default</data>
+    </edge>
+    <edge id="spine:person" source="type:organization" target="type:person">
+      <data key="label">structural_parent</data>
+      <data key="origin">default</data>
+    </edge>
+    <edge id="spine:principal" source="type:organization" target="type:principal">
+      <data key="label">structural_parent</data>
+      <data key="origin">default</data>
+    </edge>
+    <edge id="spine:privilege" source="type:organization" target="type:privilege">
+      <data key="label">structural_parent</data>
+      <data key="origin">default</data>
+    </edge>
+    <edge id="spine:security_zone" source="type:organization" target="type:security_zone">
+      <data key="label">structural_parent</data>
+      <data key="origin">default</data>
+    </edge>
+    <edge id="spine:service" source="type:compute_node" target="type:service">
+      <data key="label">structural_parent</data>
+      <data key="origin">default</data>
+    </edge>
+    <edge id="spine:site" source="type:aws.aws_account" target="type:site">
+      <data key="label">structural_parent</data>
+      <data key="origin">overrides</data>
+    </edge>
+    <edge id="spine:software_installation" source="type:compute_node" target="type:software_installation">
+      <data key="label">structural_parent</data>
+      <data key="origin">default</data>
+    </edge>
+    <edge id="spine:source_system" source="type:organization" target="type:source_system">
+      <data key="label">structural_parent</data>
+      <data key="origin">default</data>
+    </edge>
+    <edge id="spine:storage_volume" source="type:compute_node" target="type:storage_volume">
+      <data key="label">structural_parent</data>
+      <data key="origin">default</data>
+    </edge>
+    <edge id="spine:team" source="type:organization" target="type:team">
+      <data key="label">structural_parent</data>
+      <data key="origin">default</data>
+    </edge>
+  </graph>
+</graphml>

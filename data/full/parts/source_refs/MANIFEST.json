@@ -1,0 +1,69 @@
+{
+  "source_name": "source_refs.csv",
+  "source_bytes": 117049526,
+  "source_sha256": "8ca871dd148a591e50de2067cb0e322f179b9601f42fd44329a1fc9883b49fdc",
+  "parts": [
+    {
+      "name": "source_refs.part000.csv",
+      "bytes": 10485760,
+      "sha256": "9db784b16d98c3da2de7593d8b3a54758544278749a945dd537451d2294c0307"
+    },
+    {
+      "name": "source_refs.part001.csv",
+      "bytes": 10485760,
+      "sha256": "04d23dca14d12f375bf368672a98271be7995cebf07a786be7e29a4d93838d5d"
+    },
+    {
+      "name": "source_refs.part002.csv",
+      "bytes": 10485760,
+      "sha256": "0efb6cc33840399762b7a08505b6440cc6a0d187fd193adc670732230974f1f4"
+    },
+    {
+      "name": "source_refs.part003.csv",
+      "bytes": 10485760,
+      "sha256": "e7fa0924e413405786c06abb7832cded26202387868cb5ba803bd96178b2a4be"
+    },
+    {
+      "name": "source_refs.part004.csv",
+      "bytes": 10485760,
+      "sha256": "8ce87a83b08199f450e1127030b36b7ed1b51e2b887b487ebec8d1f845cb6a9f"
+    },
+    {
+      "name": "source_refs.part005.csv",
+      "bytes": 10485760,
+      "sha256": "fbec22f63ffb561a53be68efa6a4118152f899035a15600804845dac19798b1a"
+    },
+    {
+      "name": "source_refs.part006.csv",
+      "bytes": 10485760,
+      "sha256": "f49b34f2167000f78c107c1788082848606232e3743f68590842438b93599ade"
+    },
+    {
+      "name": "source_refs.part007.csv",
+      "bytes": 10485760,
+      "sha256": "b448c65ad1ab6228534a878aececdd43e3fad0fd0d653aa4b421f7eda9a0dad4"
+    },
+    {
+      "name": "source_refs.part008.csv",
+      "bytes": 10485760,
+      "sha256": "69ba76a48935b5510822dca192445021ce670fbbd8076d93229d78c9253ecf8f"
+    },
+    {
+      "name": "source_refs.part009.csv",
+      "bytes": 10485760,
+      "sha256": "ddbfa7c00af986aa8060f576581dbad613f688ef04ff06153b80274891d4ecaf"
+    },
+    {
+      "name": "source_refs.part010.csv",
+      "bytes": 10485760,
+      "sha256": "a0b9bff4c74d1c4c9b1295254fddeb62698952f8c17a26dff54fb3f0c54d4c98"
+    },
+    {
+      "name": "source_refs.part011.csv",
+      "bytes": 1706166,
+      "sha256": "607d019f42fd112421099b108cce23d72fbc2b2c0dec655ad26dd35d3abec531"
+    }
+  ],
+  "part_bytes": 10485760,
+  "reassemble": "cat source_refs.part*.csv > source_refs.csv"
+}

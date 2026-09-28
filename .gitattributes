@@ -1,0 +1,11 @@
+# This is a data repository. Nothing here may be line-ending translated.
+# The CSV dialect pins UTF-8 with LF; git's default autocrlf would rewrite it to CRLF
+# on checkout and silently corrupt every row's last field.
+* -text
+
+# Belt and braces, per type, in case someone later adds a text file and assumes otherwise.
+*.csv    -text binary
+*.json   -text
+*.graphml -text
+*.md     -text
+*.txt    -text

@@ -1,0 +1,3 @@
+entity_id,entity_type,organization_id,subscription_id,offer_code,is_auto_renewing,valid_from,valid_to,system_from,system_to,revision,operation
+acme:aws.aws_subscription:s-700000000000~ddc8a5db893a,aws.aws_subscription,acme,s-700000000000,business-plan,false,2026-09-15T03:45:06Z,\N,2026-09-15T03:45:06Z,\N,1,assert
+acme:aws.aws_subscription:s-700000000001~72b8cfd47ab0,aws.aws_subscription,acme,s-700000000001,business-plan,true,2027-01-02T20:49:42Z,\N,2027-01-02T20:49:42Z,\N,1,assert

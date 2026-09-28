@@ -1,0 +1,71 @@
+entity_id,entity_type,organization_id,parent_site,site_code,site_name,site_kind,valid_from,valid_to,system_from,system_to,revision,operation
+acme:site:none-hq~f33ef3a04440,site,acme,none,HQ,HQ (region),region,2021-01-07T17:42:12Z,\N,2021-01-07T17:42:12Z,\N,1,assert
+acme:site:hq-hq-b1~8fdf5c2d894f,site,acme,HQ,HQ-B1,HQ-B1 (building),building,2021-01-08T00:49:40Z,\N,2021-01-08T00:49:40Z,\N,1,assert
+acme:site:hq-hq-b2~ec745147e88f,site,acme,HQ,HQ-B2,HQ-B2 (building),building,2021-01-09T05:28:29Z,\N,2021-01-09T05:28:29Z,\N,1,assert
+acme:site:hq-hq-dc1~d258a5e0972f,site,acme,HQ,HQ-DC1,HQ-DC1 (building),building,2021-01-10T10:58:54Z,\N,2021-01-10T10:58:54Z,\N,1,assert
+acme:site:hq-hq-dc2~5bf62b2d3a31,site,acme,HQ,HQ-DC2,HQ-DC2 (building),building,2021-01-11T13:34:04Z,2026-10-28T17:55:12Z,2021-01-11T13:34:04Z,\N,1,assert
+acme:site:hq-remote~079bafe1f4d2,site,acme,HQ,REMOTE,REMOTE (remote),remote,2021-01-12T06:34:58Z,\N,2021-01-12T06:34:58Z,\N,1,assert
+acme:site:hq-dc1-f2-r1-hq-dc1-f2-r1-rack01~636313ecd1c3,site,acme,HQ-DC1-F2-R1,HQ-DC1-F2-R1-RACK01,HQ-DC1-F2-R1-RACK01 (rack),rack,2021-02-03T17:08:01Z,\N,2021-02-14T22:28:09Z,\N,1,assert
+acme:site:hq-dc1-f1-r1-hq-dc1-f1-r1-rack01~b1917b2432ba,site,acme,HQ-DC1-F1-R1,HQ-DC1-F1-R1-RACK01,HQ-DC1-F1-R1-RACK01 (rack),rack,2021-02-03T02:53:58Z,\N,2021-03-19T04:53:41Z,\N,1,assert
+acme:site:aws-reg-1-aws-reg-1-az1~cab4f61dd81c,site,acme,AWS-REG-1,AWS-REG-1-AZ1,AWS-REG-1-AZ1 (room),room,2021-03-22T20:24:37Z,\N,2021-04-07T02:31:17Z,\N,1,assert
+acme:site:hq-b1-f1-r1-hq-b1-f1-r1-rack03~9180120e1faa,site,acme,HQ-B1-F1-R1,HQ-B1-F1-R1-RACK03,HQ-B1-F1-R1-RACK03 (rack),rack,2021-03-30T06:47:12Z,\N,2021-05-12T17:24:22Z,\N,1,assert
+acme:site:dc2-hall2-dc2-hall2-rack03~6e9158c57574,site,acme,DC2-HALL2,DC2-HALL2-RACK03,DC2-HALL2-RACK03 (rack),rack,2021-04-26T05:19:26Z,\N,2021-06-09T06:57:11Z,\N,1,assert
+acme:site:hq-dc1-f2-hq-dc1-f2-r1~b176fa24a2af,site,acme,HQ-DC1-F2,HQ-DC1-F2-R1,HQ-DC1-F2-R1 (room),room,2021-06-15T11:09:59Z,\N,2021-07-07T23:50:21Z,\N,1,assert
+acme:site:hq-dc1-f2-r1-hq-dc1-f2-r1-rack03~b0331b2aa06d,site,acme,HQ-DC1-F2-R1,HQ-DC1-F2-R1-RACK03,HQ-DC1-F2-R1-RACK03 (rack),rack,2021-06-16T21:01:28Z,\N,2021-07-21T12:15:55Z,\N,1,assert
+acme:site:hq-b2-hq-b2-f1~d15d1fc6725b,site,acme,HQ-B2,HQ-B2-F1,HQ-B2-F1 (floor),floor,2021-07-11T07:28:21Z,\N,2021-08-24T07:34:28Z,\N,1,assert
+acme:site:cloud-aws-reg-4~2c0cf9183811,site,acme,cloud,AWS-REG-4,AWS-REG-4 (cloud_region),cloud_region,2021-09-30T18:49:31Z,\N,2021-10-09T12:38:12Z,\N,1,assert
+acme:site:dc2-hall1-dc2-hall1-rack03~3fec211d60e0,site,acme,DC2-HALL1,DC2-HALL1-RACK03,DC2-HALL1-RACK03 (rack),rack,2021-10-13T15:18:55Z,\N,2021-10-13T15:18:55Z,\N,1,assert
+acme:site:hq-b1-hq-b1-f2~1c2c473ec318,site,acme,HQ-B1,HQ-B1-F2,HQ-B1-F2 (floor),floor,2021-10-18T23:46:03Z,\N,2021-11-30T21:17:10Z,\N,1,assert
+acme:site:dc2-hall1-dc2-hall1-rack02~cb92ee0e121c,site,acme,DC2-HALL1,DC2-HALL1-RACK02,DC2-HALL1-RACK02 (rack),rack,2021-12-20T09:39:06Z,\N,2022-01-16T07:18:30Z,\N,1,assert
+acme:site:dc2-dc2-hall2~0e8fe0e69a78,site,acme,DC2,DC2-HALL2,DC2-HALL2 (room),room,2022-02-19T09:05:28Z,2022-04-28T00:27:18Z,2022-03-01T09:50:24Z,\N,1,assert
+acme:site:hq-b1-f1-hq-b1-f1-r1~7826b05be307,site,acme,HQ-B1-F1,HQ-B1-F1-R1,HQ-B1-F1-R1 (room),room,2022-04-27T06:19:45Z,\N,2022-05-14T22:36:49Z,\N,1,assert
+acme:site:hq-b1-f1-r1-hq-b1-f1-r1-rack04~63292e13a93b,site,acme,HQ-B1-F1-R1,HQ-B1-F1-R1-RACK04,HQ-B1-F1-R1-RACK04 (rack),rack,2022-05-05T07:36:54Z,\N,2022-05-14T10:41:26Z,\N,1,assert
+acme:site:cloud-aws-reg-6~140bf40f3a49,site,acme,cloud,AWS-REG-6,AWS-REG-6 (cloud_region),cloud_region,2022-05-15T22:16:15Z,2022-08-12T04:58:54Z,2022-05-16T13:38:44Z,\N,1,assert
+acme:site:hq-b1-f1-hq-b1-f1-r2~fad29a53b4a2,site,acme,HQ-B1-F1,HQ-B1-F1-R2,HQ-B1-F1-R2 (room),room,2022-06-24T18:18:03Z,\N,2022-07-30T06:45:55Z,\N,1,assert
+acme:site:hq-b2-f1-hq-b2-f1-r1~502d3c0fc242,site,acme,HQ-B2-F1,HQ-B2-F1-R1,HQ-B2-F1-R1 (room),room,2022-07-26T05:26:21Z,\N,2022-09-02T07:13:03Z,\N,1,assert
+acme:site:remote-office-f2-remote-office-f2-r2~9d8a92c21f22,site,acme,REMOTE-OFFICE-F2,REMOTE-OFFICE-F2-R2,REMOTE-OFFICE-F2-R2 (room),room,2022-08-07T01:12:56Z,\N,2022-09-12T12:54:53Z,\N,1,assert
+acme:site:hq-dc1-f2-r1-hq-dc1-f2-r1-rack02~fa8a5c069e96,site,acme,HQ-DC1-F2-R1,HQ-DC1-F2-R1-RACK02,HQ-DC1-F2-R1-RACK02 (rack),rack,2023-04-19T15:40:53Z,\N,2023-05-08T19:29:38Z,\N,1,assert
+acme:site:hq-b2-f1-hq-b2-f1-r2~3ebb87e672c6,site,acme,HQ-B2-F1,HQ-B2-F1-R2,HQ-B2-F1-R2 (room),room,2023-05-11T00:02:09Z,\N,2023-06-20T05:19:22Z,\N,1,assert
+acme:site:dc2-hall1-dc2-hall1-rack01~6b56661b8031,site,acme,DC2-HALL1,DC2-HALL1-RACK01,DC2-HALL1-RACK01 (rack),rack,2023-07-16T04:11:01Z,\N,2023-07-27T12:16:20Z,\N,1,assert
+acme:site:hq-dc2-hq-dc2-f2~1177e0adbb84,site,acme,HQ-DC2,HQ-DC2-F2,HQ-DC2-F2 (floor),floor,2023-08-08T21:39:06Z,\N,2023-08-25T13:21:20Z,\N,1,assert
+acme:site:cloud-aws-reg-2~3d45bf7800f3,site,acme,cloud,AWS-REG-2,AWS-REG-2 (cloud_region),cloud_region,2023-08-20T06:41:03Z,\N,2023-09-07T16:01:52Z,\N,1,assert
+acme:site:remote-office-f2-remote-office-f2-r1~14bbf6e99d20,site,acme,REMOTE-OFFICE-F2,REMOTE-OFFICE-F2-R1,REMOTE-OFFICE-F2-R1 (room),room,2023-08-07T16:09:42Z,\N,2023-09-09T06:48:04Z,\N,1,assert
+acme:site:hq-b1-f1-r1-hq-b1-f1-r1-rack01~c2cc22b7b6bb,site,acme,HQ-B1-F1-R1,HQ-B1-F1-R1-RACK01,HQ-B1-F1-R1-RACK01 (rack),rack,2023-09-12T14:10:38Z,\N,2023-10-25T10:05:48Z,\N,1,assert
+acme:site:hq-dc1-f1-hq-dc1-f1-r1~d634f4c06a80,site,acme,HQ-DC1-F1,HQ-DC1-F1-R1,HQ-DC1-F1-R1 (room),room,2024-02-16T23:49:08Z,\N,2024-03-08T12:21:12Z,\N,1,assert
+acme:site:hq-dc1-hq-dc1-f1~193a793cb43c,site,acme,HQ-DC1,HQ-DC1-F1,HQ-DC1-F1 (floor),floor,2024-03-03T02:55:04Z,\N,2024-04-10T10:09:44Z,\N,1,assert
+acme:site:dc2-hall2-dc2-hall2-rack01~76616707d3e7,site,acme,DC2-HALL2,DC2-HALL2-RACK01,DC2-HALL2-RACK01 (rack),rack,2024-04-24T01:53:33Z,\N,2024-05-01T03:56:21Z,\N,1,assert
+acme:site:hq-dc1-f1-r1-hq-dc1-f1-r1-rack02~c0fb98caae30,site,acme,HQ-DC1-F1-R1,HQ-DC1-F1-R1-RACK02,HQ-DC1-F1-R1-RACK02 (rack),rack,2024-05-22T03:27:29Z,\N,2024-06-05T03:43:33Z,\N,1,assert
+acme:site:hq-b1-f1-r1-hq-b1-f1-r1-rack02~f56fb6f5d2f4,site,acme,HQ-B1-F1-R1,HQ-B1-F1-R1-RACK02,HQ-B1-F1-R1-RACK02 (rack),rack,2024-09-26T14:32:52Z,\N,2024-09-26T14:32:52Z,\N,1,assert
+acme:site:aws-reg-1-aws-reg-1-az2~97449354448d,site,acme,AWS-REG-1,AWS-REG-1-AZ2,AWS-REG-1-AZ2 (room),room,2024-09-17T08:29:35Z,\N,2024-10-04T11:51:24Z,\N,1,assert
+acme:site:hq-b1-f2-hq-b1-f2-r2~d49d49e273e3,site,acme,HQ-B1-F2,HQ-B1-F2-R2,HQ-B1-F2-R2 (room),room,2024-09-25T10:53:41Z,\N,2024-10-14T17:08:32Z,\N,1,assert
+acme:site:hq-dc1-hq-dc1-f2~db2f6fc19759,site,acme,HQ-DC1,HQ-DC1-F2,HQ-DC1-F2 (floor),floor,2024-09-14T20:22:50Z,\N,2024-10-21T15:04:26Z,\N,1,assert
+acme:site:hq-b1-f2-hq-b1-f2-r1~d4c699ff1c92,site,acme,HQ-B1-F2,HQ-B1-F2-R1,HQ-B1-F2-R1 (room),room,2024-10-03T12:20:57Z,\N,2024-11-11T20:36:53Z,\N,1,assert
+acme:site:cloud-aws-reg-1~157716f551eb,site,acme,cloud,AWS-REG-1,AWS-REG-1 (cloud_region),cloud_region,2024-10-30T06:50:37Z,\N,2024-11-14T07:59:42Z,\N,1,assert
+acme:site:dc2-dc2-hall1~b8f96be967fc,site,acme,DC2,DC2-HALL1,DC2-HALL1 (room),room,2024-11-08T21:06:58Z,\N,2024-11-15T20:27:15Z,\N,1,assert
+acme:site:hq-dc1-f1-r1-hq-dc1-f1-r1-rack03~a9667cb6e254,site,acme,HQ-DC1-F1-R1,HQ-DC1-F1-R1-RACK03,HQ-DC1-F1-R1-RACK03 (rack),rack,2024-11-13T20:19:25Z,\N,2024-12-07T01:37:10Z,\N,1,assert
+acme:site:remote-office-remote-office-f1~d64fdd878fcf,site,acme,REMOTE-OFFICE,REMOTE-OFFICE-F1,REMOTE-OFFICE-F1 (floor),floor,2025-01-20T15:06:45Z,2025-04-08T10:47:34Z,2025-02-13T21:43:27Z,\N,1,assert
+acme:site:hq-dc1-f1-hq-dc1-f1-r2~a137434688fb,site,acme,HQ-DC1-F1,HQ-DC1-F1-R2,HQ-DC1-F1-R2 (room),room,2025-03-09T18:52:57Z,\N,2025-03-10T11:34:01Z,\N,1,assert
+acme:site:hq-dc2-hq-dc2-f1~259b834cafca,site,acme,HQ-DC2,HQ-DC2-F1,HQ-DC2-F1 (floor),floor,2025-02-13T22:26:30Z,\N,2025-03-23T16:36:29Z,\N,1,assert
+acme:site:cloud-aws-reg-3~ca37dfc70246,site,acme,cloud,AWS-REG-3,AWS-REG-3 (cloud_region),cloud_region,2025-06-20T12:49:33Z,\N,2025-07-31T08:04:03Z,\N,1,assert
+acme:site:hq-dc1-f2-hq-dc1-f2-r2~23ecda879205,site,acme,HQ-DC1-F2,HQ-DC1-F2-R2,HQ-DC1-F2-R2 (room),room,2025-08-13T08:44:31Z,\N,2025-09-13T00:56:43Z,\N,1,assert
+acme:site:none-dc2~7366f12c4d24,site,acme,none,DC2,DC2 (campus),campus,2025-11-19T19:57:16Z,\N,2025-12-27T12:12:46Z,\N,1,assert
+acme:site:dc2-dc2-hall2~0e8fe0e69a78,site,acme,\N,\N,\N,\N,2022-04-28T00:27:18Z,\N,2026-02-14T14:42:31Z,\N,2,retract
+acme:site:cloud-aws-reg-6~140bf40f3a49,site,acme,\N,\N,\N,\N,2022-08-12T04:58:54Z,\N,2026-03-04T09:40:50Z,\N,2,retract
+acme:site:remote-office-remote-office-f2~84bed6af3d6c,site,acme,REMOTE-OFFICE,REMOTE-OFFICE-F2,REMOTE-OFFICE-F2 (floor),floor,2026-03-04T01:42:09Z,2026-05-24T00:39:07Z,2026-03-25T11:43:49Z,\N,1,assert
+acme:site:dc2-dc2-hall4~84d5fd174d44,site,acme,DC2,DC2-HALL4,DC2-HALL4 (room),room,2026-03-05T22:08:55Z,\N,2026-03-29T06:27:05Z,\N,1,assert
+acme:site:dc2-dc2-hall3~c21128c86d93,site,acme,DC2,DC2-HALL3,DC2-HALL3 (room),room,2026-03-15T14:30:35Z,\N,2026-04-24T12:59:33Z,\N,1,assert
+acme:site:hq-b2-hq-b2-f2~c379f2b04ba7,site,acme,HQ-B2,HQ-B2-F2,HQ-B2-F2 (floor),floor,2026-04-17T01:25:58Z,2026-05-26T04:41:12Z,2026-04-28T00:24:02Z,\N,1,assert
+acme:site:dc2-hall2-dc2-hall2-rack02~3bd92bebd577,site,acme,DC2-HALL2,DC2-HALL2-RACK02,DC2-HALL2-RACK02 (rack),rack,2026-04-30T22:20:25Z,2026-07-14T11:12:53Z,2026-05-29T18:06:41Z,\N,1,assert
+acme:site:remote-office-f1-remote-office-f1-r1~f595528bd4c7,site,acme,REMOTE-OFFICE-F1,REMOTE-OFFICE-F1-R1,REMOTE-OFFICE-F1-R1 (room),room,2026-07-26T01:31:32Z,\N,2026-08-02T19:25:17Z,\N,1,assert
+acme:site:remote-remote-office~5d57fa7e9c17,site,acme,REMOTE,REMOTE-OFFICE,REMOTE-OFFICE (building),building,2026-07-03T11:46:14Z,\N,2026-08-07T13:14:40Z,\N,1,assert
+acme:site:hq-b2-hq-b2-f2~c379f2b04ba7,site,acme,\N,\N,\N,\N,2026-05-26T04:41:12Z,\N,2026-08-16T18:47:33Z,\N,2,retract
+acme:site:remote-office-remote-office-f1~d64fdd878fcf,site,acme,\N,\N,\N,\N,2025-04-08T10:47:34Z,\N,2026-08-17T11:02:57Z,\N,2,retract
+acme:site:hq-b1-hq-b1-f1~c87e8e33ce7b,site,acme,HQ-B1,HQ-B1-F1,HQ-B1-F1 (floor),floor,2026-08-15T15:11:49Z,\N,2026-08-18T10:49:53Z,\N,1,assert
+acme:site:cloud-aws-reg-5~85d0a5356f06,site,acme,cloud,AWS-REG-5,AWS-REG-5 (cloud_region),cloud_region,2026-07-18T22:23:17Z,\N,2026-08-21T03:26:04Z,\N,1,assert
+acme:site:hq-hq-dc2~5bf62b2d3a31,site,acme,\N,\N,\N,\N,2026-10-28T17:55:12Z,2026-10-28T17:55:13Z,2026-10-28T17:55:12Z,\N,2,retract
+acme:site:hq-hq-dc2~5bf62b2d3a31,site,acme,HQ,HQ-DC2,HQ-DC2 (region),region,2026-10-28T17:55:13Z,\N,2026-10-29T06:29:56Z,\N,2,assert
+acme:site:remote-office-f1-remote-office-f1-r2~ca0ed1a6fa0f,site,acme,REMOTE-OFFICE-F1,REMOTE-OFFICE-F1-R2,REMOTE-OFFICE-F1-R2 (room),room,2026-11-13T20:27:20Z,\N,2026-12-02T23:00:07Z,\N,1,assert
+acme:site:hq-dc1-f2-r1-hq-dc1-f2-r1-rack04~4b415291d8e5,site,acme,HQ-DC1-F2-R1,HQ-DC1-F2-R1-RACK04,HQ-DC1-F2-R1-RACK04 (rack),rack,2026-12-24T08:57:46Z,\N,2027-01-07T04:20:50Z,\N,1,assert
+acme:site:hq-dc1-f1-r1-hq-dc1-f1-r1-rack04~8a922f8ee42b,site,acme,HQ-DC1-F1-R1,HQ-DC1-F1-R1-RACK04,HQ-DC1-F1-R1-RACK04 (rack),rack,2027-01-07T01:37:29Z,\N,2027-02-05T21:47:29Z,\N,1,assert
+acme:site:dc2-hall2-dc2-hall2-rack02~3bd92bebd577,site,acme,\N,\N,\N,\N,2026-07-14T11:12:53Z,\N,2027-03-25T03:08:53Z,\N,2,retract
+acme:site:remote-office-remote-office-f2~84bed6af3d6c,site,acme,\N,\N,\N,\N,2026-05-24T00:39:07Z,\N,2027-03-30T19:21:15Z,\N,2,retract

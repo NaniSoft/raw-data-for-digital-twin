@@ -1,0 +1,5 @@
+entity_id,entity_type,organization_id,account_id,account_name,account_kind,is_security_account,root_email,is_locked,valid_from,valid_to,system_from,system_to,revision,operation
+acme:aws.aws_account:100200300400~59c368eb4251,aws.aws_account,acme,100200300400,prod-eu,standalone,false,root+prod-eu@acme.example,false,2026-09-15T03:45:06Z,\N,2026-09-15T03:45:06Z,\N,1,assert
+acme:aws.aws_account:100200300401~d6dd3c6c91ae,aws.aws_account,acme,100200300401,nonprod-eu,standalone,false,root+nonprod-eu@acme.example,false,2026-09-15T07:56:08Z,\N,2026-09-15T07:56:08Z,\N,1,assert
+acme:aws.aws_account:100200300402~e15b16d504a1,aws.aws_account,acme,100200300402,org-management,root,true,root+org-management@acme.example,false,2026-09-15T07:26:31Z,\N,2026-09-15T07:26:31Z,\N,1,assert
+acme:aws.aws_account:100200300403~0a59ec8f7e36,aws.aws_account,acme,100200300403,finance-saas-tenant,linked,false,root+finance-saas-tenant@acme.example,false,2027-01-02T03:51:09Z,\N,2027-01-02T03:51:09Z,\N,1,assert

@@ -1,0 +1,66 @@
+{
+  "manifest_version": "graph-manifest-v2",
+  "publish_version": "corpus-size-tree-v1",
+  "graph": "schema",
+  "what_this_answers": "what kinds of thing may exist in this model, and how they may connect. It says nothing whatever about whether any of them does. For that, read the ESTATE graph's manifest, which is a different directory and a different question.",
+  "size": "small",
+  "invariance": {
+    "claim": "this graph is byte-for-byte the same at every corpus size, and `schema/graph/publish.py::check_invariance` asserts it by generating it at two sizes and comparing. A schema that grows with the data is a schema describing the data.",
+    "what_is_compared": [
+      "the recorded content_digest, re-rendered from the seam archives",
+      "types/relationships/spine, element for element",
+      "schema.graphml, byte for byte"
+    ],
+    "what_is_not_compared": "the eight graph-level <data> elements, which carry the coordinate and the model's provenance. Those are stamped on every graph D41 requires them on, including a shard, so they are provenance rather than content -- and the two sizes are folded at the same coordinate, so they agree anyway."
+  },
+  "schema": {
+    "schema_version": "7",
+    "content_digest": "e3db04f5d1cd7a90aba9a6a2",
+    "core_contract": "1.7",
+    "packs": "cloud-aws@1.0",
+    "effective_from": "2026-09-30T00:00:00Z",
+    "renderer": "schema/versioning/check_versioning.py::render_schema_graph",
+    "digest_algorithm": "blake2b-12 over the canonical JSON of the rendered schema graph"
+  },
+  "graph_level_keys": {
+    "schema_version": "7",
+    "schema_digest": "e3db04f5d1cd7a90aba9a6a2",
+    "core_contract": "1.7",
+    "packs": "cloud-aws@1.0",
+    "as_of_valid": "2027-04-25T23:59:59Z",
+    "as_of_system": "2027-04-25T23:59:59Z",
+    "as_of_coordinate_class": "current",
+    "identity_scheme": "id-v1"
+  },
+  "counts": {
+    "type_count": 38,
+    "relationship_count": 31,
+    "spine_count": 38,
+    "node_count": 107
+  },
+  "relations": [
+    "../graph_schema/schema/relationships.parquet",
+    "../graph_schema/schema/spine.parquet",
+    "../graph_schema/schema/types.parquet"
+  ],
+  "files": {
+    "schema.graphml": 70928,
+    "../graph_schema/schema/relationships.parquet": 3902,
+    "../graph_schema/schema/spine.parquet": 2414,
+    "../graph_schema/schema/types.parquet": 5216
+  },
+  "sharded": false,
+  "shard_note": "one file, four orders of magnitude below the GraphML shard ceiling, and the estate's shards are the only thing in this deliverable that is cut",
+  "estate_graph": "../graph_estate/",
+  "estate_manifest": "../graph_estate/manifest.json",
+  "estate_note": "the estate is an INSTANCE of this model at one coordinate. It is not a second model, it is not a bigger one, and nothing about the estate may change what is written here -- which is what the invariance check exists to catch, because a schema graph that grew by one node per thousand entities would be a schema describing the data",
+  "corpus_observation_window": {
+    "end": "2027-04-25T23:59:59Z",
+    "start": "2026-01-01T00:00:00Z"
+  },
+  "corpus_fingerprint": "33f3ae65c796d55e0e55675c15f39953",
+  "substrate_version": "parquet-substrate-v1",
+  "export_format_version": "graphml-export-v1",
+  "duckdb": "1.5.5",
+  "identity_scheme": "id-v1"
+}

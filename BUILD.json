@@ -1,0 +1,28 @@
+{
+  "sizes": {
+    "small": {
+      "files": 48,
+      "bytes": 7237974
+    },
+    "full": {
+      "files": 132,
+      "bytes": 1102025756
+    }
+  },
+  "split": {
+    "full/orgs/acme/relationships.csv": {
+      "source_bytes": 754764335,
+      "source_sha256": "b3a5ab7f5c8d0998248110267662d5e1f85372b925e4adad91ef5cd4c97d24b8",
+      "part_count": 72,
+      "reassemble": "cat relationships.part*.csv > relationships.csv"
+    },
+    "full/orgs/acme/source_refs.csv": {
+      "source_bytes": 117049526,
+      "source_sha256": "8ca871dd148a591e50de2067cb0e322f179b9601f42fd44329a1fc9883b49fdc",
+      "part_count": 12,
+      "reassemble": "cat source_refs.part*.csv > source_refs.csv"
+    }
+  },
+  "copied": 99,
+  "bytes_plain": 237399104
+}

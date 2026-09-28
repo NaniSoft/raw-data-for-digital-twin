@@ -1,0 +1,4 @@
+entity_id,entity_type,organization_id,vpc_id,cidr_block,state,is_default,flow_log_group,valid_from,valid_to,system_from,system_to,revision,operation
+acme:aws.aws_vpc:vpc-00000000~c6996b97dc3c,aws.aws_vpc,acme,vpc-00000000,10.100.0.0/16,available,true,/acme/vpc-flowlogs/0,2026-09-15T03:45:06Z,\N,2026-09-15T03:45:06Z,\N,1,assert
+acme:aws.aws_vpc:vpc-00000001~8ecf8f04704e,aws.aws_vpc,acme,vpc-00000001,10.101.0.0/16,available,false,/acme/vpc-flowlogs/1,2026-09-15T07:56:08Z,\N,2026-09-15T07:56:08Z,\N,1,assert
+acme:aws.aws_vpc:vpc-00000002~e61beb5c2cdc,aws.aws_vpc,acme,vpc-00000002,10.102.0.0/16,available,false,/acme/vpc-flowlogs/2,2026-09-15T07:26:31Z,\N,2026-09-15T07:26:31Z,\N,1,assert

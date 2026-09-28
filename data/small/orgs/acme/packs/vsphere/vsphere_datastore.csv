@@ -1,0 +1,13 @@
+entity_id,entity_type,organization_id,datastore_moid,datastore_name,backing,capacity_gb,free_gb,is_encrypted_at_rest,valid_from,valid_to,system_from,system_to,revision,operation
+acme:vsphere.vsphere_datastore:datastore-0000~834520faf5cf,vsphere.vsphere_datastore,acme,datastore-0000,ds-000,vmdk,22045,8147,true,2021-01-07T17:42:12Z,\N,2021-01-07T17:42:12Z,\N,1,assert
+acme:vsphere.vsphere_datastore:datastore-0001~28aa6990d50d,vsphere.vsphere_datastore,acme,datastore-0001,ds-001,vmdk,31525,2497,true,2021-01-08T00:49:40Z,\N,2021-01-08T00:49:40Z,\N,1,assert
+acme:vsphere.vsphere_datastore:datastore-0002~ddac769af379,vsphere.vsphere_datastore,acme,datastore-0002,ds-002,vmdk,20719,12674,true,2021-01-09T05:28:29Z,\N,2021-01-09T05:28:29Z,\N,1,assert
+acme:vsphere.vsphere_datastore:datastore-0003~7c07ecae8b50,vsphere.vsphere_datastore,acme,datastore-0003,ds-003,nfs,25082,5474,true,2021-01-10T10:58:54Z,\N,2021-01-10T10:58:54Z,\N,1,assert
+acme:vsphere.vsphere_datastore:datastore-0004~04b950f2f80c,vsphere.vsphere_datastore,acme,datastore-0004,ds-004,vmfs_local,22934,2862,true,2021-01-11T13:34:04Z,\N,2021-01-11T13:34:04Z,\N,1,assert
+acme:vsphere.vsphere_datastore:datastore-0005~f034acd8bde7,vsphere.vsphere_datastore,acme,datastore-0005,ds-005,nfs,28635,18746,false,2021-01-12T06:34:58Z,\N,2021-01-12T06:34:58Z,\N,1,assert
+acme:vsphere.vsphere_datastore:datastore-0006~426cec1eb2c2,vsphere.vsphere_datastore,acme,datastore-0006,ds-006,vmdk,30407,5386,true,2021-05-12T07:42:54Z,\N,2021-06-15T02:52:14Z,\N,1,assert
+acme:vsphere.vsphere_datastore:datastore-0010~aea943a90fdf,vsphere.vsphere_datastore,acme,datastore-0010,ds-010,vmdk,17671,17222,false,2025-02-22T04:06:46Z,\N,2025-04-06T18:46:40Z,\N,1,assert
+acme:vsphere.vsphere_datastore:datastore-0007~b8c111d2e906,vsphere.vsphere_datastore,acme,datastore-0007,ds-007,nfs,16310,11559,true,2025-05-06T11:48:31Z,\N,2025-05-27T00:28:52Z,\N,1,assert
+acme:vsphere.vsphere_datastore:datastore-0011~eacf5590256b,vsphere.vsphere_datastore,acme,datastore-0011,ds-011,vmfs_local,37255,10920,false,2025-09-18T09:00:51Z,\N,2025-09-25T05:07:39Z,\N,1,assert
+acme:vsphere.vsphere_datastore:datastore-0009~60eeff155c20,vsphere.vsphere_datastore,acme,datastore-0009,ds-009,vvol,10078,17626,false,2026-05-08T06:16:18Z,\N,2026-05-18T22:40:07Z,\N,1,assert
+acme:vsphere.vsphere_datastore:datastore-0008~d7a25759e03e,vsphere.vsphere_datastore,acme,datastore-0008,ds-008,vvol,33013,11044,true,2026-05-22T08:17:46Z,\N,2026-06-18T13:45:10Z,\N,1,assert

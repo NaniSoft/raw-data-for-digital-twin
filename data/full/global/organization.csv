@@ -1,0 +1,2 @@
+entity_id,entity_type,org_slug,org_name,valid_from,valid_to,system_from,system_to,revision,operation
+acme:organization:acme~accb46996fcf,organization,acme,Acme Industries,2021-01-02T02:35:13Z,\N,2021-01-02T02:35:13Z,\N,1,assert

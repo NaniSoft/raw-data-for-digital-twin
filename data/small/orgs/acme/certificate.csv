@@ -1,0 +1,141 @@
+entity_id,entity_type,organization_id,subject,serial_number,issuer,is_publicly_trusted,valid_from,valid_to,system_from,system_to,revision,operation
+acme:certificate:hq-acme-example-9a477cdd0d36~ebcbd80dbd9c,certificate,acme,*.hq.acme.example,9a477cdd0d36,Let's Encrypt,true,2021-01-14T06:19:41Z,2022-02-05T21:08:48Z,2021-01-14T06:19:41Z,\N,1,assert
+acme:certificate:hq-b1-acme-example-7699ed55b06b~245a3a366c79,certificate,acme,*.hq-b1.acme.example,7699ed55b06b,DigiCert,false,2021-01-15T07:29:47Z,2023-11-11T13:08:15Z,2021-01-15T07:29:47Z,\N,1,assert
+acme:certificate:hq-b2-acme-example-bf76208f6f1b~037bc2204dc6,certificate,acme,*.hq-b2.acme.example,bf76208f6f1b,Internal Acme CA,false,2021-01-16T22:02:50Z,2023-03-25T16:23:48Z,2021-01-16T22:02:50Z,\N,1,assert
+acme:certificate:hq-dc1-acme-example-c62b855079bb~969a3d0b6711,certificate,acme,*.hq-dc1.acme.example,c62b855079bb,GlobalSign,false,2021-01-17T18:52:10Z,2022-06-04T00:49:04Z,2021-01-17T18:52:10Z,\N,1,assert
+acme:certificate:hq-dc2-acme-example-6b9da4a7b759~32d20857d35d,certificate,acme,*.hq-dc2.acme.example,6b9da4a7b759,Let's Encrypt,false,2021-01-18T04:11:06Z,2022-03-17T01:15:34Z,2021-01-18T04:11:06Z,\N,1,assert
+acme:certificate:dc2-hall2-rack03-acme-example~4bb061d79214,certificate,acme,*.dc2-hall2-rack03.acme.example,c3e4ebc00b34,Let's Encrypt,false,2021-01-19T02:00:13Z,2022-11-15T09:06:41Z,2021-01-19T02:00:13Z,\N,1,assert
+acme:certificate:remote-acme-example-5827549faee9~e535d1cb5734,certificate,acme,*.remote.acme.example,5827549faee9,Internal Acme CA,false,2021-01-19T17:07:58Z,2023-06-20T21:55:55Z,2021-01-19T17:07:58Z,\N,1,assert
+acme:certificate:hq-b2-f1-r1-acme-example-cc1080a5e964~dfeb204a2ef1,certificate,acme,*.hq-b2-f1-r1.acme.example,cc1080a5e964,Let's Encrypt,true,2021-04-07T18:22:48Z,2022-04-21T17:46:46Z,2021-04-07T18:22:48Z,\N,1,assert
+acme:certificate:hq-dc1-f1-r1-rack03-acme-example~bba197bc647b,certificate,acme,*.hq-dc1-f1-r1-rack03.acme.example,f1324d037457,Internal Acme CA,false,2021-08-13T13:09:53Z,2022-12-20T18:56:22Z,2021-08-13T13:09:53Z,\N,1,assert
+acme:certificate:hq-b2-f1-r2-acme-example-f57313ecf1f1~8a1b408a4729,certificate,acme,*.hq-b2-f1-r2.acme.example,f57313ecf1f1,Let's Encrypt,false,2022-01-13T08:23:20Z,2024-01-31T10:15:53Z,2022-01-13T08:23:20Z,\N,1,assert
+acme:certificate:remote-acme-example-f9570ecc1a1a~e1f0411b653f,certificate,acme,*.remote.acme.example,f9570ecc1a1a,DigiCert,false,2022-02-06T18:12:51Z,2023-06-30T00:07:46Z,2022-02-06T18:12:51Z,\N,1,assert
+acme:certificate:hq-acme-example-9a477cdd0d36~ebcbd80dbd9c,certificate,acme,\N,\N,\N,\N,2022-02-05T21:08:48Z,\N,2022-02-07T09:50:34Z,\N,2,retract
+acme:certificate:hq-dc1-f1-r1-acme-example-1d314a68890c~3c7b3d4c31ca,certificate,acme,*.hq-dc1-f1-r1.acme.example,1d314a68890c,GlobalSign,false,2022-03-17T03:18:39Z,2024-03-09T08:15:56Z,2022-03-17T03:18:39Z,\N,1,assert
+acme:certificate:hq-b1-acme-example-e3f4f7d04eeb~de5ea8bada66,certificate,acme,*.hq-b1.acme.example,e3f4f7d04eeb,Amazon RSA 2048 M01,false,2022-03-18T06:08:10Z,2024-07-10T01:43:40Z,2022-03-18T06:08:10Z,\N,1,assert
+acme:certificate:hq-dc2-acme-example-6b9da4a7b759~32d20857d35d,certificate,acme,\N,\N,\N,\N,2022-03-17T01:15:34Z,\N,2022-03-19T02:22:25Z,\N,2,retract
+acme:certificate:remote-office-f2-acme-example~2a7d314e9373,certificate,acme,*.remote-office-f2.acme.example,d33f1c39244b,Internal Acme CA,false,2022-04-22T18:24:32Z,2025-01-06T11:40:49Z,2022-04-22T18:24:32Z,\N,1,assert
+acme:certificate:hq-b2-f1-r1-acme-example-cc1080a5e964~dfeb204a2ef1,certificate,acme,\N,\N,\N,\N,2022-04-21T17:46:46Z,\N,2022-04-23T18:35:28Z,\N,2,retract
+acme:certificate:dc2-hall1-rack01-acme-example~a6eedcb35cc6,certificate,acme,*.dc2-hall1-rack01.acme.example,51ef153fe2fa,Amazon RSA 2048 M01,true,2022-05-03T19:37:41Z,2023-05-21T16:48:02Z,2022-05-03T19:37:41Z,\N,1,assert
+acme:certificate:hq-dc2-f1-acme-example-30649aca129d~9044d2d8e9b5,certificate,acme,*.hq-dc2-f1.acme.example,30649aca129d,GlobalSign,true,2022-05-04T23:20:34Z,2023-05-25T08:57:39Z,2022-05-04T23:20:34Z,\N,1,assert
+acme:certificate:hq-b2-acme-example-71777c58a7e4~9792abf6e6a8,certificate,acme,*.hq-b2.acme.example,71777c58a7e4,Amazon RSA 2048 M01,false,2022-06-05T15:04:00Z,2024-08-05T03:22:14Z,2022-06-05T15:04:00Z,\N,1,assert
+acme:certificate:hq-dc1-acme-example-c62b855079bb~969a3d0b6711,certificate,acme,\N,\N,\N,\N,2022-06-04T00:49:04Z,\N,2022-06-06T11:34:03Z,\N,2,retract
+acme:certificate:dc2-hall2-rack03-acme-example~4bb061d79214,certificate,acme,\N,\N,\N,\N,2022-11-15T09:06:41Z,\N,2022-11-17T15:54:09Z,\N,2,retract
+acme:certificate:aws-reg-5-acme-example-a58c6e2fc166~f166adfe4225,certificate,acme,*.aws-reg-5.acme.example,a58c6e2fc166,Let's Encrypt,false,2022-12-02T06:28:01Z,2024-09-20T19:20:21Z,2022-12-02T06:28:01Z,\N,1,assert
+acme:certificate:hq-dc1-f1-r1-rack03-acme-example~bba197bc647b,certificate,acme,\N,\N,\N,\N,2022-12-20T18:56:22Z,\N,2022-12-22T21:37:22Z,\N,2,retract
+acme:certificate:hq-dc1-f2-r1-rack04-acme-example~45620b5349a9,certificate,acme,*.hq-dc1-f2-r1-rack04.acme.example,7aeafae5e081,DigiCert,false,2023-02-03T18:06:19Z,2024-09-28T17:21:39Z,2023-02-03T18:06:19Z,\N,1,assert
+acme:certificate:hq-dc1-f1-acme-example-6aea8bd7ba11~153ae852e20a,certificate,acme,*.hq-dc1-f1.acme.example,6aea8bd7ba11,Sectigo,false,2023-03-05T05:44:52Z,2025-05-16T00:22:41Z,2023-03-05T05:44:52Z,\N,1,assert
+acme:certificate:hq-dc1-acme-example-b28d98996d82~9cb1efddd740,certificate,acme,*.hq-dc1.acme.example,b28d98996d82,Sectigo,true,2023-03-26T06:25:12Z,2024-04-25T03:46:59Z,2023-03-26T06:25:12Z,\N,1,assert
+acme:certificate:hq-b2-acme-example-bf76208f6f1b~037bc2204dc6,certificate,acme,\N,\N,\N,\N,2023-03-25T16:23:48Z,\N,2023-03-27T12:38:06Z,\N,2,retract
+acme:certificate:hq-b1-f1-r1-rack03-acme-example~229279aaf1f7,certificate,acme,*.hq-b1-f1-r1-rack03.acme.example,50b49ac691cc,Amazon RSA 2048 M01,false,2023-05-02T22:57:54Z,2024-06-24T15:13:20Z,2023-05-02T22:57:54Z,\N,1,assert
+acme:certificate:dc2-hall1-rack01-acme-example~a6eedcb35cc6,certificate,acme,\N,\N,\N,\N,2023-05-21T16:48:02Z,\N,2023-05-23T01:01:08Z,\N,2,retract
+acme:certificate:aws-reg-4-acme-example-b4bef2f73413~a70963322968,certificate,acme,*.aws-reg-4.acme.example,b4bef2f73413,Internal Acme CA,true,2023-05-26T01:04:26Z,2024-06-24T05:19:47Z,2023-05-26T01:04:26Z,\N,1,assert
+acme:certificate:hq-dc2-f1-acme-example-30649aca129d~9044d2d8e9b5,certificate,acme,\N,\N,\N,\N,2023-05-25T08:57:39Z,\N,2023-05-27T16:59:09Z,\N,2,retract
+acme:certificate:hq-acme-example-43d3523c1251~96bbb6255c0d,certificate,acme,*.hq.acme.example,43d3523c1251,Let's Encrypt,false,2023-06-21T13:53:31Z,2025-12-07T16:46:51Z,2023-06-21T13:53:31Z,\N,1,assert
+acme:certificate:remote-acme-example-5827549faee9~e535d1cb5734,certificate,acme,\N,\N,\N,\N,2023-06-20T21:55:55Z,\N,2023-06-22T15:03:37Z,\N,2,retract
+acme:certificate:remote-acme-example-f9570ecc1a1a~e1f0411b653f,certificate,acme,\N,\N,\N,\N,2023-06-30T00:07:46Z,\N,2023-07-02T21:30:02Z,\N,2,retract
+acme:certificate:hq-b2-f1-acme-example-0f3a9f14dbba~363a81c2b5aa,certificate,acme,*.hq-b2-f1.acme.example,0f3a9f14dbba,GlobalSign,false,2023-08-02T02:28:20Z,2025-03-12T21:58:39Z,2023-08-02T02:28:20Z,\N,1,assert
+acme:certificate:hq-dc1-f1-r1-rack04-acme-example~afb796954791,certificate,acme,*.hq-dc1-f1-r1-rack04.acme.example,012fb8ea0381,Let's Encrypt,false,2023-08-19T15:05:21Z,2025-01-20T02:55:13Z,2023-08-19T15:05:21Z,\N,1,assert
+acme:certificate:dc2-acme-example-36c2ab85c24f~2b2b404fe45f,certificate,acme,*.dc2.acme.example,36c2ab85c24f,Amazon RSA 2048 M01,false,2023-09-25T23:41:55Z,2025-03-09T08:34:44Z,2023-09-25T23:41:55Z,\N,1,assert
+acme:certificate:hq-b1-f1-r1-rack04-acme-example~2917c69b2217,certificate,acme,*.hq-b1-f1-r1-rack04.acme.example,9d8a653b8109,Sectigo,false,2023-10-01T08:23:33Z,2025-01-10T08:05:24Z,2023-10-01T08:23:33Z,\N,1,assert
+acme:certificate:hq-dc2-acme-example-d6a6bc38a74c~39cb3e74b0e5,certificate,acme,*.hq-dc2.acme.example,d6a6bc38a74c,DigiCert,false,2023-11-12T21:46:19Z,2025-11-25T11:23:00Z,2023-11-12T21:46:19Z,\N,1,assert
+acme:certificate:hq-b1-acme-example-7699ed55b06b~245a3a366c79,certificate,acme,\N,\N,\N,\N,2023-11-11T13:08:15Z,\N,2023-11-13T08:39:10Z,\N,2,retract
+acme:certificate:hq-b2-f2-acme-example-81655a4523e4~5ca9bf06ddf3,certificate,acme,*.hq-b2-f2.acme.example,81655a4523e4,GlobalSign,false,2023-11-13T17:28:00Z,2025-03-10T13:33:35Z,2023-11-13T17:28:00Z,\N,1,assert
+acme:certificate:hq-dc1-f1-r2-acme-example-1abba2ff6b1a~22be3d830267,certificate,acme,*.hq-dc1-f1-r2.acme.example,1abba2ff6b1a,Internal Acme CA,false,2023-11-14T15:18:50Z,2026-05-23T17:57:49Z,2023-11-14T15:18:50Z,\N,1,assert
+acme:certificate:dc2-hall2-rack01-acme-example~eab65a1e8ca8,certificate,acme,*.dc2-hall2-rack01.acme.example,8a439e96eb9c,GlobalSign,true,2024-01-22T20:40:16Z,2025-02-13T17:06:01Z,2024-01-22T20:40:16Z,\N,1,assert
+acme:certificate:remote-office-f1-r2-acme-example~3a36e903ea7a,certificate,acme,*.remote-office-f1-r2.acme.example,79cb8a9d9301,GlobalSign,true,2024-02-01T12:15:12Z,2025-02-20T20:56:56Z,2024-02-01T12:15:12Z,\N,1,assert
+acme:certificate:hq-b2-f1-r2-acme-example-f57313ecf1f1~8a1b408a4729,certificate,acme,\N,\N,\N,\N,2024-01-31T10:15:53Z,\N,2024-02-02T13:45:51Z,\N,2,retract
+acme:certificate:hq-b1-f2-acme-example-5231e954cbad~94ff655ea642,certificate,acme,*.hq-b1-f2.acme.example,5231e954cbad,Amazon RSA 2048 M01,false,2024-02-03T02:24:10Z,2026-11-02T21:25:25Z,2024-02-03T02:24:10Z,\N,1,assert
+acme:certificate:remote-office-f1-r1-acme-example~953ab3695fdf,certificate,acme,*.remote-office-f1-r1.acme.example,206a8725ef3f,Let's Encrypt,false,2024-03-10T09:39:12Z,2025-12-19T01:57:14Z,2024-03-10T09:39:12Z,\N,1,assert
+acme:certificate:hq-dc1-f1-r1-acme-example-1d314a68890c~3c7b3d4c31ca,certificate,acme,\N,\N,\N,\N,2024-03-09T08:15:56Z,\N,2024-03-11T21:57:30Z,\N,2,retract
+acme:certificate:hq-dc1-acme-example-b28d98996d82~9cb1efddd740,certificate,acme,\N,\N,\N,\N,2024-04-25T03:46:59Z,\N,2024-04-27T02:03:26Z,\N,2,retract
+acme:certificate:hq-b1-f2-r2-acme-example-7b2708c856cf~573acae6775d,certificate,acme,*.hq-b1-f2-r2.acme.example,7b2708c856cf,Let's Encrypt,false,2024-05-01T13:23:15Z,2026-11-08T08:10:01Z,2024-05-01T13:23:15Z,\N,1,assert
+acme:certificate:hq-b1-f1-r1-rack02-acme-example~4e681eff2fed,certificate,acme,*.hq-b1-f1-r1-rack02.acme.example,f0fd483ea68c,Let's Encrypt,false,2024-05-13T21:36:27Z,2026-12-31T22:48:18Z,2024-05-13T21:36:27Z,\N,1,assert
+acme:certificate:aws-reg-4-acme-example-b4bef2f73413~a70963322968,certificate,acme,\N,\N,\N,\N,2024-06-24T05:19:47Z,\N,2024-06-26T06:29:37Z,\N,2,retract
+acme:certificate:hq-b1-f1-r1-rack03-acme-example~229279aaf1f7,certificate,acme,\N,\N,\N,\N,2024-06-24T15:13:20Z,\N,2024-06-26T16:46:53Z,\N,2,retract
+acme:certificate:hq-b1-acme-example-e3f4f7d04eeb~de5ea8bada66,certificate,acme,\N,\N,\N,\N,2024-07-10T01:43:40Z,\N,2024-07-12T14:28:14Z,\N,2,retract
+acme:certificate:hq-b2-acme-example-71777c58a7e4~9792abf6e6a8,certificate,acme,\N,\N,\N,\N,2024-08-05T03:22:14Z,\N,2024-08-07T20:38:32Z,\N,2,retract
+acme:certificate:dc2-hall1-acme-example-0f53f06f4c2d~fbb2b84d863c,certificate,acme,*.dc2-hall1.acme.example,0f53f06f4c2d,Internal Acme CA,true,2024-08-19T00:35:54Z,2025-09-11T15:00:45Z,2024-08-19T00:35:54Z,\N,1,assert
+acme:certificate:aws-reg-5-acme-example-a58c6e2fc166~f166adfe4225,certificate,acme,\N,\N,\N,\N,2024-09-20T19:20:21Z,\N,2024-09-22T00:13:26Z,\N,2,retract
+acme:certificate:hq-dc1-f2-r1-rack04-acme-example~45620b5349a9,certificate,acme,\N,\N,\N,\N,2024-09-28T17:21:39Z,\N,2024-09-30T18:24:39Z,\N,2,retract
+acme:certificate:hq-dc1-f2-r1-acme-example-7f9082ddab13~d2793ec7ce3e,certificate,acme,*.hq-dc1-f2-r1.acme.example,7f9082ddab13,Amazon RSA 2048 M01,true,2024-12-08T00:53:31Z,2026-01-06T00:26:34Z,2024-12-08T00:53:31Z,\N,1,assert
+acme:certificate:hq-dc1-f2-r2-acme-example-2b13cb729d1a~530175969389,certificate,acme,*.hq-dc1-f2-r2.acme.example,2b13cb729d1a,Sectigo,false,2024-12-26T06:34:08Z,2027-02-02T06:08:49Z,2024-12-26T06:34:08Z,\N,1,assert
+acme:certificate:remote-office-f2-acme-example~2a7d314e9373,certificate,acme,\N,\N,\N,\N,2025-01-06T11:40:49Z,\N,2025-01-08T03:56:26Z,\N,2,retract
+acme:certificate:hq-b1-f1-r1-rack04-acme-example~2917c69b2217,certificate,acme,\N,\N,\N,\N,2025-01-10T08:05:24Z,\N,2025-01-12T09:21:03Z,\N,2,retract
+acme:certificate:hq-dc1-f1-r1-rack04-acme-example~afb796954791,certificate,acme,\N,\N,\N,\N,2025-01-20T02:55:13Z,\N,2025-01-22T12:55:45Z,\N,2,retract
+acme:certificate:dc2-hall2-rack01-acme-example~eab65a1e8ca8,certificate,acme,\N,\N,\N,\N,2025-02-13T17:06:01Z,\N,2025-02-15T10:59:45Z,\N,2,retract
+acme:certificate:remote-office-f1-r2-acme-example~3a36e903ea7a,certificate,acme,\N,\N,\N,\N,2025-02-20T20:56:56Z,\N,2025-02-22T03:47:26Z,\N,2,retract
+acme:certificate:dc2-acme-example-36c2ab85c24f~2b2b404fe45f,certificate,acme,\N,\N,\N,\N,2025-03-09T08:34:44Z,\N,2025-03-11T15:47:28Z,\N,2,retract
+acme:certificate:aws-reg-1-az1-acme-example-d10452de3900~ab6d941c1a06,certificate,acme,*.aws-reg-1-az1.acme.example,d10452de3900,DigiCert,false,2025-03-11T20:20:00Z,2027-04-24T07:36:38Z,2025-03-11T20:20:00Z,\N,1,assert
+acme:certificate:hq-b2-f2-acme-example-81655a4523e4~5ca9bf06ddf3,certificate,acme,\N,\N,\N,\N,2025-03-10T13:33:35Z,\N,2025-03-12T23:20:11Z,\N,2,retract
+acme:certificate:aws-reg-1-az2-acme-example-797ac3be540b~d7dec86ee9dc,certificate,acme,*.aws-reg-1-az2.acme.example,797ac3be540b,Let's Encrypt,false,2025-03-13T09:16:08Z,2026-06-24T12:12:47Z,2025-03-13T09:16:08Z,\N,1,assert
+acme:certificate:hq-b2-f1-acme-example-0f3a9f14dbba~363a81c2b5aa,certificate,acme,\N,\N,\N,\N,2025-03-12T21:58:39Z,\N,2025-03-14T03:35:36Z,\N,2,retract
+acme:certificate:hq-b1-f1-acme-example-b9c10637b74c~b9cc1c9d0b9f,certificate,acme,*.hq-b1-f1.acme.example,b9c10637b74c,Sectigo,false,2025-03-21T12:28:03Z,2027-04-24T01:03:22Z,2025-03-21T12:28:03Z,\N,1,assert
+acme:certificate:aws-reg-6-acme-example-074ec062134a~9079a3bdc282,certificate,acme,*.aws-reg-6.acme.example,074ec062134a,DigiCert,true,2025-05-17T23:13:24Z,2026-06-17T11:25:07Z,2025-05-17T23:13:24Z,\N,1,assert
+acme:certificate:hq-dc1-f1-acme-example-6aea8bd7ba11~153ae852e20a,certificate,acme,\N,\N,\N,\N,2025-05-16T00:22:41Z,\N,2025-05-18T09:24:24Z,\N,2,retract
+acme:certificate:hq-dc1-f2-r1-rack03-acme-example~30290708012d,certificate,acme,*.hq-dc1-f2-r1-rack03.acme.example,2620e5c170f4,Internal Acme CA,false,2025-05-23T05:59:50Z,2027-04-24T17:57:08Z,2025-05-23T05:59:50Z,\N,1,assert
+acme:certificate:hq-dc1-f1-r1-rack02-acme-example~72e51962e139,certificate,acme,*.hq-dc1-f1-r1-rack02.acme.example,30121f77f7f4,GlobalSign,true,2025-05-29T11:10:19Z,2026-06-18T05:44:28Z,2025-05-29T11:10:19Z,\N,1,assert
+acme:certificate:hq-dc1-f2-r1-rack01-acme-example~0ab70150c322,certificate,acme,*.hq-dc1-f2-r1-rack01.acme.example,8d7cf6fa3203,GlobalSign,false,2025-06-04T10:04:33Z,2027-02-23T07:11:10Z,2025-06-04T10:04:33Z,\N,1,assert
+acme:certificate:remote-office-f2-r2-acme-example~07c849575165,certificate,acme,*.remote-office-f2-r2.acme.example,bb663768c74e,Amazon RSA 2048 M01,true,2025-07-27T14:30:35Z,2026-08-17T20:36:22Z,2025-07-27T14:30:35Z,\N,1,assert
+acme:certificate:dc2-hall1-acme-example-0f53f06f4c2d~fbb2b84d863c,certificate,acme,\N,\N,\N,\N,2025-09-11T15:00:45Z,\N,2025-09-13T07:59:21Z,\N,2,retract
+acme:certificate:hq-dc2-acme-example-d6a6bc38a74c~39cb3e74b0e5,certificate,acme,\N,\N,\N,\N,2025-11-25T11:23:00Z,\N,2025-11-27T13:32:24Z,\N,2,retract
+acme:certificate:hq-acme-example-43d3523c1251~96bbb6255c0d,certificate,acme,\N,\N,\N,\N,2025-12-07T16:46:51Z,\N,2025-12-09T16:07:59Z,\N,2,retract
+acme:certificate:remote-office-f1-r1-acme-example~953ab3695fdf,certificate,acme,\N,\N,\N,\N,2025-12-19T01:57:14Z,\N,2025-12-21T13:55:36Z,\N,2,retract
+acme:certificate:remote-office-acme-example-52496d84082b~b9e7168b5bda,certificate,acme,*.remote-office.acme.example,52496d84082b,Sectigo,false,2026-01-07T21:54:23Z,2027-04-24T15:24:06Z,2026-01-07T21:54:23Z,\N,1,assert
+acme:certificate:hq-dc1-f2-r1-acme-example-7f9082ddab13~d2793ec7ce3e,certificate,acme,\N,\N,\N,\N,2026-01-06T00:26:34Z,\N,2026-01-08T16:30:55Z,\N,2,retract
+acme:certificate:hq-dc2-f2-acme-example-ba819c27cb19~64ba496e778d,certificate,acme,*.hq-dc2-f2.acme.example,ba819c27cb19,Amazon RSA 2048 M01,true,2026-01-20T14:43:07Z,2027-02-17T00:53:04Z,2026-01-20T14:43:07Z,\N,1,assert
+acme:certificate:hq-b1-f1-r2-acme-example-7223735e7d35~43b85c827a6a,certificate,acme,*.hq-b1-f1-r2.acme.example,7223735e7d35,Let's Encrypt,true,2026-01-21T11:32:14Z,2027-02-17T12:31:37Z,2026-01-21T11:32:14Z,\N,1,assert
+acme:certificate:dc2-hall1-rack03-acme-example~e784989b95c1,certificate,acme,*.dc2-hall1-rack03.acme.example,97c6b46b5773,DigiCert,false,2026-01-23T07:18:02Z,2027-04-24T15:44:52Z,2026-01-23T07:18:02Z,\N,1,assert
+acme:certificate:hq-b1-f2-r1-acme-example-d6928e7d03da~482bbb0d2948,certificate,acme,*.hq-b1-f2-r1.acme.example,d6928e7d03da,DigiCert,true,2026-03-13T02:24:49Z,2027-04-15T00:39:56Z,2026-03-13T02:24:49Z,\N,1,assert
+acme:certificate:hq-b1-f1-r1-rack01-acme-example~90395a5e4d51,certificate,acme,*.hq-b1-f1-r1-rack01.acme.example,7199d3f86ddc,GlobalSign,false,2026-04-22T19:43:41Z,2027-04-24T02:59:38Z,2026-04-22T19:43:41Z,\N,1,assert
+acme:certificate:remote-office-f1-acme-example~fa85ecd38222,certificate,acme,*.remote-office-f1.acme.example,7b7c1c8d51b0,DigiCert,false,2026-05-24T04:16:46Z,2027-04-24T03:13:10Z,2026-05-24T04:16:46Z,\N,1,assert
+acme:certificate:hq-dc1-f1-r2-acme-example-1abba2ff6b1a~22be3d830267,certificate,acme,\N,\N,\N,\N,2026-05-23T17:57:49Z,\N,2026-05-25T05:16:34Z,\N,2,retract
+acme:certificate:dc2-hall4-acme-example-54f5c4443a69~0722635f9078,certificate,acme,*.dc2-hall4.acme.example,54f5c4443a69,Let's Encrypt,false,2026-06-02T17:34:59Z,2027-04-24T13:30:19Z,2026-06-02T17:34:59Z,\N,1,assert
+acme:certificate:aws-reg-6-acme-example-074ec062134a~9079a3bdc282,certificate,acme,\N,\N,\N,\N,2026-06-17T11:25:07Z,\N,2026-06-19T10:36:26Z,\N,2,retract
+acme:certificate:hq-dc1-f1-r1-rack02-acme-example~72e51962e139,certificate,acme,\N,\N,\N,\N,2026-06-18T05:44:28Z,\N,2026-06-20T14:55:49Z,\N,2,retract
+acme:certificate:aws-reg-1-az2-acme-example-797ac3be540b~d7dec86ee9dc,certificate,acme,\N,\N,\N,\N,2026-06-24T12:12:47Z,\N,2026-06-26T01:02:56Z,\N,2,retract
+acme:certificate:hq-b1-f1-r1-acme-example-38ebfde3c66d~728a61e42d99,certificate,acme,*.hq-b1-f1-r1.acme.example,38ebfde3c66d,GlobalSign,true,2026-07-01T13:11:38Z,2027-01-06T06:50:49Z,2026-07-01T13:11:38Z,\N,1,assert
+acme:certificate:dc2-hall2-acme-example-1434b9bd1c70~05680084f45c,certificate,acme,*.dc2-hall2.acme.example,1434b9bd1c70,DigiCert,true,2026-08-08T06:39:37Z,2027-02-21T06:19:48Z,2026-08-08T06:39:37Z,\N,1,assert
+acme:certificate:dc2-hall2-rack02-acme-example~ef73cf218ff8,certificate,acme,*.dc2-hall2-rack02.acme.example,9e85da69217c,Let's Encrypt,false,2026-08-19T05:22:54Z,2027-04-24T23:16:46Z,2026-08-19T05:22:54Z,\N,1,assert
+acme:certificate:remote-office-f2-r2-acme-example~07c849575165,certificate,acme,\N,\N,\N,\N,2026-08-17T20:36:22Z,\N,2026-08-19T07:24:41Z,\N,2,retract
+acme:certificate:hq-dc1-f2-acme-example-cd2363368418~c1759bfb4fc5,certificate,acme,*.hq-dc1-f2.acme.example,cd2363368418,Amazon RSA 2048 M01,false,2026-08-23T02:25:58Z,2027-04-24T09:25:25Z,2026-08-23T02:25:58Z,\N,1,assert
+acme:certificate:hq-dc1-f1-r1-rack01-acme-example~55c30bf0654e,certificate,acme,*.hq-dc1-f1-r1-rack01.acme.example,11777eed66ce,Amazon RSA 2048 M01,false,2026-09-08T23:58:39Z,2027-04-24T17:06:53Z,2026-09-08T23:58:39Z,\N,1,assert
+acme:certificate:dc2-hall1-rack02-acme-example~889a347b03fc,certificate,acme,*.dc2-hall1-rack02.acme.example,3d5cf329e6a5,Sectigo,false,2026-10-16T01:20:43Z,2027-04-24T04:01:08Z,2026-10-16T01:20:43Z,\N,1,assert
+acme:certificate:aws-reg-2-az1-acme-example-c270e25ffc33~e0617ee3aa10,certificate,acme,*.aws-reg-2-az1.acme.example,c270e25ffc33,Let's Encrypt,false,2026-11-03T05:00:52Z,2027-04-24T04:25:21Z,2026-11-03T05:00:52Z,\N,1,assert
+acme:certificate:hq-b1-f2-acme-example-5231e954cbad~94ff655ea642,certificate,acme,\N,\N,\N,\N,2026-11-02T21:25:25Z,\N,2026-11-04T04:07:07Z,\N,2,retract
+acme:certificate:remote-office-f2-r1-acme-example~94b6196b9afb,certificate,acme,*.remote-office-f2-r1.acme.example,9828f76ee51c,Let's Encrypt,false,2026-11-09T16:37:14Z,2027-04-24T17:59:08Z,2026-11-09T16:37:14Z,\N,1,assert
+acme:certificate:hq-b1-f2-r2-acme-example-7b2708c856cf~573acae6775d,certificate,acme,\N,\N,\N,\N,2026-11-08T08:10:01Z,\N,2026-11-10T08:26:59Z,\N,2,retract
+acme:certificate:hq-dc1-f2-r1-rack02-acme-example~4fd220bfdf39,certificate,acme,*.hq-dc1-f2-r1-rack02.acme.example,a622568767be,Amazon RSA 2048 M01,false,2026-11-20T02:20:51Z,2027-04-24T04:48:35Z,2026-11-20T02:20:51Z,\N,1,assert
+acme:certificate:dc2-hall3-acme-example-abafff2ed4ac~cd492c55a7af,certificate,acme,*.dc2-hall3.acme.example,abafff2ed4ac,Let's Encrypt,false,2026-12-07T16:49:35Z,2027-04-24T11:23:20Z,2026-12-07T16:49:35Z,\N,1,assert
+acme:certificate:hq-b1-f1-r1-rack02-acme-example~4e681eff2fed,certificate,acme,\N,\N,\N,\N,2026-12-31T22:48:18Z,\N,2027-01-02T08:32:32Z,\N,2,retract
+acme:certificate:aws-reg-2-acme-example-794936d0f4d0~a5564284570a,certificate,acme,*.aws-reg-2.acme.example,794936d0f4d0,GlobalSign,false,2027-01-07T21:45:50Z,2027-04-24T18:59:03Z,2027-01-07T21:45:50Z,\N,1,assert
+acme:certificate:hq-b1-f1-r1-acme-example-38ebfde3c66d~728a61e42d99,certificate,acme,\N,\N,\N,\N,2027-01-06T06:50:49Z,\N,2027-01-08T02:18:16Z,\N,2,retract
+acme:certificate:aws-reg-3-az1-acme-example-41ddff059be6~9eae13cfa43b,certificate,acme,*.aws-reg-3-az1.acme.example,41ddff059be6,GlobalSign,false,2027-01-31T14:38:11Z,2027-04-24T00:26:46Z,2027-01-31T14:38:11Z,\N,1,assert
+acme:certificate:hq-dc1-f2-r2-acme-example-2b13cb729d1a~530175969389,certificate,acme,\N,\N,\N,\N,2027-02-02T06:08:49Z,\N,2027-02-04T12:38:20Z,\N,2,retract
+acme:certificate:aws-reg-3-acme-example-0a8853869d61~8836240ac7b9,certificate,acme,*.aws-reg-3.acme.example,0a8853869d61,Internal Acme CA,false,2027-02-18T00:57:46Z,2027-04-24T03:43:02Z,2027-02-18T00:57:46Z,\N,1,assert
+acme:certificate:aws-reg-1-acme-example-7e8491500f55~a5cd9f322679,certificate,acme,*.aws-reg-1.acme.example,7e8491500f55,Sectigo,false,2027-02-18T13:35:11Z,2027-04-24T15:49:37Z,2027-02-18T13:35:11Z,\N,1,assert
+acme:certificate:hq-b1-f1-r2-acme-example-7223735e7d35~43b85c827a6a,certificate,acme,\N,\N,\N,\N,2027-02-17T12:31:37Z,\N,2027-02-19T17:36:09Z,\N,2,retract
+acme:certificate:hq-dc2-f2-acme-example-ba819c27cb19~64ba496e778d,certificate,acme,\N,\N,\N,\N,2027-02-17T00:53:04Z,\N,2027-02-19T22:51:52Z,\N,2,retract
+acme:certificate:dc2-hall2-acme-example-1434b9bd1c70~05680084f45c,certificate,acme,\N,\N,\N,\N,2027-02-21T06:19:48Z,\N,2027-02-23T20:01:25Z,\N,2,retract
+acme:certificate:hq-dc1-f2-r1-rack01-acme-example~0ab70150c322,certificate,acme,\N,\N,\N,\N,2027-02-23T07:11:10Z,\N,2027-02-25T21:55:27Z,\N,2,retract
+acme:certificate:hq-b1-f2-r1-acme-example-d6928e7d03da~482bbb0d2948,certificate,acme,\N,\N,\N,\N,2027-04-15T00:39:56Z,\N,2027-04-17T22:03:07Z,\N,2,retract
+acme:certificate:hq-dc1-f2-r1-rack02-acme-example~4fd220bfdf39,certificate,acme,\N,\N,\N,\N,2027-04-24T04:48:35Z,\N,2027-04-25T02:57:45Z,\N,2,retract
+acme:certificate:dc2-hall1-rack02-acme-example~889a347b03fc,certificate,acme,\N,\N,\N,\N,2027-04-24T04:01:08Z,\N,2027-04-25T03:04:01Z,\N,2,retract
+acme:certificate:remote-office-f2-r1-acme-example~94b6196b9afb,certificate,acme,\N,\N,\N,\N,2027-04-24T17:59:08Z,\N,2027-04-25T05:34:29Z,\N,2,retract
+acme:certificate:dc2-hall1-rack03-acme-example~e784989b95c1,certificate,acme,\N,\N,\N,\N,2027-04-24T15:44:52Z,\N,2027-04-25T06:00:58Z,\N,2,retract
+acme:certificate:hq-dc1-f2-acme-example-cd2363368418~c1759bfb4fc5,certificate,acme,\N,\N,\N,\N,2027-04-24T09:25:25Z,\N,2027-04-25T07:48:21Z,\N,2,retract
+acme:certificate:hq-b1-f1-acme-example-b9c10637b74c~b9cc1c9d0b9f,certificate,acme,\N,\N,\N,\N,2027-04-24T01:03:22Z,\N,2027-04-25T08:07:05Z,\N,2,retract
+acme:certificate:aws-reg-2-acme-example-794936d0f4d0~a5564284570a,certificate,acme,\N,\N,\N,\N,2027-04-24T18:59:03Z,\N,2027-04-25T11:03:47Z,\N,2,retract
+acme:certificate:aws-reg-3-az1-acme-example-41ddff059be6~9eae13cfa43b,certificate,acme,\N,\N,\N,\N,2027-04-24T00:26:46Z,\N,2027-04-25T11:43:52Z,\N,2,retract
+acme:certificate:dc2-hall4-acme-example-54f5c4443a69~0722635f9078,certificate,acme,\N,\N,\N,\N,2027-04-24T13:30:19Z,\N,2027-04-25T12:32:58Z,\N,2,retract
+acme:certificate:hq-dc1-f2-r1-rack03-acme-example~30290708012d,certificate,acme,\N,\N,\N,\N,2027-04-24T17:57:08Z,\N,2027-04-25T14:00:01Z,\N,2,retract
+acme:certificate:remote-office-f1-acme-example~fa85ecd38222,certificate,acme,\N,\N,\N,\N,2027-04-24T03:13:10Z,\N,2027-04-25T14:59:33Z,\N,2,retract
+acme:certificate:aws-reg-1-az1-acme-example-d10452de3900~ab6d941c1a06,certificate,acme,\N,\N,\N,\N,2027-04-24T07:36:38Z,\N,2027-04-25T16:55:44Z,\N,2,retract
+acme:certificate:aws-reg-3-acme-example-0a8853869d61~8836240ac7b9,certificate,acme,\N,\N,\N,\N,2027-04-24T03:43:02Z,\N,2027-04-25T16:59:39Z,\N,2,retract
+acme:certificate:hq-b1-f1-r1-rack01-acme-example~90395a5e4d51,certificate,acme,\N,\N,\N,\N,2027-04-24T02:59:38Z,\N,2027-04-25T17:11:50Z,\N,2,retract
+acme:certificate:hq-dc1-f1-r1-rack01-acme-example~55c30bf0654e,certificate,acme,\N,\N,\N,\N,2027-04-24T17:06:53Z,\N,2027-04-25T18:35:14Z,\N,2,retract
+acme:certificate:dc2-hall2-rack02-acme-example~ef73cf218ff8,certificate,acme,\N,\N,\N,\N,2027-04-24T23:16:46Z,\N,2027-04-25T19:23:26Z,\N,2,retract
+acme:certificate:aws-reg-1-acme-example-7e8491500f55~a5cd9f322679,certificate,acme,\N,\N,\N,\N,2027-04-24T15:49:37Z,\N,2027-04-25T19:46:33Z,\N,2,retract
+acme:certificate:aws-reg-2-az1-acme-example-c270e25ffc33~e0617ee3aa10,certificate,acme,\N,\N,\N,\N,2027-04-24T04:25:21Z,\N,2027-04-25T21:19:57Z,\N,2,retract
+acme:certificate:dc2-hall3-acme-example-abafff2ed4ac~cd492c55a7af,certificate,acme,\N,\N,\N,\N,2027-04-24T11:23:20Z,\N,2027-04-25T21:28:28Z,\N,2,retract
+acme:certificate:remote-office-acme-example-52496d84082b~b9e7168b5bda,certificate,acme,\N,\N,\N,\N,2027-04-24T15:24:06Z,\N,2027-04-25T23:17:28Z,\N,2,retract

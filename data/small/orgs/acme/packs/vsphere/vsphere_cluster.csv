@@ -1,0 +1,6 @@
+entity_id,entity_type,organization_id,cluster_moid,cluster_name,drs_enabled,ha_mode,is_ha_enabled,valid_from,valid_to,system_from,system_to,revision,operation
+acme:vsphere.vsphere_cluster:domain-c000~e33f6582d910,vsphere.vsphere_cluster,acme,domain-c000,cluster-00,true,failover,true,2021-01-07T17:42:12Z,\N,2021-01-07T17:42:12Z,\N,1,assert
+acme:vsphere.vsphere_cluster:domain-c001~e6103accc6ff,vsphere.vsphere_cluster,acme,domain-c001,cluster-01,true,failover,true,2021-01-08T00:49:40Z,\N,2021-01-08T00:49:40Z,\N,1,assert
+acme:vsphere.vsphere_cluster:domain-c002~ff4ca041ce02,vsphere.vsphere_cluster,acme,domain-c002,cluster-02,true,failover,true,2021-01-09T05:28:29Z,\N,2021-01-09T05:28:29Z,\N,1,assert
+acme:vsphere.vsphere_cluster:domain-c003~85dc530d0259,vsphere.vsphere_cluster,acme,domain-c003,cluster-03,false,ft,true,2021-01-10T10:58:54Z,\N,2021-01-10T10:58:54Z,\N,1,assert
+acme:vsphere.vsphere_cluster:domain-c004~1f2f2262ef37,vsphere.vsphere_cluster,acme,domain-c004,cluster-04,false,ft,true,2021-01-11T13:34:04Z,\N,2021-01-11T13:34:04Z,\N,1,assert

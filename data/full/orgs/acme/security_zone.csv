@@ -1,0 +1,10 @@
+entity_id,entity_type,organization_id,zone_code,zone_name,zone_class,valid_from,valid_to,system_from,system_to,revision,operation
+acme:security_zone:zone-internet~025abca34332,security_zone,acme,ZONE-INTERNET,Internet-facing edge,internet,2021-01-02T02:35:13Z,\N,2021-01-02T02:35:13Z,\N,1,assert
+acme:security_zone:zone-mgmt~a0ced167f630,security_zone,acme,ZONE-MGMT,Management network,management,2021-01-02T03:52:03Z,\N,2021-01-02T03:52:03Z,\N,1,assert
+acme:security_zone:zone-restricted~5727b530be8d,security_zone,acme,ZONE-RESTRICTED,Restricted / PCI,restricted,2021-01-02T17:11:57Z,\N,2021-01-02T17:11:57Z,\N,1,assert
+acme:security_zone:zone-dmz~b327b8fcb082,security_zone,acme,ZONE-DMZ,External DMZ,dmz,2021-01-03T22:31:42Z,\N,2021-01-03T22:31:42Z,\N,1,assert
+acme:security_zone:zone-user~5f7f3e395fa2,security_zone,acme,ZONE-USER,Corporate user LAN,user,2021-01-03T07:31:55Z,\N,2021-01-03T07:31:55Z,\N,1,assert
+acme:security_zone:zone-cloud-prod~43dec0d06113,security_zone,acme,ZONE-CLOUD-PROD,Production cloud account,internet,2021-01-03T15:53:50Z,\N,2021-01-03T15:53:50Z,\N,1,assert
+acme:security_zone:zone-cloud-saas~81342d517059,security_zone,acme,ZONE-CLOUD-SAAS,Finance SaaS tenant,internet,2021-01-03T15:21:09Z,\N,2021-01-03T15:21:09Z,\N,1,assert
+acme:security_zone:zone-ot~efca0e79cb55,security_zone,acme,ZONE-OT,OT and building management,unknown,2021-01-04T00:28:57Z,\N,2021-01-04T00:28:57Z,\N,1,assert
+acme:security_zone:zone-server~fa91c07614d2,security_zone,acme,ZONE-SERVER,Server farm,server,2021-01-05T09:04:12Z,\N,2021-01-05T09:04:12Z,\N,1,assert

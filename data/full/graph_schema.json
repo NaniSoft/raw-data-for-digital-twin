@@ -1,0 +1,656 @@
+{
+  "$comment": [
+    "The type -> column declaration for the substrate, written by the generator from",
+    "the headers it emitted. D21's 'types live in the schema alone': the CSV header",
+    "carries names and order, this file carries the dialect type of every column."
+  ],
+  "identity_block": [
+    "entity_id",
+    "entity_type",
+    "organization_id"
+  ],
+  "organization": "acme",
+  "schema_version": "generator-v1",
+  "temporal_block": [
+    "valid_from",
+    "valid_to",
+    "system_from",
+    "system_to",
+    "revision",
+    "operation"
+  ],
+  "types": {
+    "access_rule": {
+      "columns": [
+        "rule_key",
+        "action",
+        "protocol",
+        "dst_port",
+        "rule_order",
+        "is_reviewed"
+      ],
+      "dialect_types": [
+        "string",
+        "string",
+        "string",
+        "string",
+        "int",
+        "boolean"
+      ]
+    },
+    "affected_product": {
+      "columns": [
+        "cve_id",
+        "product_model_id",
+        "affected_range"
+      ],
+      "dialect_types": [
+        "string",
+        "string",
+        "version_range"
+      ]
+    },
+    "aws.aws_account": {
+      "columns": [
+        "account_id",
+        "account_name",
+        "account_kind",
+        "is_security_account",
+        "root_email",
+        "is_locked"
+      ],
+      "dialect_types": [
+        "string",
+        "string",
+        "string",
+        "boolean",
+        "string",
+        "boolean"
+      ]
+    },
+    "aws.aws_security_group": {
+      "columns": [
+        "security_group_id",
+        "group_name",
+        "description",
+        "is_default"
+      ],
+      "dialect_types": [
+        "string",
+        "string",
+        "string",
+        "boolean"
+      ]
+    },
+    "aws.aws_subscription": {
+      "columns": [
+        "subscription_id",
+        "offer_code",
+        "is_auto_renewing"
+      ],
+      "dialect_types": [
+        "string",
+        "string",
+        "boolean"
+      ]
+    },
+    "aws.aws_vpc": {
+      "columns": [
+        "vpc_id",
+        "cidr_block",
+        "state",
+        "is_default",
+        "flow_log_group"
+      ],
+      "dialect_types": [
+        "string",
+        "cidr",
+        "string",
+        "boolean",
+        "string"
+      ]
+    },
+    "blind_spot": {
+      "columns": [
+        "spot_key",
+        "spot_class",
+        "region_kind",
+        "region_ref",
+        "attribute_class",
+        "cause_kind",
+        "scope_magnitude",
+        "scope_basis",
+        "declared_by",
+        "confidence_in_declaration",
+        "suppresses"
+      ],
+      "dialect_types": [
+        "string",
+        "string",
+        "string",
+        "string",
+        "string",
+        "string",
+        "int",
+        "string",
+        "string",
+        "string",
+        "json"
+      ]
+    },
+    "certificate": {
+      "columns": [
+        "subject",
+        "serial_number",
+        "issuer",
+        "is_publicly_trusted"
+      ],
+      "dialect_types": [
+        "string",
+        "string",
+        "string",
+        "boolean"
+      ]
+    },
+    "compute_node": {
+      "columns": [
+        "node_key",
+        "node_name",
+        "node_kind",
+        "lifecycle_stage",
+        "lifecycle_stage_status",
+        "is_monitored"
+      ],
+      "dialect_types": [
+        "string",
+        "string",
+        "string",
+        "string",
+        "string",
+        "boolean"
+      ]
+    },
+    "contract": {
+      "columns": [
+        "vendor_code",
+        "contract_ref",
+        "contract_kind",
+        "starts_on",
+        "ends_on"
+      ],
+      "dialect_types": [
+        "string",
+        "string",
+        "string",
+        "string",
+        "string"
+      ]
+    },
+    "data_flow": {
+      "columns": [
+        "flow_source",
+        "flow_destination",
+        "protocol",
+        "dst_port",
+        "data_classification"
+      ],
+      "dialect_types": [
+        "string",
+        "string",
+        "string",
+        "string",
+        "string"
+      ]
+    },
+    "data_row": {
+      "columns": [
+        "data_store_id",
+        "schema_name",
+        "table_name",
+        "row_key"
+      ],
+      "dialect_types": [
+        "string",
+        "string",
+        "string",
+        "string"
+      ]
+    },
+    "data_store": {
+      "columns": [
+        "store_key",
+        "store_name",
+        "store_kind",
+        "stores_pii",
+        "lifecycle_stage",
+        "lifecycle_stage_status"
+      ],
+      "dialect_types": [
+        "string",
+        "string",
+        "string",
+        "boolean",
+        "string",
+        "string"
+      ]
+    },
+    "database_column": {
+      "columns": [
+        "data_store_id",
+        "schema_name",
+        "table_name",
+        "column_name",
+        "ordinal_position",
+        "is_pii",
+        "classification",
+        "is_encrypted_at_rest"
+      ],
+      "dialect_types": [
+        "string",
+        "string",
+        "string",
+        "string",
+        "int",
+        "boolean",
+        "string",
+        "boolean"
+      ]
+    },
+    "database_table": {
+      "columns": [
+        "data_store_id",
+        "schema_name",
+        "table_name",
+        "estimated_rows"
+      ],
+      "dialect_types": [
+        "string",
+        "string",
+        "string",
+        "int"
+      ]
+    },
+    "discovery_run": {
+      "columns": [
+        "run_key",
+        "source_system",
+        "observation_method",
+        "region_kind",
+        "region_ref",
+        "attribute_classes",
+        "started_at",
+        "finished_at",
+        "coverage_outcome",
+        "entities_seen"
+      ],
+      "dialect_types": [
+        "string",
+        "string",
+        "string",
+        "string",
+        "string",
+        "json",
+        "timestamp",
+        "timestamp",
+        "string",
+        "int"
+      ]
+    },
+    "entitlement": {
+      "columns": [
+        "subject",
+        "grant",
+        "scope",
+        "starts_on"
+      ],
+      "dialect_types": [
+        "string",
+        "string",
+        "string",
+        "string"
+      ]
+    },
+    "identity_group": {
+      "columns": [
+        "group_key",
+        "group_name"
+      ],
+      "dialect_types": [
+        "string",
+        "string"
+      ]
+    },
+    "ip_address": {
+      "columns": [
+        "address",
+        "address_kind"
+      ],
+      "dialect_types": [
+        "string",
+        "string"
+      ]
+    },
+    "network_device": {
+      "columns": [
+        "device_key",
+        "device_name",
+        "device_kind",
+        "lifecycle_stage",
+        "lifecycle_stage_status"
+      ],
+      "dialect_types": [
+        "string",
+        "string",
+        "string",
+        "string",
+        "string"
+      ]
+    },
+    "network_port": {
+      "columns": [
+        "owning_node",
+        "port_name",
+        "port_speed_mbps"
+      ],
+      "dialect_types": [
+        "string",
+        "string",
+        "int"
+      ]
+    },
+    "network_segment": {
+      "columns": [
+        "cidr",
+        "segment_name"
+      ],
+      "dialect_types": [
+        "string",
+        "string"
+      ]
+    },
+    "observation": {
+      "columns": [
+        "source_system",
+        "observed_at",
+        "kind",
+        "subject",
+        "severity",
+        "confidence"
+      ],
+      "dialect_types": [
+        "string",
+        "timestamp",
+        "string",
+        "string",
+        "string",
+        "string"
+      ]
+    },
+    "org_unit": {
+      "columns": [
+        "parent_org_unit",
+        "unit_code",
+        "unit_name",
+        "unit_kind"
+      ],
+      "dialect_types": [
+        "string",
+        "string",
+        "string",
+        "string"
+      ]
+    },
+    "organization": {
+      "columns": [
+        "org_slug",
+        "org_name"
+      ],
+      "dialect_types": [
+        "string",
+        "string"
+      ]
+    },
+    "person": {
+      "columns": [
+        "employee_ref",
+        "full_name",
+        "job_title",
+        "department_code",
+        "is_departed"
+      ],
+      "dialect_types": [
+        "string",
+        "string",
+        "string",
+        "string",
+        "boolean"
+      ]
+    },
+    "principal": {
+      "columns": [
+        "principal_key",
+        "display_name",
+        "account_type",
+        "is_enabled",
+        "last_activity_at"
+      ],
+      "dialect_types": [
+        "string",
+        "string",
+        "string",
+        "boolean",
+        "timestamp"
+      ]
+    },
+    "privilege": {
+      "columns": [
+        "privilege_name",
+        "privilege_kind"
+      ],
+      "dialect_types": [
+        "string",
+        "string"
+      ]
+    },
+    "product_model": {
+      "columns": [
+        "vendor_code",
+        "model_code",
+        "model_kind",
+        "model_name",
+        "latest_version",
+        "support_status"
+      ],
+      "dialect_types": [
+        "string",
+        "string",
+        "string",
+        "string",
+        "string",
+        "string"
+      ]
+    },
+    "security_zone": {
+      "columns": [
+        "zone_code",
+        "zone_name",
+        "zone_class"
+      ],
+      "dialect_types": [
+        "string",
+        "string",
+        "string"
+      ]
+    },
+    "service": {
+      "columns": [
+        "service_key",
+        "service_name",
+        "lifecycle_stage",
+        "lifecycle_stage_status"
+      ],
+      "dialect_types": [
+        "string",
+        "string",
+        "string",
+        "string"
+      ]
+    },
+    "site": {
+      "columns": [
+        "parent_site",
+        "site_code",
+        "site_name",
+        "site_kind"
+      ],
+      "dialect_types": [
+        "string",
+        "string",
+        "string",
+        "string"
+      ]
+    },
+    "software_installation": {
+      "columns": [
+        "compute_node",
+        "product_model",
+        "install_path",
+        "version"
+      ],
+      "dialect_types": [
+        "string",
+        "string",
+        "string",
+        "string"
+      ]
+    },
+    "source_system": {
+      "columns": [
+        "system_key",
+        "display_name",
+        "source_kind"
+      ],
+      "dialect_types": [
+        "string",
+        "string",
+        "string"
+      ]
+    },
+    "storage_volume": {
+      "columns": [
+        "volume_key",
+        "capacity_gb",
+        "lifecycle_stage",
+        "lifecycle_stage_status"
+      ],
+      "dialect_types": [
+        "string",
+        "int",
+        "string",
+        "string"
+      ]
+    },
+    "team": {
+      "columns": [
+        "team_code",
+        "team_name",
+        "function"
+      ],
+      "dialect_types": [
+        "string",
+        "string",
+        "string"
+      ]
+    },
+    "vendor": {
+      "columns": [
+        "vendor_code",
+        "vendor_name",
+        "vendor_country"
+      ],
+      "dialect_types": [
+        "string",
+        "string",
+        "string"
+      ]
+    },
+    "vsphere.vsphere_cluster": {
+      "columns": [
+        "cluster_moid",
+        "cluster_name",
+        "drs_enabled",
+        "ha_mode",
+        "is_ha_enabled"
+      ],
+      "dialect_types": [
+        "string",
+        "string",
+        "boolean",
+        "string",
+        "boolean"
+      ]
+    },
+    "vsphere.vsphere_datastore": {
+      "columns": [
+        "datastore_moid",
+        "datastore_name",
+        "backing",
+        "capacity_gb",
+        "free_gb",
+        "is_encrypted_at_rest"
+      ],
+      "dialect_types": [
+        "string",
+        "string",
+        "string",
+        "int",
+        "int",
+        "boolean"
+      ]
+    },
+    "vsphere.vsphere_privilege": {
+      "columns": [
+        "privilege_id",
+        "privilege_label",
+        "privilege_group",
+        "is_dangerous"
+      ],
+      "dialect_types": [
+        "string",
+        "string",
+        "string",
+        "boolean"
+      ]
+    },
+    "vsphere.vsphere_resource_pool": {
+      "columns": [
+        "pool_moid",
+        "pool_name",
+        "cluster_moid",
+        "cpu_reservation_mhz",
+        "memory_reservation_mb",
+        "is_root_pool"
+      ],
+      "dialect_types": [
+        "string",
+        "string",
+        "string",
+        "int",
+        "int",
+        "boolean"
+      ]
+    },
+    "vulnerability": {
+      "columns": [
+        "cve_id",
+        "severity_score",
+        "published_at"
+      ],
+      "dialect_types": [
+        "string",
+        "int",
+        "timestamp"
+      ]
+    }
+  }
+}
