@@ -115,12 +115,45 @@ than one that omits the data.
 2. **A corpus's window must be contained in the model's window, one-directionally.** A model window
    may and must extend past a corpus's end: a model is in force for corpora not yet generated.
    Requiring them to end together is the freeze this design rejects.
-3. **The generator's default leaves one table with two in-force `designated_data_tier`
-   relationships**, and the reader refuses that corpus by name. The published artefacts were
-   generated with the producer-side fix; the naive output is reproducible and is *not* what is here.
-   A demotion must be a **retract of the existing relationship id**, not a second assert — an
-   identity is a pure function of `(type, from, to)`, so asserting the id twice is a violation of
-   uniqueness, not a fix.
+3. **One relationship in `data/small` is malformed, and it is here — not fixed.** Out of 21,850
+   relationship ids, exactly one is defective:
+
+   ```
+   relationship_id : acme:rel:designated_data_tier~b80af623da80
+   two `assert` rows, BOTH at revision 1, both with system_from 2026-09-28T00:00:00Z
+   valid intervals [2021-01-12T06:34:58Z, 2021-03-13T19:51:08Z) and [2021-01-12T06:34:58Z, \N)
+   -> they OVERLAP, and a `retract` at revision 2 sits between them
+   ```
+
+   That is the naive-generator shape: a demotion was recorded as a **second assert** of an identity
+   that already existed, instead of a **retract** of it. A relationship id is a pure function of
+   `(type, from, to)`, so asserting it twice is a violation of uniqueness, not a fix for anything.
+
+   **An earlier version of this file claimed the published artefacts did not contain this shape.
+   That was wrong, and the error was caught by an unrelated piece of work reading the file.** It is
+   stated here instead. **1 row in 23,106; the other 21,849 ids are well formed.** The correct
+   producer-side fix is to write the retraction. It was not applied to the published `data/small`,
+   because applying it moves the whole artefact.
+
+4b. **Four entity types in the corpus are OUTSIDE the model.** The corpus declares 42 types;
+   the pinned schema version declares fewer. `schema_versions.json`'s current record pins
+   **`cloud-aws@1.0` only**, and the rendered schema graph carries **38 types** (34 core + 4 AWS).
+   The corpus additionally ships four `vsphere.*` type files and declares them in
+   `graph_schema.json`:
+
+   ```
+   vsphere.vsphere_cluster   vsphere.vsphere_datastore
+   vsphere.vsphere_privilege vsphere.vsphere_resource_pool
+   ```
+
+   **These four are in the data and not in the model.** The organization profile declares the
+   `virtualization-vsphere@1.0` pack but the pinned version record does not carry it, so a
+   type-resolution pass that trusts the version record will not find them. Treat those four types
+   as **unmodelled**: their attributes are not covered by any schema-version claim, and
+   `check_paths` verifies topology rather than predicates for them. This is the same *shape* as the
+   retro-introduction problem the corpus was regenerated to fix — a type the data asserts that the
+   model cannot name — and it is recorded rather than hidden.
+
 4. **The full-scale corpus has never been validated by the rule engine**, because the engine keeps
    every row as a dict at ~2,373 bytes/row, which projects to ~11.9 GB at 5.45 M rows. The
    small-scale corpus is validated: **3,833 findings across 10 named causes, 0 unclassified.**
