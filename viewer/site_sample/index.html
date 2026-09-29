@@ -1,0 +1,46 @@
+<!doctype html><meta charset=utf-8><title>the estate</title><style>body{font:14px/1.55 ui-sans-serif,system-ui,Segoe UI,sans-serif;margin:0;background:#0f1115;color:#d7dae0}main{max-width:1080px;margin:0 auto;padding:22px}a{color:#7fb2ff;text-decoration:none}a:hover{text-decoration:underline}h1{font-size:19px;margin:0 0 6px}h2{font-size:14px;margin:24px 0 6px;color:#9fb4d8;font-weight:600}code,.mono{font-family:ui-monospace,Cascadia Code,Consolas,monospace;font-size:12px}table{border-collapse:collapse;width:100%}th,td{text-align:left;padding:3px 7px;border-bottom:1px solid #22262e;vertical-align:top}th{color:#9fb4d8;font-size:12px}.banner{background:#1a1f2a;border-left:3px solid #7fb2ff;padding:9px 13px;margin:11px 0;border-radius:2px}.warn{border-left-color:#e0a04f}.stop{border-left-color:#e05f5f}.small{color:#8b93a1;font-size:12px}.pill{display:inline-block;padding:1px 7px;border-radius:9px;background:#22262e;font-size:11px}.pill.read{background:#1d3326;color:#7fd39a}.pill.empty{background:#3a2a1d;color:#e0a04f}a[data-outside]{color:#e0a04f}a[data-outside]:after{content:' (outside)'}</style><main><h1>the estate as of 2027-04-25T23:59:59Z</h1>
+<div class='banner'>scope <code>2027-03-26..2027-04-25</code> &mdash; The change set: every entity named by a corpus row whose system_from is in (S1, S2]. This is the browsable artefact. At 1M a 30-day window is 36,068 r...</div>
+<table><tr><th>entities in scope</th><td class='mono'>35,336</td><th>changed relationship rows</th><td class='mono'>36,068</td><th>changed entity rows</th><td class='mono'>28,062</td></tr><tr><th>nodes in the substrate</th><td class='mono'>995,727</td><th>entity types with a node relation</th><td class='mono'>42</td><th>spine rows</th><td class='mono'>38</td></tr></table>
+<p class='small'>Types whose entities are in this estate only as <code>expected_dead</code> ghosts: [&#x27;access_rule&#x27;, &#x27;blind_spot&#x27;, &#x27;certificate&#x27;, &#x27;compute_node&#x27;, &#x27;contract&#x27;, &#x27;data_flow&#x27;, &#x27;data_store&#x27;, &#x27;entitlement&#x27;, &#x27;network_device&#x27;, &#x27;network_segment&#x27;, &#x27;person&#x27;, &#x27;principal&#x27;, &#x27;product_model&#x27;, &#x27;service&#x27;, &#x27;site&#x27;, &#x27;storage_volume&#x27;]. <code>nodes/ghosts.parquet</code> holds 35,079 of them, and it is inside the node glob, so a count over the glob is right while a per-type enumeration is short unless the ghosts relation is read too.</p>
+<p class='small'>The change set is the corpus rows whose <code>system_from</code> is in <code>(2027-03-26T00:00:00Z, 2027-04-25T23:59:59Z]</code>. The interval is HALF-OPEN, the corpus is the authority, and a diff of two snapshots is not used &mdash; a snapshot diff is blind to exactly the retroactive corrections the twin holds.</p>
+<h2>where to go</h2><p><a href='changed.html'>the changelog</a> &middot; <a href='changed-2.html'>changelog page 2 of 8</a> &middot; <a href='changed-3.html'>changelog page 3 of 8</a> &middot; <a href='changed-4.html'>changelog page 4 of 8</a> &middot; <a href='changed-5.html'>changelog page 5 of 8</a> &middot; <a href='changed-6.html'>changelog page 6 of 8</a> &middot; <a href='changed-7.html'>changelog page 7 of 8</a> &middot; <a href='changed-8.html'>changelog page 8 of 8</a> &middot; <a href='diff.html'>the As-Of diff</a> &middot; <a href='site.json'>this site&#x27;s manifest</a> &middot; <a href='layout/estate/envelope.json'>the estate layout scope</a></p>
+<h2>the estate's declared spine, and why it is the facet list</h2><p class='small'>38 rows, byte-identical at every corpus size. Faceting a 372,093-neighbour hub by RELATIONSHIP type does nothing &mdash; the organization emits exactly one, <code>contains</code>. Faceting by TARGET TYPE splits it into 26, and those types are the spine.</p><table>
+<tr><td class='mono'>access_rule</td><td class='mono'>organization</td><td class='small'>core</td></tr>
+<tr><td class='mono'>affected_product</td><td class='mono'></td><td class='small'>core</td></tr>
+<tr><td class='mono'>aws.aws_account</td><td class='mono'></td><td class='small'></td></tr>
+<tr><td class='mono'>aws.aws_security_group</td><td class='mono'></td><td class='small'></td></tr>
+<tr><td class='mono'>aws.aws_subscription</td><td class='mono'></td><td class='small'></td></tr>
+<tr><td class='mono'>aws.aws_vpc</td><td class='mono'></td><td class='small'></td></tr>
+<tr><td class='mono'>blind_spot</td><td class='mono'>organization</td><td class='small'>core</td></tr>
+<tr><td class='mono'>certificate</td><td class='mono'>compute_node</td><td class='small'>core</td></tr>
+<tr><td class='mono'>compute_node</td><td class='mono'>organization</td><td class='small'>core</td></tr>
+<tr><td class='mono'>contract</td><td class='mono'>organization</td><td class='small'>core</td></tr>
+<tr><td class='mono'>data_flow</td><td class='mono'>organization</td><td class='small'>core</td></tr>
+<tr><td class='mono'>data_row</td><td class='mono'>database_table</td><td class='small'>core</td></tr>
+<tr><td class='mono'>data_store</td><td class='mono'>compute_node</td><td class='small'>core</td></tr>
+<tr><td class='mono'>database_column</td><td class='mono'>database_table</td><td class='small'>core</td></tr>
+<tr><td class='mono'>database_table</td><td class='mono'>data_store</td><td class='small'>core</td></tr>
+<tr><td class='mono'>discovery_run</td><td class='mono'>organization</td><td class='small'>core</td></tr>
+<tr><td class='mono'>entitlement</td><td class='mono'>organization</td><td class='small'>core</td></tr>
+<tr><td class='mono'>identity_group</td><td class='mono'>organization</td><td class='small'>core</td></tr>
+<tr><td class='mono'>ip_address</td><td class='mono'>network_segment</td><td class='small'>core</td></tr>
+<tr><td class='mono'>network_device</td><td class='mono'>organization</td><td class='small'>core</td></tr>
+<tr><td class='mono'>network_port</td><td class='mono'>compute_node</td><td class='small'>core</td></tr>
+<tr><td class='mono'>network_segment</td><td class='mono'>organization</td><td class='small'>core</td></tr>
+<tr><td class='mono'>observation</td><td class='mono'>organization</td><td class='small'>core</td></tr>
+<tr><td class='mono'>org_unit</td><td class='mono'>organization</td><td class='small'>core</td></tr>
+<tr><td class='mono'>organization</td><td class='mono'></td><td class='small'>core</td></tr>
+<tr><td class='mono'>person</td><td class='mono'>organization</td><td class='small'>core</td></tr>
+<tr><td class='mono'>principal</td><td class='mono'>organization</td><td class='small'>core</td></tr>
+<tr><td class='mono'>privilege</td><td class='mono'>organization</td><td class='small'>core</td></tr>
+<tr><td class='mono'>product_model</td><td class='mono'></td><td class='small'>core</td></tr>
+<tr><td class='mono'>security_zone</td><td class='mono'>organization</td><td class='small'>core</td></tr>
+<tr><td class='mono'>service</td><td class='mono'>compute_node</td><td class='small'>core</td></tr>
+<tr><td class='mono'>site</td><td class='mono'>aws.aws_account</td><td class='small'>pack:cloud-aws</td></tr>
+<tr><td class='mono'>software_installation</td><td class='mono'>compute_node</td><td class='small'>core</td></tr>
+<tr><td class='mono'>source_system</td><td class='mono'>organization</td><td class='small'>core</td></tr>
+<tr><td class='mono'>storage_volume</td><td class='mono'>compute_node</td><td class='small'>core</td></tr>
+<tr><td class='mono'>team</td><td class='mono'>organization</td><td class='small'>core</td></tr>
+<tr><td class='mono'>vendor</td><td class='mono'></td><td class='small'>core</td></tr>
+<tr><td class='mono'>vulnerability</td><td class='mono'></td><td class='small'>core</td></tr>
+</table></main><hr><p class='small'>site_version asof-site-v1 &middot; coordinate V=2027-04-25T23:59:59Z S=2027-04-25T23:59:59Z &middot; estate_state <span class='pill read'>read</span> &middot; valid_time_window NOT_DECLARED -- a model has ... &middot; corpus 506ea72c69f2b6b0ba2b2b95adff6637 &middot; scope <code>2027-03-26..2027-04-25</code><br><b>An <code>estate_state</code> of <code>empty_belief</code> means the twin held no belief covering this coordinate. It does not mean nothing exists.</b> Every page here was generated from the artefacts named above and from nothing else; there is no second copy of any fact in this site.</p></main>

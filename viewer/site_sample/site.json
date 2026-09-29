@@ -1,0 +1,39 @@
+{
+  "backlink_rows_per_page": 200,
+  "build_seconds": 84.06,
+  "changed_entity_rows": 28062,
+  "changed_relationship_rows": 36068,
+  "changelog_rows": 5000,
+  "coordinate": {
+    "class": "current",
+    "system": "2027-04-25T23:59:59Z",
+    "valid": "2027-04-25T23:59:59Z"
+  },
+  "corpus_fingerprint": "506ea72c69f2b6b0ba2b2b95adff6637",
+  "diff": {
+    "check_versioning_reference": {
+      "error": "OutOfMemoryException: Out of Memory Error: could not allocate block of size 30.5 MiB (1008.3 MiB/1.0 GiB used)",
+      "note": "The reference executor, `check_versioning.estate_diff`, builds one UNION ALL over all 42 entity views and at 1M that raises OutOfMemoryException against the fold's own 1 GiB ceiling. It is reported as not_run rather than replaced silently, and check_viewer compares the two executors on the small corpus where both run.",
+      "status": "not_run"
+    },
+    "estate_changed": true,
+    "estate_rows": 14031,
+    "model_changed": true,
+    "relationship_rows": 36068,
+    "s1": "2027-03-26T00:00:00Z",
+    "s2": "2027-04-25T23:59:59Z",
+    "verdict": "BOTH"
+  },
+  "entities_in_scope": 35336,
+  "estate_state": "read",
+  "scope": {
+    "kind": "window",
+    "label": "2027-03-26..2027-04-25",
+    "s1": "2027-03-26T00:00:00Z",
+    "s2": "2027-04-25T23:59:59Z"
+  },
+  "site_version": "asof-site-v1",
+  "substrate_version": "parquet-substrate-v1",
+  "types_only_in_the_graphml_export": [],
+  "valid_time_window": "NOT_DECLARED -- a model has no valid-time interval and a completeness span would be a figure whose denominator is the twin's own belief about the world"
+}

@@ -1,0 +1,3551 @@
+{
+  "as_known_now": {
+    "Q1": {
+      "claim": {
+        "aggregation": "min_over_sources, read from coverage_contract.yaml defaults",
+        "caps": [
+          {
+            "ceiling": "unknown",
+            "gates_failed": [
+              "undeclared_attribute",
+              "unpopulated_shape",
+              "untranslatable_filter"
+            ],
+            "scope": "the question's own traversal",
+            "why": "path(s) reachability_by_attribute, software_exposure could not be evaluated at this coordinate. A Claim Strength describes an OBSERVATION, and a path that cannot run is not a coverage gap over the world but a gap in the twin. The coverage layer is not permitted to supply a rung for a computation that did not happen."
+          },
+          {
+            "ceiling": "observed_within_declared_gap",
+            "scope": "the artefact as a whole",
+            "why": "D50's admission gate puts a CEILING on any claim made from this artefact, and a ceiling is not a rung. Reported as a cap so the two are never confused."
+          }
+        ],
+        "cells": [
+          {
+            "attribute_class": "patch_state",
+            "blind_spots": [],
+            "bound": null,
+            "bound_basis": null,
+            "claim_strength": "observed",
+            "complement_licensed": true,
+            "grounding": true,
+            "reason": "enumerated by an attributable channel inside its window, no declared gap",
+            "region": "seg_dmz_ext",
+            "runs": [
+              "run_scanner_vuln_seg_dmz_ext_2021_01"
+            ],
+            "source_system": "scanner_vuln",
+            "universe_declared_and_finite": true
+          },
+          {
+            "attribute_class": "patch_state",
+            "blind_spots": [],
+            "bound": null,
+            "bound_basis": null,
+            "claim_strength": "unknown",
+            "complement_licensed": false,
+            "grounding": false,
+            "reason": "no live channel reported this class for this region at this coordinate, and no declared gap names the hole -- the one state D30 says is not representable, and which the region obligation exists to prevent",
+            "region": "attribute_regions/patch_state",
+            "runs": [],
+            "source_system": "",
+            "universe_declared_and_finite": false
+          }
+        ],
+        "claim_strength": "unknown",
+        "claim_strength_before_caps": "unknown",
+        "complement_licensed": false,
+        "declared_floor": "high",
+        "declared_floor_rung": null,
+        "floor_met": null,
+        "floor_state": "unresolvable",
+        "grounding": false,
+        "sentences_unavailable_below_this_rung": [
+          "safe",
+          "none",
+          "no",
+          "all",
+          "compliant"
+        ],
+        "strongest_cell": "observed",
+        "universe_declared_and_finite": true
+      },
+      "coverage_cells": [
+        {
+          "attribute_class": "patch_state",
+          "region": "seg_dmz_ext"
+        },
+        {
+          "attribute_class": "patch_state",
+          "region": "attribute_regions/patch_state"
+        }
+      ],
+      "declared_claim_strength_floor": "high",
+      "declared_default_as_of": "as_known_now",
+      "id": "Q1",
+      "inference_envelope": {
+        "declared_by": "schema/security/paths.yaml :: inference_envelope",
+        "envelope": {
+          "as_of_class": "as_known_now",
+          "as_of_coordinate": {
+            "class": "as_known_now",
+            "schema_version_K": "3",
+            "schema_version_source": "history",
+            "system": "2026-09-26T00:00:00Z",
+            "valid": "2026-03-15T00:00:00Z"
+          },
+          "claim_strength": "unknown",
+          "coverage_regions": [
+            "attribute_regions/patch_state",
+            "seg_dmz_ext"
+          ],
+          "rule_id": "Q1",
+          "rule_version": "paths.yaml@9349b779a642",
+          "subject_id": "<no subject chosen: compute_node>",
+          "value": {
+            "paths_answered": [
+              "reachability_by_observed_path",
+              "ownership"
+            ],
+            "paths_refused": [
+              "reachability_by_attribute",
+              "software_exposure"
+            ],
+            "rows_by_path": {
+              "ownership": 13,
+              "reachability_by_attribute": 0,
+              "reachability_by_observed_path": 2,
+              "software_exposure": 0
+            }
+          }
+        },
+        "every_required_field_present": true,
+        "fields_beyond_the_declared_list": [],
+        "fields_unfilled": [],
+        "persistence": "forbidden",
+        "required_fields": [
+          "subject_id",
+          "rule_id",
+          "rule_version",
+          "as_of_coordinate",
+          "as_of_class",
+          "claim_strength",
+          "coverage_regions",
+          "value"
+        ]
+      },
+      "paths": [
+        {
+          "attributes_read": [
+            {
+              "attribute": "security_zone.zone_class",
+              "op": "in",
+              "values": [
+                "internet",
+                "dmz"
+              ]
+            }
+          ],
+          "edges_used": [
+            "assigned_to",
+            "in_segment",
+            "in_zone"
+          ],
+          "kind": "placement",
+          "note": "The observed path. Preferred over the attribute below because a path is evidence and an attribute is an assertion, and the two deserve different confidence.",
+          "path": "reachability_by_observed_path",
+          "rows": 2,
+          "rows_the_filter_matches_in_the_estate": 2,
+          "status": "answered",
+          "subject_ids": [
+            "acme:security_zone:zone-dmz~b327b8fcb082",
+            "acme:security_zone:zone-internet~025abca34332"
+          ]
+        },
+        {
+          "attributes_read": [],
+          "edges_used": [],
+          "kind": "placement",
+          "path": "reachability_by_attribute",
+          "refusal": "untranslatable_filter",
+          "refusal_detail": {
+            "gates_failed": 1,
+            "untranslatable_filter": {
+              "filter": "compute_node has a service with is_internet_facing = true",
+              "note": "this module translates a narrow grammar and refuses everything else. A filter with a dropped conjunct is a filter true of more than the question, so nothing is guessed here.",
+              "why": "this module cannot translate 'compute_node has a service with is_internet_facing = true'"
+            }
+          },
+          "rows": 0,
+          "status": "refused"
+        },
+        {
+          "attributes_read": [
+            {
+              "attribute": "affected_product.version_range"
+            },
+            {
+              "attribute": "software_installation.installed_version"
+            },
+            {
+              "attribute": "vulnerability.exploited_in_the_wild"
+            }
+          ],
+          "edges_used": [
+            "contains",
+            "instance_of",
+            "about",
+            "about"
+          ],
+          "kind": "placement",
+          "note": "\"Unpatched\" is an INFERENCE over (installed_version, affected_product.fixed_in_version). Nothing stores a patch_level flag: a stored flag is a fact that goes stale the moment a new CVE lands, which is exactly what D8 forbids.",
+          "path": "software_exposure",
+          "refusal": "undeclared_attribute + unpopulated_shape + untranslatable_filter",
+          "refusal_detail": {
+            "gates_failed": 3,
+            "undeclared_attribute": {
+              "missing": [
+                {
+                  "attribute": "affected_product.version_range",
+                  "declared_columns": [
+                    "affected_range",
+                    "cve_id",
+                    "product_model_id"
+                  ],
+                  "problem": "the column is not declared"
+                },
+                {
+                  "attribute": "software_installation.installed_version",
+                  "declared_columns": [
+                    "compute_node",
+                    "install_path",
+                    "product_model",
+                    "version"
+                  ],
+                  "problem": "the column is not declared"
+                },
+                {
+                  "attribute": "vulnerability.exploited_in_the_wild",
+                  "declared_columns": [
+                    "cve_id",
+                    "published_at",
+                    "severity_score"
+                  ],
+                  "problem": "the column is not declared"
+                }
+              ],
+              "why": "a path that names an attribute the declared schema does not carry cannot be evaluated, and evaluating it anyway yields an empty result, which reads as a clean estate. Refused rather than returned empty."
+            },
+            "unpopulated_shape": {
+              "rows_of_that_relationship_type_at_this_coordinate": {
+                "about": 15,
+                "contains": 3704
+              },
+              "shapes": [
+                {
+                  "declared_by": "hops",
+                  "direction": "inverse",
+                  "from_type": "software_installation",
+                  "relationship": "contains",
+                  "to_type": "compute_node"
+                },
+                {
+                  "declared_by": "join",
+                  "direction": "join",
+                  "from_type": "product_model",
+                  "relationship": "about",
+                  "to_type": "affected_product"
+                },
+                {
+                  "declared_by": "join",
+                  "direction": "join",
+                  "from_type": "affected_product",
+                  "relationship": "about",
+                  "to_type": "vulnerability"
+                }
+              ],
+              "shapes_that_ARE_populated_for_that_type": {
+                "about": [
+                  "discovery_run->ip_address (15)"
+                ],
+                "contains": [
+                  "compute_node->certificate (53)",
+                  "compute_node->data_store (49)",
+                  "compute_node->network_port (93)",
+                  "compute_node->service (117)",
+                  "compute_node->software_installation (546)",
+                  "compute_node->storage_volume (139)",
+                  "data_store->database_table (86)",
+                  "database_column->data_row (273)"
+                ]
+              },
+              "why": "the core contract DECLARES this relationship and the corpus holds no row of it in this endpoint shape at this coordinate. Zero rows is a sentence, and this one would be a false all-clear, so the path is refused rather than returned empty."
+            },
+            "untranslatable_filter": {
+              "filter": "affected_product.version_range admits software_installation.installed_version, AND vulnerability.exploited_in_the_wild = true",
+              "note": "this module translates a narrow grammar and refuses everything else. A filter with a dropped conjunct is a filter true of more than the question, so nothing is guessed here.",
+              "why": "this module cannot translate 'affected_product.version_range admits software_installation.installed_version,'"
+            }
+          },
+          "rows": 0,
+          "status": "refused"
+        },
+        {
+          "attributes_read": [],
+          "edges_used": [
+            "operated_by",
+            "member_of"
+          ],
+          "kind": "attribution",
+          "note": "bitemporal, so \"who owned it in March\" and \"who owns it now\" are both answerable and are different questions. A host with no operated_by edge is an unowned host, which is a finding in itself.",
+          "path": "ownership",
+          "rows": 13,
+          "status": "answered",
+          "subject_ids": [
+            "acme:person:e000011~968736616a61",
+            "acme:person:e000008~222f6021d9c0",
+            "acme:person:e000012~50355e7fd639",
+            "acme:person:e000001~5796efe72eb7",
+            "acme:person:e000004~ad436d630df3",
+            "acme:person:e000018~dbbf4cc2e0b1",
+            "acme:person:e000007~56dfe2528105",
+            "acme:person:e000016~6293a233323a",
+            "acme:person:e000014~6f39fd8c9de7",
+            "acme:person:e000000~35cb9b53e1e8",
+            "acme:person:e000002~fe765433a949",
+            "acme:person:e000003~83735a7e8e57"
+          ]
+        }
+      ],
+      "refused_paths": [
+        "reachability_by_attribute",
+        "software_exposure"
+      ],
+      "schema_declaration": {
+        "graph_schema_declares_types": 42,
+        "source": "slice/corpus/graph_schema.json"
+      },
+      "subject": null,
+      "subject_type": "compute_node",
+      "title": "Internet-reachable hosts running exploitable unpatched software, and who owns them"
+    },
+    "Q2": {
+      "claim": {
+        "aggregation": "min_over_sources, read from coverage_contract.yaml defaults",
+        "caps": [
+          {
+            "ceiling": "unknown",
+            "gates_failed": [
+              "unexecutable_start",
+              "unpopulated_shape"
+            ],
+            "scope": "the question's own traversal",
+            "why": "path(s) authority_scope, group_authority, exposed_data, transitive_services could not be evaluated at this coordinate. A Claim Strength describes an OBSERVATION, and a path that cannot run is not a coverage gap over the world but a gap in the twin. The coverage layer is not permitted to supply a rung for a computation that did not happen."
+          },
+          {
+            "ceiling": "observed_within_declared_gap",
+            "scope": "the artefact as a whole",
+            "why": "D50's admission gate puts a CEILING on any claim made from this artefact, and a ceiling is not a rung. Reported as a cap so the two are never confused."
+          }
+        ],
+        "cells": [
+          {
+            "attribute_class": "reachability",
+            "blind_spots": [],
+            "bound": null,
+            "bound_basis": null,
+            "claim_strength": "unknown",
+            "complement_licensed": false,
+            "grounding": false,
+            "reason": "no live channel reported this class for this region at this coordinate, and no declared gap names the hole -- the one state D30 says is not representable, and which the region obligation exists to prevent",
+            "region": "seg_core_user",
+            "runs": [],
+            "source_system": "",
+            "universe_declared_and_finite": true
+          },
+          {
+            "attribute_class": "membership",
+            "blind_spots": [],
+            "bound": null,
+            "bound_basis": null,
+            "claim_strength": "unknown",
+            "complement_licensed": false,
+            "grounding": false,
+            "reason": "no live channel reported this class for this region at this coordinate, and no declared gap names the hole -- the one state D30 says is not representable, and which the region obligation exists to prevent",
+            "region": "seg_core_user",
+            "runs": [],
+            "source_system": "",
+            "universe_declared_and_finite": true
+          },
+          {
+            "attribute_class": "reachability",
+            "blind_spots": [
+              "spot_dmz_route"
+            ],
+            "bound": 1,
+            "bound_basis": "cidr_host_count",
+            "claim_strength": "observed_within_declared_gap",
+            "complement_licensed": false,
+            "grounding": false,
+            "reason": "declared unobserved: spot_dmz_route",
+            "region": "seg_dmz_ext",
+            "runs": [],
+            "source_system": "",
+            "universe_declared_and_finite": true
+          },
+          {
+            "attribute_class": "membership",
+            "blind_spots": [],
+            "bound": null,
+            "bound_basis": null,
+            "claim_strength": "unknown",
+            "complement_licensed": false,
+            "grounding": false,
+            "reason": "no live channel reported this class for this region at this coordinate, and no declared gap names the hole -- the one state D30 says is not representable, and which the region obligation exists to prevent",
+            "region": "seg_dmz_ext",
+            "runs": [],
+            "source_system": "",
+            "universe_declared_and_finite": true
+          },
+          {
+            "attribute_class": "reachability",
+            "blind_spots": [
+              "spot_sf_fw_export"
+            ],
+            "bound": 1,
+            "bound_basis": "cidr_host_count",
+            "claim_strength": "observed_within_declared_gap",
+            "complement_licensed": false,
+            "grounding": false,
+            "reason": "declared unobserved: spot_sf_fw_export",
+            "region": "seg_server_farm",
+            "runs": [],
+            "source_system": "",
+            "universe_declared_and_finite": true
+          },
+          {
+            "attribute_class": "membership",
+            "blind_spots": [],
+            "bound": null,
+            "bound_basis": null,
+            "claim_strength": "unknown",
+            "complement_licensed": false,
+            "grounding": false,
+            "reason": "no live channel reported this class for this region at this coordinate, and no declared gap names the hole -- the one state D30 says is not representable, and which the region obligation exists to prevent",
+            "region": "seg_server_farm",
+            "runs": [],
+            "source_system": "",
+            "universe_declared_and_finite": true
+          },
+          {
+            "attribute_class": "reachability",
+            "blind_spots": [],
+            "bound": null,
+            "bound_basis": null,
+            "claim_strength": "unknown",
+            "complement_licensed": false,
+            "grounding": false,
+            "reason": "no live channel reported this class for this region at this coordinate, and no declared gap names the hole -- the one state D30 says is not representable, and which the region obligation exists to prevent",
+            "region": "seg_mgmt",
+            "runs": [],
+            "source_system": "",
+            "universe_declared_and_finite": true
+          },
+          {
+            "attribute_class": "membership",
+            "blind_spots": [],
+            "bound": null,
+            "bound_basis": null,
+            "claim_strength": "unknown",
+            "complement_licensed": false,
+            "grounding": false,
+            "reason": "no live channel reported this class for this region at this coordinate, and no declared gap names the hole -- the one state D30 says is not representable, and which the region obligation exists to prevent",
+            "region": "seg_mgmt",
+            "runs": [],
+            "source_system": "",
+            "universe_declared_and_finite": true
+          },
+          {
+            "attribute_class": "reachability",
+            "blind_spots": [
+              "spot_ot_sweep_missed"
+            ],
+            "bound": 1,
+            "bound_basis": "cidr_host_count",
+            "claim_strength": "observed_within_declared_gap",
+            "complement_licensed": false,
+            "grounding": false,
+            "reason": "declared unobserved: spot_ot_sweep_missed",
+            "region": "seg_plant_ot",
+            "runs": [],
+            "source_system": "",
+            "universe_declared_and_finite": true
+          },
+          {
+            "attribute_class": "membership",
+            "blind_spots": [],
+            "bound": null,
+            "bound_basis": null,
+            "claim_strength": "unbounded",
+            "complement_licensed": false,
+            "grounding": false,
+            "reason": "witnessed only by attesting channels, which may be a numerator and never a denominator: a completed report says something was looked at, not that nothing else was",
+            "region": "seg_plant_ot",
+            "runs": [
+              "run_flow_netflow_seg_plant_ot_2021_01"
+            ],
+            "source_system": "flow_netflow*",
+            "universe_declared_and_finite": true
+          },
+          {
+            "attribute_class": "reachability",
+            "blind_spots": [],
+            "bound": null,
+            "bound_basis": null,
+            "claim_strength": "unknown",
+            "complement_licensed": false,
+            "grounding": false,
+            "reason": "no live channel reported this class for this region at this coordinate, and no declared gap names the hole -- the one state D30 says is not representable, and which the region obligation exists to prevent",
+            "region": "dir_corp",
+            "runs": [],
+            "source_system": "",
+            "universe_declared_and_finite": false
+          },
+          {
+            "attribute_class": "membership",
+            "blind_spots": [],
+            "bound": null,
+            "bound_basis": null,
+            "claim_strength": "unbounded",
+            "complement_licensed": false,
+            "grounding": false,
+            "reason": "witnessed only by attesting channels, which may be a numerator and never a denominator: a completed report says something was looked at, not that nothing else was",
+            "region": "dir_corp",
+            "runs": [
+              "run_iam_corp_dir_corp_2021_01"
+            ],
+            "source_system": "iam_corp*",
+            "universe_declared_and_finite": false
+          },
+          {
+            "attribute_class": "reachability",
+            "blind_spots": [],
+            "bound": null,
+            "bound_basis": null,
+            "claim_strength": "unknown",
+            "complement_licensed": false,
+            "grounding": false,
+            "reason": "no live channel reported this class for this region at this coordinate, and no declared gap names the hole -- the one state D30 says is not representable, and which the region obligation exists to prevent",
+            "region": "dir_emea",
+            "runs": [],
+            "source_system": "",
+            "universe_declared_and_finite": false
+          },
+          {
+            "attribute_class": "membership",
+            "blind_spots": [],
+            "bound": null,
+            "bound_basis": null,
+            "claim_strength": "unknown",
+            "complement_licensed": false,
+            "grounding": false,
+            "reason": "no live channel reported this class for this region at this coordinate, and no declared gap names the hole -- the one state D30 says is not representable, and which the region obligation exists to prevent",
+            "region": "dir_emea",
+            "runs": [],
+            "source_system": "",
+            "universe_declared_and_finite": false
+          }
+        ],
+        "claim_strength": "unknown",
+        "claim_strength_before_caps": "unknown",
+        "complement_licensed": false,
+        "declared_floor": "medium",
+        "declared_floor_rung": null,
+        "floor_met": null,
+        "floor_state": "unresolvable",
+        "grounding": false,
+        "sentences_unavailable_below_this_rung": [
+          "safe",
+          "none",
+          "no",
+          "all",
+          "compliant"
+        ],
+        "strongest_cell": "observed_within_declared_gap",
+        "universe_declared_and_finite": true
+      },
+      "coverage_cells": [
+        {
+          "attribute_class": "reachability",
+          "region": "seg_core_user"
+        },
+        {
+          "attribute_class": "membership",
+          "region": "seg_core_user"
+        },
+        {
+          "attribute_class": "reachability",
+          "region": "seg_dmz_ext"
+        },
+        {
+          "attribute_class": "membership",
+          "region": "seg_dmz_ext"
+        },
+        {
+          "attribute_class": "reachability",
+          "region": "seg_server_farm"
+        },
+        {
+          "attribute_class": "membership",
+          "region": "seg_server_farm"
+        },
+        {
+          "attribute_class": "reachability",
+          "region": "seg_mgmt"
+        },
+        {
+          "attribute_class": "membership",
+          "region": "seg_mgmt"
+        },
+        {
+          "attribute_class": "reachability",
+          "region": "seg_plant_ot"
+        },
+        {
+          "attribute_class": "membership",
+          "region": "seg_plant_ot"
+        },
+        {
+          "attribute_class": "reachability",
+          "region": "dir_corp"
+        },
+        {
+          "attribute_class": "membership",
+          "region": "dir_corp"
+        },
+        {
+          "attribute_class": "reachability",
+          "region": "dir_emea"
+        },
+        {
+          "attribute_class": "membership",
+          "region": "dir_emea"
+        }
+      ],
+      "declared_claim_strength_floor": "medium",
+      "declared_default_as_of": "as_known_now",
+      "id": "Q2",
+      "inference_envelope": {
+        "declared_by": "schema/security/paths.yaml :: inference_envelope",
+        "envelope": {
+          "as_of_class": "as_known_now",
+          "as_of_coordinate": {
+            "class": "as_known_now",
+            "schema_version_K": "3",
+            "schema_version_source": "history",
+            "system": "2026-09-26T00:00:00Z",
+            "valid": "2026-03-15T00:00:00Z"
+          },
+          "claim_strength": "unknown",
+          "coverage_regions": [
+            "dir_corp",
+            "dir_emea",
+            "seg_core_user",
+            "seg_dmz_ext",
+            "seg_mgmt",
+            "seg_plant_ot",
+            "seg_server_farm"
+          ],
+          "rule_id": "Q2",
+          "rule_version": "paths.yaml@9349b779a642",
+          "subject_id": "acme:principal:ad-4cca5c22-4a1b-4c2d-8e3f-0f74727022d6~6e5d8f71cfd5",
+          "value": {
+            "paths_answered": [
+              "authority_grant"
+            ],
+            "paths_refused": [
+              "authority_scope",
+              "group_authority",
+              "exposed_data",
+              "transitive_services"
+            ],
+            "rows_by_path": {
+              "authority_grant": 2,
+              "authority_scope": 0,
+              "exposed_data": 0,
+              "group_authority": 0,
+              "transitive_services": 0
+            }
+          }
+        },
+        "every_required_field_present": true,
+        "fields_beyond_the_declared_list": [],
+        "fields_unfilled": [],
+        "persistence": "forbidden",
+        "required_fields": [
+          "subject_id",
+          "rule_id",
+          "rule_version",
+          "as_of_coordinate",
+          "as_of_class",
+          "claim_strength",
+          "coverage_regions",
+          "value"
+        ]
+      },
+      "paths": [
+        {
+          "attributes_read": [],
+          "edges_used": [
+            "granted_to",
+            "grants"
+          ],
+          "kind": "privilege",
+          "note": "The grant itself. The scope is a SEPARATE path below rather than a third hop, because `granted_on` departs from the entitlement and not from the privilege -- writing it as a hop here walks off the end of the relationship, which is the kind of mistake a type-checking pass exists to catch.",
+          "path": "authority_grant",
+          "rows": 2,
+          "status": "answered",
+          "subject_ids": [
+            "acme:privilege:directory-privileged-role-0003~7eeb51ea05d5",
+            "acme:privilege:system-privileged-role-0017~079b77b03e44"
+          ]
+        },
+        {
+          "attributes_read": [],
+          "edges_used": [
+            "granted_on"
+          ],
+          "kind": "privilege",
+          "note": "The scope hop, and the reason `granted_on` exists at all. Without it the grant's scope is in the natural key and unreachable from the graph, and \"what can this account touch\" has no answer. Applied to each entitlement the authority paths return.",
+          "path": "authority_scope",
+          "refusal": "unexecutable_start + unpopulated_shape",
+          "refusal_detail": {
+            "gates_failed": 2,
+            "unexecutable_start": {
+              "declared_by": "path.from vs question.subject_type",
+              "note": "The scope hop, and the reason `granted_on` exists at all. Without it the grant's scope is in the natural key and unreachable from the graph, and \"what can this account touch\" has no answer. Applied to each entitlement the authority paths return.",
+              "path_starts_at": "entitlement",
+              "question_subject_type": "principal",
+              "rows_without_the_continuation": 0,
+              "why": "this path's start type is not the question's subject type, so it cannot be walked from the subject and no key says what it should be walked from instead. Its own note may say so in prose; prose is not a key."
+            },
+            "unpopulated_shape": {
+              "rows_of_that_relationship_type_at_this_coordinate": {
+                "granted_on": 112
+              },
+              "shapes": [
+                {
+                  "declared_by": "hops",
+                  "direction": "forward",
+                  "from_type": "entitlement",
+                  "relationship": "granted_on",
+                  "to_type": "any_declared_scope"
+                }
+              ],
+              "shapes_that_ARE_populated_for_that_type": {
+                "granted_on": [
+                  "entitlement->database_column (13)",
+                  "entitlement->service (99)"
+                ]
+              },
+              "why": "the core contract DECLARES this relationship and the corpus holds no row of it in this endpoint shape at this coordinate. Zero rows is a sentence, and this one would be a false all-clear, so the path is refused rather than returned empty."
+            }
+          },
+          "rows": 0,
+          "status": "refused"
+        },
+        {
+          "attributes_read": [],
+          "edges_used": [
+            "member_of",
+            "granted_to",
+            "granted_on"
+          ],
+          "kind": "privilege",
+          "note": "Authority held by a group the principal belongs to. Omitting this is how a tool undercounts a domain admin by exactly the amount that matters.",
+          "path": "group_authority",
+          "refusal": "unpopulated_shape",
+          "refusal_detail": {
+            "gates_failed": 1,
+            "unpopulated_shape": {
+              "rows_of_that_relationship_type_at_this_coordinate": {
+                "granted_on": 112,
+                "granted_to": 99
+              },
+              "shapes": [
+                {
+                  "declared_by": "hops",
+                  "direction": "inverse",
+                  "from_type": "entitlement",
+                  "relationship": "granted_to",
+                  "to_type": "identity_group"
+                },
+                {
+                  "declared_by": "hops",
+                  "direction": "forward",
+                  "from_type": "entitlement",
+                  "relationship": "granted_on",
+                  "to_type": "any_declared_scope"
+                }
+              ],
+              "shapes_that_ARE_populated_for_that_type": {
+                "granted_on": [
+                  "entitlement->database_column (13)",
+                  "entitlement->service (99)"
+                ],
+                "granted_to": [
+                  "entitlement->principal (99)"
+                ]
+              },
+              "why": "the core contract DECLARES this relationship and the corpus holds no row of it in this endpoint shape at this coordinate. Zero rows is a sentence, and this one would be a false all-clear, so the path is refused rather than returned empty."
+            }
+          },
+          "rows": 0,
+          "status": "refused"
+        },
+        {
+          "attributes_read": [
+            {
+              "attribute": "data_flow.data_classification",
+              "op": "is_not_null"
+            }
+          ],
+          "edges_used": [
+            "flow_destination",
+            "exposes"
+          ],
+          "kind": "dependency",
+          "note": "The exfiltration surface in one walk: from a reachable service, the flows that touch it, and the datastores those flows expose. `exposes` is the hop that turns \"it can talk to the service\" into \"and the service reads the datastore\", which is the half of the question people forget.",
+          "path": "exposed_data",
+          "refusal": "unexecutable_start",
+          "refusal_detail": {
+            "gates_failed": 1,
+            "unexecutable_start": {
+              "applies_to": "each service the authority paths make reachable",
+              "declared_by": "applies_to",
+              "executed_by": "nothing in this repository -- the key is declared in paths.yaml and read by no module, this one included",
+              "rows_without_the_continuation": 5,
+              "why": "this path is a CONTINUATION of the question's other paths, not a walk from the subject. Running it from the subject selects nothing and reports zero, which is a false all-clear on the substantive half of the question."
+            }
+          },
+          "rows": 0,
+          "status": "refused"
+        },
+        {
+          "attributes_read": [],
+          "edges_used": [],
+          "kind": "dependency",
+          "note": "A chain of services is a fixed point, not a linear walk, and writing it as a walk is how a spec ends up hopping off the end of a relationship. This is where ticket 18's depth-cap finding bites: the cap silently truncates the blast radius, so the cap is part of the answer (`closure_depth_reached` in the output) and not a setting.",
+          "path": "transitive_services",
+          "refusal": "unexecutable_start",
+          "refusal_detail": {
+            "gates_failed": 1,
+            "unexecutable_start": {
+              "applies_to": "each service the authority paths make reachable",
+              "declared_by": "applies_to",
+              "executed_by": "nothing in this repository -- the key is declared in paths.yaml and read by no module, this one included",
+              "rows_without_the_continuation": -1,
+              "why": "this path is a CONTINUATION of the question's other paths, not a walk from the subject. Running it from the subject selects nothing and reports zero, which is a false all-clear on the substantive half of the question."
+            }
+          },
+          "rows": 0,
+          "status": "refused"
+        }
+      ],
+      "refused_paths": [
+        "authority_scope",
+        "group_authority",
+        "exposed_data",
+        "transitive_services"
+      ],
+      "schema_declaration": {
+        "graph_schema_declares_types": 42,
+        "source": "slice/corpus/graph_schema.json"
+      },
+      "subject": "acme:principal:ad-4cca5c22-4a1b-4c2d-8e3f-0f74727022d6~6e5d8f71cfd5",
+      "subject_type": "principal",
+      "title": "What a compromised service account can reach and exfiltrate"
+    },
+    "Q3": {
+      "claim": {
+        "aggregation": "min_over_sources, read from coverage_contract.yaml defaults",
+        "caps": [
+          {
+            "ceiling": "unknown",
+            "gates_failed": [
+              "unapplied_classifier",
+              "undeclared_attribute"
+            ],
+            "scope": "the question's own traversal",
+            "why": "path(s) standing_grant, departed_human, still_live_account could not be evaluated at this coordinate. A Claim Strength describes an OBSERVATION, and a path that cannot run is not a coverage gap over the world but a gap in the twin. The coverage layer is not permitted to supply a rung for a computation that did not happen."
+          },
+          {
+            "ceiling": "observed_within_declared_gap",
+            "scope": "the artefact as a whole",
+            "why": "D50's admission gate puts a CEILING on any claim made from this artefact, and a ceiling is not a rung. Reported as a cap so the two are never confused."
+          }
+        ],
+        "cells": [
+          {
+            "attribute_class": "inventory",
+            "blind_spots": [],
+            "bound": null,
+            "bound_basis": null,
+            "claim_strength": "observed",
+            "complement_licensed": true,
+            "grounding": true,
+            "reason": "enumerated by an attributable channel inside its window, no declared gap",
+            "region": "seg_core_user",
+            "runs": [
+              "run_scanner_vuln_seg_core_user_2021_01",
+              "run_scanner_vuln_seg_core_user_2026_02"
+            ],
+            "source_system": "scanner_vuln",
+            "universe_declared_and_finite": true
+          },
+          {
+            "attribute_class": "inventory",
+            "blind_spots": [],
+            "bound": null,
+            "bound_basis": null,
+            "claim_strength": "observed",
+            "complement_licensed": true,
+            "grounding": true,
+            "reason": "enumerated by an attributable channel inside its window, no declared gap",
+            "region": "seg_dmz_ext",
+            "runs": [
+              "run_scanner_vuln_seg_dmz_ext_2021_01"
+            ],
+            "source_system": "scanner_vuln",
+            "universe_declared_and_finite": true
+          },
+          {
+            "attribute_class": "inventory",
+            "blind_spots": [],
+            "bound": null,
+            "bound_basis": null,
+            "claim_strength": "observed",
+            "complement_licensed": true,
+            "grounding": true,
+            "reason": "enumerated by an attributable channel inside its window, no declared gap",
+            "region": "seg_server_farm",
+            "runs": [
+              "run_sweep_active_seg_server_farm_2021_01",
+              "run_sweep_active_seg_server_farm_2025_04"
+            ],
+            "source_system": "sweep_active",
+            "universe_declared_and_finite": true
+          },
+          {
+            "attribute_class": "inventory",
+            "blind_spots": [],
+            "bound": null,
+            "bound_basis": null,
+            "claim_strength": "observed",
+            "complement_licensed": true,
+            "grounding": true,
+            "reason": "enumerated by an attributable channel inside its window, no declared gap",
+            "region": "seg_mgmt",
+            "runs": [
+              "run_sweep_active_seg_mgmt_2021_01"
+            ],
+            "source_system": "sweep_active",
+            "universe_declared_and_finite": true
+          },
+          {
+            "attribute_class": "inventory",
+            "blind_spots": [],
+            "bound": null,
+            "bound_basis": null,
+            "claim_strength": "unbounded",
+            "complement_licensed": false,
+            "grounding": false,
+            "reason": "witnessed only by attesting channels, which may be a numerator and never a denominator: a completed report says something was looked at, not that nothing else was",
+            "region": "seg_plant_ot",
+            "runs": [
+              "run_flow_netflow_seg_plant_ot_2021_01"
+            ],
+            "source_system": "flow_netflow*",
+            "universe_declared_and_finite": true
+          },
+          {
+            "attribute_class": "inventory",
+            "blind_spots": [],
+            "bound": null,
+            "bound_basis": null,
+            "claim_strength": "unbounded",
+            "complement_licensed": false,
+            "grounding": false,
+            "reason": "witnessed only by attesting channels, which may be a numerator and never a denominator: a completed report says something was looked at, not that nothing else was",
+            "region": "dir_corp",
+            "runs": [
+              "run_iam_corp_dir_corp_2021_01"
+            ],
+            "source_system": "iam_corp*",
+            "universe_declared_and_finite": false
+          },
+          {
+            "attribute_class": "inventory",
+            "blind_spots": [],
+            "bound": null,
+            "bound_basis": null,
+            "claim_strength": "unknown",
+            "complement_licensed": false,
+            "grounding": false,
+            "reason": "no live channel reported this class for this region at this coordinate, and no declared gap names the hole -- the one state D30 says is not representable, and which the region obligation exists to prevent",
+            "region": "dir_emea",
+            "runs": [],
+            "source_system": "",
+            "universe_declared_and_finite": false
+          }
+        ],
+        "claim_strength": "unknown",
+        "claim_strength_before_caps": "unknown",
+        "complement_licensed": false,
+        "declared_floor": "high",
+        "declared_floor_rung": null,
+        "floor_met": null,
+        "floor_state": "unresolvable",
+        "grounding": false,
+        "sentences_unavailable_below_this_rung": [
+          "safe",
+          "none",
+          "no",
+          "all",
+          "compliant"
+        ],
+        "strongest_cell": "observed",
+        "universe_declared_and_finite": true
+      },
+      "coverage_cells": [
+        {
+          "attribute_class": "inventory",
+          "region": "seg_core_user"
+        },
+        {
+          "attribute_class": "inventory",
+          "region": "seg_dmz_ext"
+        },
+        {
+          "attribute_class": "inventory",
+          "region": "seg_server_farm"
+        },
+        {
+          "attribute_class": "inventory",
+          "region": "seg_mgmt"
+        },
+        {
+          "attribute_class": "inventory",
+          "region": "seg_plant_ot"
+        },
+        {
+          "attribute_class": "inventory",
+          "region": "dir_corp"
+        },
+        {
+          "attribute_class": "inventory",
+          "region": "dir_emea"
+        }
+      ],
+      "declared_claim_strength_floor": "high",
+      "declared_default_as_of": "current",
+      "id": "Q3",
+      "inference_envelope": {
+        "declared_by": "schema/security/paths.yaml :: inference_envelope",
+        "envelope": {
+          "as_of_class": "as_known_now",
+          "as_of_coordinate": {
+            "class": "as_known_now",
+            "schema_version_K": "3",
+            "schema_version_source": "history",
+            "system": "2026-09-26T00:00:00Z",
+            "valid": "2026-03-15T00:00:00Z"
+          },
+          "claim_strength": "unknown",
+          "coverage_regions": [
+            "dir_corp",
+            "dir_emea",
+            "seg_core_user",
+            "seg_dmz_ext",
+            "seg_mgmt",
+            "seg_plant_ot",
+            "seg_server_farm"
+          ],
+          "rule_id": "Q3",
+          "rule_version": "paths.yaml@9349b779a642",
+          "subject_id": "<no subject chosen: entitlement>",
+          "value": {
+            "paths_answered": [],
+            "paths_refused": [
+              "standing_grant",
+              "departed_human",
+              "still_live_account"
+            ],
+            "rows_by_path": {
+              "departed_human": 0,
+              "standing_grant": 0,
+              "still_live_account": 0
+            }
+          }
+        },
+        "every_required_field_present": true,
+        "fields_beyond_the_declared_list": [],
+        "fields_unfilled": [],
+        "persistence": "forbidden",
+        "required_fields": [
+          "subject_id",
+          "rule_id",
+          "rule_version",
+          "as_of_coordinate",
+          "as_of_class",
+          "claim_strength",
+          "coverage_regions",
+          "value"
+        ]
+      },
+      "paths": [
+        {
+          "attributes_read": [
+            {
+              "attribute": "privilege.privilege_kind",
+              "op": "in",
+              "values": [
+                "directory",
+                "system"
+              ]
+            },
+            {
+              "attribute": "entitlement.is_standing",
+              "literal": "true",
+              "op": "="
+            },
+            {
+              "attribute": "entitlement.valid_to",
+              "op": "is_null"
+            }
+          ],
+          "edges_used": [
+            "grants"
+          ],
+          "kind": "privilege",
+          "path": "standing_grant",
+          "refusal": "undeclared_attribute",
+          "refusal_detail": {
+            "gates_failed": 1,
+            "undeclared_attribute": {
+              "missing": [
+                {
+                  "attribute": "entitlement.is_standing",
+                  "declared_columns": [
+                    "grant",
+                    "scope",
+                    "starts_on",
+                    "subject"
+                  ],
+                  "problem": "the column is not declared"
+                }
+              ],
+              "why": "a path that names an attribute the declared schema does not carry cannot be evaluated, and evaluating it anyway yields an empty result, which reads as a clean estate. Refused rather than returned empty."
+            }
+          },
+          "rows": 0,
+          "status": "refused"
+        },
+        {
+          "attributes_read": [],
+          "edges_used": [
+            "authorised_by"
+          ],
+          "kind": "attribution",
+          "note": "THE load-bearing step, and the reason the fold classifies rather than filters. The person is a real entity whose valid interval has ended, so the fold reports the edge's target_state as `ended` -- valid state. Drop the edge, or treat `ended` as a dangling reference, and this question returns nothing at all. The departed employee is *precisely* an expected-dead target.",
+          "path": "departed_human",
+          "refusal": "unapplied_classifier",
+          "refusal_detail": {
+            "gates_failed": 1,
+            "unapplied_classifier": {
+              "classify": "fold.target_state == 'ended'",
+              "declared_by": "classify",
+              "executed_by": "nothing in this repository. check_paths.py checks that the string is present; no module evaluates it",
+              "rows_without_the_declared_classifier": 11,
+              "why": "a declared classifier that is not applied does not widen the answer, it INVERTS it: the path returns every row it walks, under a question about departed staff. Refused rather than answered unfiltered."
+            }
+          },
+          "rows": 0,
+          "status": "refused"
+        },
+        {
+          "attributes_read": [
+            {
+              "attribute": "principal.enabled",
+              "literal": "true",
+              "op": "="
+            }
+          ],
+          "edges_used": [
+            "granted_to"
+          ],
+          "kind": "privilege",
+          "note": "An account that was disabled at the same time as the departure is not a finding. The conjunction is what makes the question a question.",
+          "path": "still_live_account",
+          "refusal": "undeclared_attribute",
+          "refusal_detail": {
+            "gates_failed": 1,
+            "undeclared_attribute": {
+              "missing": [
+                {
+                  "attribute": "principal.enabled",
+                  "declared_columns": [
+                    "account_type",
+                    "display_name",
+                    "is_enabled",
+                    "last_activity_at",
+                    "principal_key"
+                  ],
+                  "problem": "the column is not declared"
+                }
+              ],
+              "why": "a path that names an attribute the declared schema does not carry cannot be evaluated, and evaluating it anyway yields an empty result, which reads as a clean estate. Refused rather than returned empty."
+            }
+          },
+          "rows": 0,
+          "status": "refused"
+        }
+      ],
+      "refused_paths": [
+        "standing_grant",
+        "departed_human",
+        "still_live_account"
+      ],
+      "schema_declaration": {
+        "graph_schema_declares_types": 42,
+        "source": "slice/corpus/graph_schema.json"
+      },
+      "subject": null,
+      "subject_type": "entitlement",
+      "title": "Standing administrative privilege held by someone who has departed"
+    },
+    "Q4": {
+      "claim": {
+        "aggregation": "min_over_sources, read from coverage_contract.yaml defaults",
+        "caps": [
+          {
+            "ceiling": "unknown",
+            "gates_failed": [
+              "unexecutable_start"
+            ],
+            "scope": "the question's own traversal",
+            "why": "path(s) network_path could not be evaluated at this coordinate. A Claim Strength describes an OBSERVATION, and a path that cannot run is not a coverage gap over the world but a gap in the twin. The coverage layer is not permitted to supply a rung for a computation that did not happen."
+          },
+          {
+            "ceiling": "unknown",
+            "declaration_absent": null,
+            "scope": "attribute_class/sensitivity",
+            "state": "absent_from_the_model",
+            "why": "the profile declares `sensitivity` assessed and this question's coverage requirements name it, but the declared schema carries no sensitivity column on database_column and the corpus does not either. An obligation over an absent field is satisfied by construction. `policy.attribute_class_must_be_assessed` is `not_implemented`, so nothing in the catalogue can say so either way."
+          },
+          {
+            "ceiling": "observed_within_declared_gap",
+            "scope": "the artefact as a whole",
+            "why": "D50's admission gate puts a CEILING on any claim made from this artefact, and a ceiling is not a rung. Reported as a cap so the two are never confused."
+          }
+        ],
+        "cells": [
+          {
+            "attribute_class": "encryption",
+            "blind_spots": [],
+            "bound": null,
+            "bound_basis": null,
+            "claim_strength": "observed",
+            "complement_licensed": true,
+            "grounding": true,
+            "reason": "enumerated by an attributable channel inside its window, no declared gap",
+            "region": "seg_core_user",
+            "runs": [
+              "run_scanner_vuln_seg_core_user_2021_01",
+              "run_scanner_vuln_seg_core_user_2026_02"
+            ],
+            "source_system": "scanner_vuln",
+            "universe_declared_and_finite": true
+          },
+          {
+            "attribute_class": "classification",
+            "blind_spots": [],
+            "bound": null,
+            "bound_basis": null,
+            "claim_strength": "unknown",
+            "complement_licensed": false,
+            "grounding": false,
+            "reason": "no live channel reported this class for this region at this coordinate, and no declared gap names the hole -- the one state D30 says is not representable, and which the region obligation exists to prevent",
+            "region": "seg_core_user",
+            "runs": [],
+            "source_system": "",
+            "universe_declared_and_finite": true
+          },
+          {
+            "attribute_class": "sensitivity",
+            "blind_spots": [],
+            "bound": null,
+            "bound_basis": null,
+            "claim_strength": "unknown",
+            "complement_licensed": false,
+            "grounding": false,
+            "reason": "no live channel reported this class for this region at this coordinate, and no declared gap names the hole -- the one state D30 says is not representable, and which the region obligation exists to prevent",
+            "region": "seg_core_user",
+            "runs": [],
+            "source_system": "",
+            "universe_declared_and_finite": true
+          },
+          {
+            "attribute_class": "encryption",
+            "blind_spots": [],
+            "bound": null,
+            "bound_basis": null,
+            "claim_strength": "observed",
+            "complement_licensed": true,
+            "grounding": true,
+            "reason": "enumerated by an attributable channel inside its window, no declared gap",
+            "region": "seg_dmz_ext",
+            "runs": [
+              "run_scanner_vuln_seg_dmz_ext_2021_01"
+            ],
+            "source_system": "scanner_vuln",
+            "universe_declared_and_finite": true
+          },
+          {
+            "attribute_class": "classification",
+            "blind_spots": [],
+            "bound": null,
+            "bound_basis": null,
+            "claim_strength": "unknown",
+            "complement_licensed": false,
+            "grounding": false,
+            "reason": "no live channel reported this class for this region at this coordinate, and no declared gap names the hole -- the one state D30 says is not representable, and which the region obligation exists to prevent",
+            "region": "seg_dmz_ext",
+            "runs": [],
+            "source_system": "",
+            "universe_declared_and_finite": true
+          },
+          {
+            "attribute_class": "sensitivity",
+            "blind_spots": [],
+            "bound": null,
+            "bound_basis": null,
+            "claim_strength": "unknown",
+            "complement_licensed": false,
+            "grounding": false,
+            "reason": "no live channel reported this class for this region at this coordinate, and no declared gap names the hole -- the one state D30 says is not representable, and which the region obligation exists to prevent",
+            "region": "seg_dmz_ext",
+            "runs": [],
+            "source_system": "",
+            "universe_declared_and_finite": true
+          },
+          {
+            "attribute_class": "encryption",
+            "blind_spots": [],
+            "bound": null,
+            "bound_basis": null,
+            "claim_strength": "unknown",
+            "complement_licensed": false,
+            "grounding": false,
+            "reason": "no live channel reported this class for this region at this coordinate, and no declared gap names the hole -- the one state D30 says is not representable, and which the region obligation exists to prevent",
+            "region": "attribute_regions/encryption",
+            "runs": [],
+            "source_system": "",
+            "universe_declared_and_finite": false
+          },
+          {
+            "attribute_class": "classification",
+            "blind_spots": [
+              "spot_classification_gap"
+            ],
+            "bound": null,
+            "bound_basis": null,
+            "claim_strength": "observed_within_declared_gap",
+            "complement_licensed": false,
+            "grounding": false,
+            "reason": "declared unobserved: spot_classification_gap",
+            "region": "attribute_regions/classification",
+            "runs": [],
+            "source_system": "",
+            "universe_declared_and_finite": false
+          },
+          {
+            "attribute_class": "sensitivity",
+            "blind_spots": [],
+            "bound": null,
+            "bound_basis": null,
+            "claim_strength": "unknown",
+            "complement_licensed": false,
+            "grounding": false,
+            "reason": "no live channel reported this class for this region at this coordinate, and no declared gap names the hole -- the one state D30 says is not representable, and which the region obligation exists to prevent",
+            "region": "attribute_regions/sensitivity",
+            "runs": [],
+            "source_system": "",
+            "universe_declared_and_finite": false
+          }
+        ],
+        "claim_strength": "unknown",
+        "claim_strength_before_caps": "unknown",
+        "complement_licensed": false,
+        "declared_floor": "medium",
+        "declared_floor_rung": null,
+        "floor_met": null,
+        "floor_state": "unresolvable",
+        "grounding": false,
+        "sentences_unavailable_below_this_rung": [
+          "safe",
+          "none",
+          "no",
+          "all",
+          "compliant"
+        ],
+        "strongest_cell": "observed",
+        "universe_declared_and_finite": true
+      },
+      "coverage_cells": [
+        {
+          "attribute_class": "encryption",
+          "region": "seg_core_user"
+        },
+        {
+          "attribute_class": "classification",
+          "region": "seg_core_user"
+        },
+        {
+          "attribute_class": "sensitivity",
+          "region": "seg_core_user"
+        },
+        {
+          "attribute_class": "encryption",
+          "region": "seg_dmz_ext"
+        },
+        {
+          "attribute_class": "classification",
+          "region": "seg_dmz_ext"
+        },
+        {
+          "attribute_class": "sensitivity",
+          "region": "seg_dmz_ext"
+        },
+        {
+          "attribute_class": "encryption",
+          "region": "attribute_regions/encryption"
+        },
+        {
+          "attribute_class": "classification",
+          "region": "attribute_regions/classification"
+        },
+        {
+          "attribute_class": "sensitivity",
+          "region": "attribute_regions/sensitivity"
+        }
+      ],
+      "declared_claim_strength_floor": "medium",
+      "declared_default_as_of": "as_known_now",
+      "id": "Q4",
+      "inference_envelope": {
+        "declared_by": "schema/security/paths.yaml :: inference_envelope",
+        "envelope": {
+          "as_of_class": "as_known_now",
+          "as_of_coordinate": {
+            "class": "as_known_now",
+            "schema_version_K": "3",
+            "schema_version_source": "history",
+            "system": "2026-09-26T00:00:00Z",
+            "valid": "2026-03-15T00:00:00Z"
+          },
+          "claim_strength": "unknown",
+          "coverage_regions": [
+            "attribute_regions/classification",
+            "attribute_regions/encryption",
+            "attribute_regions/sensitivity",
+            "seg_core_user",
+            "seg_dmz_ext"
+          ],
+          "rule_id": "Q4",
+          "rule_version": "paths.yaml@9349b779a642",
+          "subject_id": "<no subject chosen: database_column>",
+          "value": {
+            "paths_answered": [
+              "classification",
+              "to_datastore"
+            ],
+            "paths_refused": [
+              "network_path"
+            ],
+            "rows_by_path": {
+              "classification": 47,
+              "network_path": 0,
+              "to_datastore": 31
+            }
+          }
+        },
+        "every_required_field_present": true,
+        "fields_beyond_the_declared_list": [],
+        "fields_unfilled": [],
+        "persistence": "forbidden",
+        "required_fields": [
+          "subject_id",
+          "rule_id",
+          "rule_version",
+          "as_of_coordinate",
+          "as_of_class",
+          "claim_strength",
+          "coverage_regions",
+          "value"
+        ]
+      },
+      "paths": [
+        {
+          "attributes_read": [
+            {
+              "attribute": "database_column.is_pii",
+              "literal": "true",
+              "op": "="
+            },
+            {
+              "attribute": "database_column.is_encrypted_at_rest",
+              "literal": "false",
+              "op": "="
+            }
+          ],
+          "edges_used": [],
+          "kind": "placement",
+          "note": "An attribute-pair claim, and therefore the weakest kind. It is exactly the case D30 identified: blindness to an ATTRIBUTE is not blindness to an ENTITY, and an unobserved encryption state is not an unencrypted column. A covered region is what makes the negative claim assertable.",
+          "path": "classification",
+          "rows": 47,
+          "rows_the_filter_matches_in_the_estate": 47,
+          "status": "answered",
+          "subject_ids": [
+            "acme:database_column:acme-data-store-store-00000~173c52e384f1",
+            "acme:database_column:acme-data-store-store-00000~50fff5bc994a",
+            "acme:database_column:acme-data-store-store-00000~5e7eb28f926b",
+            "acme:database_column:acme-data-store-store-00000~904372e5c668",
+            "acme:database_column:acme-data-store-store-00000~a133213a005b",
+            "acme:database_column:acme-data-store-store-00001~01983d3bfad4",
+            "acme:database_column:acme-data-store-store-00001~30ddcf0b5fc5",
+            "acme:database_column:acme-data-store-store-00001~4055406eb91a",
+            "acme:database_column:acme-data-store-store-00001~5b276a108a06",
+            "acme:database_column:acme-data-store-store-00002~b93fea238ee8",
+            "acme:database_column:acme-data-store-store-00002~c5afe2e226a1",
+            "acme:database_column:acme-data-store-store-00003~0ee320cc4c45"
+          ]
+        },
+        {
+          "attributes_read": [],
+          "edges_used": [
+            "contains",
+            "contains"
+          ],
+          "kind": "placement",
+          "path": "to_datastore",
+          "rows": 31,
+          "status": "answered",
+          "subject_ids": [
+            "acme:data_store:store-00000~199fa6b0c449",
+            "acme:data_store:store-00003~355a60161960",
+            "acme:data_store:store-00002~a544946a70d1",
+            "acme:data_store:store-00005~d9cb14e88d51",
+            "acme:data_store:store-00001~f3e021452766",
+            "acme:data_store:store-00041~3a94689d27db",
+            "acme:data_store:store-00030~7cf56a2d81dd",
+            "acme:data_store:store-00042~20df4870412d",
+            "acme:data_store:store-00015~b90744b8b425",
+            "acme:data_store:store-00027~0c9d272f0960",
+            "acme:data_store:store-00017~0335de594a0b",
+            "acme:data_store:store-00034~a13ca0592528"
+          ]
+        },
+        {
+          "attributes_read": [
+            {
+              "attribute": "security_zone.zone_class",
+              "op": "in",
+              "values": [
+                "user",
+                "internet",
+                "dmz"
+              ]
+            }
+          ],
+          "edges_used": [
+            "runs_on",
+            "assigned_to",
+            "in_segment",
+            "in_zone"
+          ],
+          "kind": "placement",
+          "path": "network_path",
+          "refusal": "unexecutable_start",
+          "refusal_detail": {
+            "gates_failed": 1,
+            "unexecutable_start": {
+              "declared_by": "path.from vs question.subject_type",
+              "note": "",
+              "path_starts_at": "data_store",
+              "question_subject_type": "database_column",
+              "rows_without_the_continuation": 3,
+              "why": "this path's start type is not the question's subject type, so it cannot be walked from the subject and no key says what it should be walked from instead. Its own note may say so in prose; prose is not a key."
+            }
+          },
+          "rows": 0,
+          "status": "refused"
+        }
+      ],
+      "refused_paths": [
+        "network_path"
+      ],
+      "schema_declaration": {
+        "graph_schema_declares_types": 42,
+        "source": "slice/corpus/graph_schema.json"
+      },
+      "subject": null,
+      "subject_type": "database_column",
+      "title": "PII columns unencrypted at rest behind a user-facing subnet"
+    }
+  },
+  "as_thought_then": {
+    "Q1": {
+      "claim": {
+        "aggregation": "min_over_sources, read from coverage_contract.yaml defaults",
+        "caps": [
+          {
+            "ceiling": "unknown",
+            "gates_failed": [
+              "undeclared_attribute",
+              "unpopulated_shape",
+              "untranslatable_filter"
+            ],
+            "scope": "the question's own traversal",
+            "why": "path(s) reachability_by_attribute, software_exposure could not be evaluated at this coordinate. A Claim Strength describes an OBSERVATION, and a path that cannot run is not a coverage gap over the world but a gap in the twin. The coverage layer is not permitted to supply a rung for a computation that did not happen."
+          },
+          {
+            "ceiling": "observed_within_declared_gap",
+            "scope": "the artefact as a whole",
+            "why": "D50's admission gate puts a CEILING on any claim made from this artefact, and a ceiling is not a rung. Reported as a cap so the two are never confused."
+          }
+        ],
+        "cells": [
+          {
+            "attribute_class": "patch_state",
+            "blind_spots": [],
+            "bound": null,
+            "bound_basis": null,
+            "claim_strength": "observed",
+            "complement_licensed": true,
+            "grounding": true,
+            "reason": "enumerated by an attributable channel inside its window, no declared gap",
+            "region": "seg_dmz_ext",
+            "runs": [
+              "run_scanner_vuln_seg_dmz_ext_2021_01"
+            ],
+            "source_system": "scanner_vuln",
+            "universe_declared_and_finite": true
+          },
+          {
+            "attribute_class": "patch_state",
+            "blind_spots": [],
+            "bound": null,
+            "bound_basis": null,
+            "claim_strength": "unknown",
+            "complement_licensed": false,
+            "grounding": false,
+            "reason": "no live channel reported this class for this region at this coordinate, and no declared gap names the hole -- the one state D30 says is not representable, and which the region obligation exists to prevent",
+            "region": "attribute_regions/patch_state",
+            "runs": [],
+            "source_system": "",
+            "universe_declared_and_finite": false
+          }
+        ],
+        "claim_strength": "unknown",
+        "claim_strength_before_caps": "unknown",
+        "complement_licensed": false,
+        "declared_floor": "high",
+        "declared_floor_rung": null,
+        "floor_met": null,
+        "floor_state": "unresolvable",
+        "grounding": false,
+        "sentences_unavailable_below_this_rung": [
+          "safe",
+          "none",
+          "no",
+          "all",
+          "compliant"
+        ],
+        "strongest_cell": "observed",
+        "universe_declared_and_finite": true
+      },
+      "coverage_cells": [
+        {
+          "attribute_class": "patch_state",
+          "region": "seg_dmz_ext"
+        },
+        {
+          "attribute_class": "patch_state",
+          "region": "attribute_regions/patch_state"
+        }
+      ],
+      "declared_claim_strength_floor": "high",
+      "declared_default_as_of": "as_known_now",
+      "id": "Q1",
+      "inference_envelope": {
+        "declared_by": "schema/security/paths.yaml :: inference_envelope",
+        "envelope": {
+          "as_of_class": "as_thought_then",
+          "as_of_coordinate": {
+            "class": "as_thought_then",
+            "schema_version_K": "1",
+            "schema_version_source": "history",
+            "system": "2026-03-15T00:00:00Z",
+            "valid": "2026-03-15T00:00:00Z"
+          },
+          "claim_strength": "unknown",
+          "coverage_regions": [
+            "attribute_regions/patch_state",
+            "seg_dmz_ext"
+          ],
+          "rule_id": "Q1",
+          "rule_version": "paths.yaml@9349b779a642",
+          "subject_id": "<no subject chosen: compute_node>",
+          "value": {
+            "paths_answered": [
+              "reachability_by_observed_path",
+              "ownership"
+            ],
+            "paths_refused": [
+              "reachability_by_attribute",
+              "software_exposure"
+            ],
+            "rows_by_path": {
+              "ownership": 9,
+              "reachability_by_attribute": 0,
+              "reachability_by_observed_path": 2,
+              "software_exposure": 0
+            }
+          }
+        },
+        "every_required_field_present": true,
+        "fields_beyond_the_declared_list": [],
+        "fields_unfilled": [],
+        "persistence": "forbidden",
+        "required_fields": [
+          "subject_id",
+          "rule_id",
+          "rule_version",
+          "as_of_coordinate",
+          "as_of_class",
+          "claim_strength",
+          "coverage_regions",
+          "value"
+        ]
+      },
+      "paths": [
+        {
+          "attributes_read": [
+            {
+              "attribute": "security_zone.zone_class",
+              "op": "in",
+              "values": [
+                "internet",
+                "dmz"
+              ]
+            }
+          ],
+          "edges_used": [
+            "assigned_to",
+            "in_segment",
+            "in_zone"
+          ],
+          "kind": "placement",
+          "note": "The observed path. Preferred over the attribute below because a path is evidence and an attribute is an assertion, and the two deserve different confidence.",
+          "path": "reachability_by_observed_path",
+          "rows": 2,
+          "rows_the_filter_matches_in_the_estate": 2,
+          "status": "answered",
+          "subject_ids": [
+            "acme:security_zone:zone-dmz~b327b8fcb082",
+            "acme:security_zone:zone-internet~025abca34332"
+          ]
+        },
+        {
+          "attributes_read": [],
+          "edges_used": [],
+          "kind": "placement",
+          "path": "reachability_by_attribute",
+          "refusal": "untranslatable_filter",
+          "refusal_detail": {
+            "gates_failed": 1,
+            "untranslatable_filter": {
+              "filter": "compute_node has a service with is_internet_facing = true",
+              "note": "this module translates a narrow grammar and refuses everything else. A filter with a dropped conjunct is a filter true of more than the question, so nothing is guessed here.",
+              "why": "this module cannot translate 'compute_node has a service with is_internet_facing = true'"
+            }
+          },
+          "rows": 0,
+          "status": "refused"
+        },
+        {
+          "attributes_read": [
+            {
+              "attribute": "affected_product.version_range"
+            },
+            {
+              "attribute": "software_installation.installed_version"
+            },
+            {
+              "attribute": "vulnerability.exploited_in_the_wild"
+            }
+          ],
+          "edges_used": [
+            "contains",
+            "instance_of",
+            "about",
+            "about"
+          ],
+          "kind": "placement",
+          "note": "\"Unpatched\" is an INFERENCE over (installed_version, affected_product.fixed_in_version). Nothing stores a patch_level flag: a stored flag is a fact that goes stale the moment a new CVE lands, which is exactly what D8 forbids.",
+          "path": "software_exposure",
+          "refusal": "undeclared_attribute + unpopulated_shape + untranslatable_filter",
+          "refusal_detail": {
+            "gates_failed": 3,
+            "undeclared_attribute": {
+              "missing": [
+                {
+                  "attribute": "affected_product.version_range",
+                  "declared_columns": [
+                    "affected_range",
+                    "cve_id",
+                    "product_model_id"
+                  ],
+                  "problem": "the column is not declared"
+                },
+                {
+                  "attribute": "software_installation.installed_version",
+                  "declared_columns": [
+                    "compute_node",
+                    "install_path",
+                    "product_model",
+                    "version"
+                  ],
+                  "problem": "the column is not declared"
+                },
+                {
+                  "attribute": "vulnerability.exploited_in_the_wild",
+                  "declared_columns": [
+                    "cve_id",
+                    "published_at",
+                    "severity_score"
+                  ],
+                  "problem": "the column is not declared"
+                }
+              ],
+              "why": "a path that names an attribute the declared schema does not carry cannot be evaluated, and evaluating it anyway yields an empty result, which reads as a clean estate. Refused rather than returned empty."
+            },
+            "unpopulated_shape": {
+              "rows_of_that_relationship_type_at_this_coordinate": {
+                "about": 15,
+                "contains": 3626
+              },
+              "shapes": [
+                {
+                  "declared_by": "hops",
+                  "direction": "inverse",
+                  "from_type": "software_installation",
+                  "relationship": "contains",
+                  "to_type": "compute_node"
+                },
+                {
+                  "declared_by": "join",
+                  "direction": "join",
+                  "from_type": "product_model",
+                  "relationship": "about",
+                  "to_type": "affected_product"
+                },
+                {
+                  "declared_by": "join",
+                  "direction": "join",
+                  "from_type": "affected_product",
+                  "relationship": "about",
+                  "to_type": "vulnerability"
+                }
+              ],
+              "shapes_that_ARE_populated_for_that_type": {
+                "about": [
+                  "discovery_run->ip_address (15)"
+                ],
+                "contains": [
+                  "compute_node->certificate (53)",
+                  "compute_node->data_store (48)",
+                  "compute_node->network_port (89)",
+                  "compute_node->service (110)",
+                  "compute_node->software_installation (534)",
+                  "compute_node->storage_volume (138)",
+                  "data_store->database_table (84)",
+                  "database_column->data_row (266)"
+                ]
+              },
+              "why": "the core contract DECLARES this relationship and the corpus holds no row of it in this endpoint shape at this coordinate. Zero rows is a sentence, and this one would be a false all-clear, so the path is refused rather than returned empty."
+            },
+            "untranslatable_filter": {
+              "filter": "affected_product.version_range admits software_installation.installed_version, AND vulnerability.exploited_in_the_wild = true",
+              "note": "this module translates a narrow grammar and refuses everything else. A filter with a dropped conjunct is a filter true of more than the question, so nothing is guessed here.",
+              "why": "this module cannot translate 'affected_product.version_range admits software_installation.installed_version,'"
+            }
+          },
+          "rows": 0,
+          "status": "refused"
+        },
+        {
+          "attributes_read": [],
+          "edges_used": [
+            "operated_by",
+            "member_of"
+          ],
+          "kind": "attribution",
+          "note": "bitemporal, so \"who owned it in March\" and \"who owns it now\" are both answerable and are different questions. A host with no operated_by edge is an unowned host, which is a finding in itself.",
+          "path": "ownership",
+          "rows": 9,
+          "status": "answered",
+          "subject_ids": [
+            "acme:person:e000011~968736616a61",
+            "acme:person:e000008~222f6021d9c0",
+            "acme:person:e000012~50355e7fd639",
+            "acme:person:e000004~ad436d630df3",
+            "acme:person:e000007~56dfe2528105",
+            "acme:person:e000016~6293a233323a",
+            "acme:person:e000000~35cb9b53e1e8",
+            "acme:person:e000002~fe765433a949",
+            "acme:person:e000005~18f5810cc064"
+          ]
+        }
+      ],
+      "refused_paths": [
+        "reachability_by_attribute",
+        "software_exposure"
+      ],
+      "schema_declaration": {
+        "graph_schema_declares_types": 42,
+        "source": "slice/corpus/graph_schema.json"
+      },
+      "subject": null,
+      "subject_type": "compute_node",
+      "title": "Internet-reachable hosts running exploitable unpatched software, and who owns them"
+    },
+    "Q2": {
+      "claim": {
+        "aggregation": "min_over_sources, read from coverage_contract.yaml defaults",
+        "caps": [
+          {
+            "ceiling": "unknown",
+            "gates_failed": [
+              "unexecutable_start",
+              "unpopulated_shape"
+            ],
+            "scope": "the question's own traversal",
+            "why": "path(s) authority_scope, group_authority, exposed_data, transitive_services could not be evaluated at this coordinate. A Claim Strength describes an OBSERVATION, and a path that cannot run is not a coverage gap over the world but a gap in the twin. The coverage layer is not permitted to supply a rung for a computation that did not happen."
+          },
+          {
+            "ceiling": "observed_within_declared_gap",
+            "scope": "the artefact as a whole",
+            "why": "D50's admission gate puts a CEILING on any claim made from this artefact, and a ceiling is not a rung. Reported as a cap so the two are never confused."
+          }
+        ],
+        "cells": [
+          {
+            "attribute_class": "reachability",
+            "blind_spots": [],
+            "bound": null,
+            "bound_basis": null,
+            "claim_strength": "unknown",
+            "complement_licensed": false,
+            "grounding": false,
+            "reason": "no live channel reported this class for this region at this coordinate, and no declared gap names the hole -- the one state D30 says is not representable, and which the region obligation exists to prevent",
+            "region": "seg_core_user",
+            "runs": [],
+            "source_system": "",
+            "universe_declared_and_finite": true
+          },
+          {
+            "attribute_class": "membership",
+            "blind_spots": [],
+            "bound": null,
+            "bound_basis": null,
+            "claim_strength": "unknown",
+            "complement_licensed": false,
+            "grounding": false,
+            "reason": "no live channel reported this class for this region at this coordinate, and no declared gap names the hole -- the one state D30 says is not representable, and which the region obligation exists to prevent",
+            "region": "seg_core_user",
+            "runs": [],
+            "source_system": "",
+            "universe_declared_and_finite": true
+          },
+          {
+            "attribute_class": "reachability",
+            "blind_spots": [
+              "spot_dmz_route"
+            ],
+            "bound": 1,
+            "bound_basis": "cidr_host_count",
+            "claim_strength": "observed_within_declared_gap",
+            "complement_licensed": false,
+            "grounding": false,
+            "reason": "declared unobserved: spot_dmz_route",
+            "region": "seg_dmz_ext",
+            "runs": [],
+            "source_system": "",
+            "universe_declared_and_finite": true
+          },
+          {
+            "attribute_class": "membership",
+            "blind_spots": [],
+            "bound": null,
+            "bound_basis": null,
+            "claim_strength": "unknown",
+            "complement_licensed": false,
+            "grounding": false,
+            "reason": "no live channel reported this class for this region at this coordinate, and no declared gap names the hole -- the one state D30 says is not representable, and which the region obligation exists to prevent",
+            "region": "seg_dmz_ext",
+            "runs": [],
+            "source_system": "",
+            "universe_declared_and_finite": true
+          },
+          {
+            "attribute_class": "reachability",
+            "blind_spots": [
+              "spot_sf_fw_export"
+            ],
+            "bound": 1,
+            "bound_basis": "cidr_host_count",
+            "claim_strength": "observed_within_declared_gap",
+            "complement_licensed": false,
+            "grounding": false,
+            "reason": "declared unobserved: spot_sf_fw_export",
+            "region": "seg_server_farm",
+            "runs": [],
+            "source_system": "",
+            "universe_declared_and_finite": true
+          },
+          {
+            "attribute_class": "membership",
+            "blind_spots": [],
+            "bound": null,
+            "bound_basis": null,
+            "claim_strength": "unknown",
+            "complement_licensed": false,
+            "grounding": false,
+            "reason": "no live channel reported this class for this region at this coordinate, and no declared gap names the hole -- the one state D30 says is not representable, and which the region obligation exists to prevent",
+            "region": "seg_server_farm",
+            "runs": [],
+            "source_system": "",
+            "universe_declared_and_finite": true
+          },
+          {
+            "attribute_class": "reachability",
+            "blind_spots": [],
+            "bound": null,
+            "bound_basis": null,
+            "claim_strength": "unknown",
+            "complement_licensed": false,
+            "grounding": false,
+            "reason": "no live channel reported this class for this region at this coordinate, and no declared gap names the hole -- the one state D30 says is not representable, and which the region obligation exists to prevent",
+            "region": "seg_mgmt",
+            "runs": [],
+            "source_system": "",
+            "universe_declared_and_finite": true
+          },
+          {
+            "attribute_class": "membership",
+            "blind_spots": [],
+            "bound": null,
+            "bound_basis": null,
+            "claim_strength": "unknown",
+            "complement_licensed": false,
+            "grounding": false,
+            "reason": "no live channel reported this class for this region at this coordinate, and no declared gap names the hole -- the one state D30 says is not representable, and which the region obligation exists to prevent",
+            "region": "seg_mgmt",
+            "runs": [],
+            "source_system": "",
+            "universe_declared_and_finite": true
+          },
+          {
+            "attribute_class": "reachability",
+            "blind_spots": [
+              "spot_ot_sweep_missed"
+            ],
+            "bound": 1,
+            "bound_basis": "cidr_host_count",
+            "claim_strength": "observed_within_declared_gap",
+            "complement_licensed": false,
+            "grounding": false,
+            "reason": "declared unobserved: spot_ot_sweep_missed",
+            "region": "seg_plant_ot",
+            "runs": [],
+            "source_system": "",
+            "universe_declared_and_finite": true
+          },
+          {
+            "attribute_class": "membership",
+            "blind_spots": [],
+            "bound": null,
+            "bound_basis": null,
+            "claim_strength": "unbounded",
+            "complement_licensed": false,
+            "grounding": false,
+            "reason": "witnessed only by attesting channels, which may be a numerator and never a denominator: a completed report says something was looked at, not that nothing else was",
+            "region": "seg_plant_ot",
+            "runs": [
+              "run_flow_netflow_seg_plant_ot_2021_01"
+            ],
+            "source_system": "flow_netflow*",
+            "universe_declared_and_finite": true
+          },
+          {
+            "attribute_class": "reachability",
+            "blind_spots": [],
+            "bound": null,
+            "bound_basis": null,
+            "claim_strength": "unknown",
+            "complement_licensed": false,
+            "grounding": false,
+            "reason": "no live channel reported this class for this region at this coordinate, and no declared gap names the hole -- the one state D30 says is not representable, and which the region obligation exists to prevent",
+            "region": "dir_corp",
+            "runs": [],
+            "source_system": "",
+            "universe_declared_and_finite": false
+          },
+          {
+            "attribute_class": "membership",
+            "blind_spots": [],
+            "bound": null,
+            "bound_basis": null,
+            "claim_strength": "unbounded",
+            "complement_licensed": false,
+            "grounding": false,
+            "reason": "witnessed only by attesting channels, which may be a numerator and never a denominator: a completed report says something was looked at, not that nothing else was",
+            "region": "dir_corp",
+            "runs": [
+              "run_iam_corp_dir_corp_2021_01"
+            ],
+            "source_system": "iam_corp*",
+            "universe_declared_and_finite": false
+          },
+          {
+            "attribute_class": "reachability",
+            "blind_spots": [],
+            "bound": null,
+            "bound_basis": null,
+            "claim_strength": "unknown",
+            "complement_licensed": false,
+            "grounding": false,
+            "reason": "no live channel reported this class for this region at this coordinate, and no declared gap names the hole -- the one state D30 says is not representable, and which the region obligation exists to prevent",
+            "region": "dir_emea",
+            "runs": [],
+            "source_system": "",
+            "universe_declared_and_finite": false
+          },
+          {
+            "attribute_class": "membership",
+            "blind_spots": [],
+            "bound": null,
+            "bound_basis": null,
+            "claim_strength": "unknown",
+            "complement_licensed": false,
+            "grounding": false,
+            "reason": "no live channel reported this class for this region at this coordinate, and no declared gap names the hole -- the one state D30 says is not representable, and which the region obligation exists to prevent",
+            "region": "dir_emea",
+            "runs": [],
+            "source_system": "",
+            "universe_declared_and_finite": false
+          }
+        ],
+        "claim_strength": "unknown",
+        "claim_strength_before_caps": "unknown",
+        "complement_licensed": false,
+        "declared_floor": "medium",
+        "declared_floor_rung": null,
+        "floor_met": null,
+        "floor_state": "unresolvable",
+        "grounding": false,
+        "sentences_unavailable_below_this_rung": [
+          "safe",
+          "none",
+          "no",
+          "all",
+          "compliant"
+        ],
+        "strongest_cell": "observed_within_declared_gap",
+        "universe_declared_and_finite": true
+      },
+      "coverage_cells": [
+        {
+          "attribute_class": "reachability",
+          "region": "seg_core_user"
+        },
+        {
+          "attribute_class": "membership",
+          "region": "seg_core_user"
+        },
+        {
+          "attribute_class": "reachability",
+          "region": "seg_dmz_ext"
+        },
+        {
+          "attribute_class": "membership",
+          "region": "seg_dmz_ext"
+        },
+        {
+          "attribute_class": "reachability",
+          "region": "seg_server_farm"
+        },
+        {
+          "attribute_class": "membership",
+          "region": "seg_server_farm"
+        },
+        {
+          "attribute_class": "reachability",
+          "region": "seg_mgmt"
+        },
+        {
+          "attribute_class": "membership",
+          "region": "seg_mgmt"
+        },
+        {
+          "attribute_class": "reachability",
+          "region": "seg_plant_ot"
+        },
+        {
+          "attribute_class": "membership",
+          "region": "seg_plant_ot"
+        },
+        {
+          "attribute_class": "reachability",
+          "region": "dir_corp"
+        },
+        {
+          "attribute_class": "membership",
+          "region": "dir_corp"
+        },
+        {
+          "attribute_class": "reachability",
+          "region": "dir_emea"
+        },
+        {
+          "attribute_class": "membership",
+          "region": "dir_emea"
+        }
+      ],
+      "declared_claim_strength_floor": "medium",
+      "declared_default_as_of": "as_known_now",
+      "id": "Q2",
+      "inference_envelope": {
+        "declared_by": "schema/security/paths.yaml :: inference_envelope",
+        "envelope": {
+          "as_of_class": "as_thought_then",
+          "as_of_coordinate": {
+            "class": "as_thought_then",
+            "schema_version_K": "1",
+            "schema_version_source": "history",
+            "system": "2026-03-15T00:00:00Z",
+            "valid": "2026-03-15T00:00:00Z"
+          },
+          "claim_strength": "unknown",
+          "coverage_regions": [
+            "dir_corp",
+            "dir_emea",
+            "seg_core_user",
+            "seg_dmz_ext",
+            "seg_mgmt",
+            "seg_plant_ot",
+            "seg_server_farm"
+          ],
+          "rule_id": "Q2",
+          "rule_version": "paths.yaml@9349b779a642",
+          "subject_id": "<no subject chosen: principal>",
+          "value": {
+            "paths_answered": [
+              "authority_grant"
+            ],
+            "paths_refused": [
+              "authority_scope",
+              "group_authority",
+              "exposed_data",
+              "transitive_services"
+            ],
+            "rows_by_path": {
+              "authority_grant": 12,
+              "authority_scope": 0,
+              "exposed_data": 0,
+              "group_authority": 0,
+              "transitive_services": 0
+            }
+          }
+        },
+        "every_required_field_present": true,
+        "fields_beyond_the_declared_list": [],
+        "fields_unfilled": [],
+        "persistence": "forbidden",
+        "required_fields": [
+          "subject_id",
+          "rule_id",
+          "rule_version",
+          "as_of_coordinate",
+          "as_of_class",
+          "claim_strength",
+          "coverage_regions",
+          "value"
+        ]
+      },
+      "paths": [
+        {
+          "attributes_read": [],
+          "edges_used": [
+            "granted_to",
+            "grants"
+          ],
+          "kind": "privilege",
+          "note": "The grant itself. The scope is a SEPARATE path below rather than a third hop, because `granted_on` departs from the entitlement and not from the privilege -- writing it as a hop here walks off the end of the relationship, which is the kind of mistake a type-checking pass exists to catch.",
+          "path": "authority_grant",
+          "rows": 12,
+          "status": "answered",
+          "subject_ids": [
+            "acme:privilege:system-privileged-role-0020~e9f1e3186969",
+            "acme:privilege:network-privileged-role-0021~61974bb524ef",
+            "acme:privilege:network-privileged-role-0018~16885639801b",
+            "acme:privilege:system-privileged-role-0002~66319b668467",
+            "acme:privilege:system-privileged-role-0016~ae165da97610",
+            "acme:privilege:cloud-privileged-role-0022~aadf168a0484",
+            "acme:privilege:directory-privileged-role-0007~1b8f03e34698",
+            "acme:privilege:directory-privileged-role-0003~7eeb51ea05d5",
+            "acme:privilege:system-privileged-role-0017~079b77b03e44",
+            "acme:privilege:database-privileged-role-0029~8d7b429b110b",
+            "acme:privilege:system-privileged-role-0015~4099e0906929",
+            "acme:privilege:cloud-privileged-role-0027~a959c56f013d"
+          ]
+        },
+        {
+          "attributes_read": [],
+          "edges_used": [
+            "granted_on"
+          ],
+          "kind": "privilege",
+          "note": "The scope hop, and the reason `granted_on` exists at all. Without it the grant's scope is in the natural key and unreachable from the graph, and \"what can this account touch\" has no answer. Applied to each entitlement the authority paths return.",
+          "path": "authority_scope",
+          "refusal": "unexecutable_start + unpopulated_shape",
+          "refusal_detail": {
+            "gates_failed": 2,
+            "unexecutable_start": {
+              "declared_by": "path.from vs question.subject_type",
+              "note": "The scope hop, and the reason `granted_on` exists at all. Without it the grant's scope is in the natural key and unreachable from the graph, and \"what can this account touch\" has no answer. Applied to each entitlement the authority paths return.",
+              "path_starts_at": "entitlement",
+              "question_subject_type": "principal",
+              "rows_without_the_continuation": 0,
+              "why": "this path's start type is not the question's subject type, so it cannot be walked from the subject and no key says what it should be walked from instead. Its own note may say so in prose; prose is not a key."
+            },
+            "unpopulated_shape": {
+              "rows_of_that_relationship_type_at_this_coordinate": {
+                "granted_on": 0
+              },
+              "shapes": [
+                {
+                  "declared_by": "hops",
+                  "direction": "forward",
+                  "from_type": "entitlement",
+                  "relationship": "granted_on",
+                  "to_type": "any_declared_scope"
+                }
+              ],
+              "shapes_that_ARE_populated_for_that_type": {
+                "granted_on": []
+              },
+              "why": "the core contract DECLARES this relationship and the corpus holds no row of it in this endpoint shape at this coordinate. Zero rows is a sentence, and this one would be a false all-clear, so the path is refused rather than returned empty."
+            }
+          },
+          "rows": 0,
+          "status": "refused"
+        },
+        {
+          "attributes_read": [],
+          "edges_used": [
+            "member_of",
+            "granted_to",
+            "granted_on"
+          ],
+          "kind": "privilege",
+          "note": "Authority held by a group the principal belongs to. Omitting this is how a tool undercounts a domain admin by exactly the amount that matters.",
+          "path": "group_authority",
+          "refusal": "unpopulated_shape",
+          "refusal_detail": {
+            "gates_failed": 1,
+            "unpopulated_shape": {
+              "rows_of_that_relationship_type_at_this_coordinate": {
+                "granted_on": 0,
+                "granted_to": 99
+              },
+              "shapes": [
+                {
+                  "declared_by": "hops",
+                  "direction": "inverse",
+                  "from_type": "entitlement",
+                  "relationship": "granted_to",
+                  "to_type": "identity_group"
+                },
+                {
+                  "declared_by": "hops",
+                  "direction": "forward",
+                  "from_type": "entitlement",
+                  "relationship": "granted_on",
+                  "to_type": "any_declared_scope"
+                }
+              ],
+              "shapes_that_ARE_populated_for_that_type": {
+                "granted_on": [],
+                "granted_to": [
+                  "entitlement->principal (99)"
+                ]
+              },
+              "why": "the core contract DECLARES this relationship and the corpus holds no row of it in this endpoint shape at this coordinate. Zero rows is a sentence, and this one would be a false all-clear, so the path is refused rather than returned empty."
+            }
+          },
+          "rows": 0,
+          "status": "refused"
+        },
+        {
+          "attributes_read": [
+            {
+              "attribute": "data_flow.data_classification",
+              "op": "is_not_null"
+            }
+          ],
+          "edges_used": [
+            "flow_destination",
+            "exposes"
+          ],
+          "kind": "dependency",
+          "note": "The exfiltration surface in one walk: from a reachable service, the flows that touch it, and the datastores those flows expose. `exposes` is the hop that turns \"it can talk to the service\" into \"and the service reads the datastore\", which is the half of the question people forget.",
+          "path": "exposed_data",
+          "refusal": "unexecutable_start",
+          "refusal_detail": {
+            "gates_failed": 1,
+            "unexecutable_start": {
+              "applies_to": "each service the authority paths make reachable",
+              "declared_by": "applies_to",
+              "executed_by": "nothing in this repository -- the key is declared in paths.yaml and read by no module, this one included",
+              "rows_without_the_continuation": 5,
+              "why": "this path is a CONTINUATION of the question's other paths, not a walk from the subject. Running it from the subject selects nothing and reports zero, which is a false all-clear on the substantive half of the question."
+            }
+          },
+          "rows": 0,
+          "status": "refused"
+        },
+        {
+          "attributes_read": [],
+          "edges_used": [],
+          "kind": "dependency",
+          "note": "A chain of services is a fixed point, not a linear walk, and writing it as a walk is how a spec ends up hopping off the end of a relationship. This is where ticket 18's depth-cap finding bites: the cap silently truncates the blast radius, so the cap is part of the answer (`closure_depth_reached` in the output) and not a setting.",
+          "path": "transitive_services",
+          "refusal": "unexecutable_start",
+          "refusal_detail": {
+            "gates_failed": 1,
+            "unexecutable_start": {
+              "applies_to": "each service the authority paths make reachable",
+              "declared_by": "applies_to",
+              "executed_by": "nothing in this repository -- the key is declared in paths.yaml and read by no module, this one included",
+              "rows_without_the_continuation": -1,
+              "why": "this path is a CONTINUATION of the question's other paths, not a walk from the subject. Running it from the subject selects nothing and reports zero, which is a false all-clear on the substantive half of the question."
+            }
+          },
+          "rows": 0,
+          "status": "refused"
+        }
+      ],
+      "refused_paths": [
+        "authority_scope",
+        "group_authority",
+        "exposed_data",
+        "transitive_services"
+      ],
+      "schema_declaration": {
+        "graph_schema_declares_types": 42,
+        "source": "slice/corpus/graph_schema.json"
+      },
+      "subject": null,
+      "subject_type": "principal",
+      "title": "What a compromised service account can reach and exfiltrate"
+    },
+    "Q3": {
+      "claim": {
+        "aggregation": "min_over_sources, read from coverage_contract.yaml defaults",
+        "caps": [
+          {
+            "ceiling": "unknown",
+            "gates_failed": [
+              "unapplied_classifier",
+              "undeclared_attribute"
+            ],
+            "scope": "the question's own traversal",
+            "why": "path(s) standing_grant, departed_human, still_live_account could not be evaluated at this coordinate. A Claim Strength describes an OBSERVATION, and a path that cannot run is not a coverage gap over the world but a gap in the twin. The coverage layer is not permitted to supply a rung for a computation that did not happen."
+          },
+          {
+            "ceiling": "observed_within_declared_gap",
+            "scope": "the artefact as a whole",
+            "why": "D50's admission gate puts a CEILING on any claim made from this artefact, and a ceiling is not a rung. Reported as a cap so the two are never confused."
+          }
+        ],
+        "cells": [
+          {
+            "attribute_class": "inventory",
+            "blind_spots": [],
+            "bound": null,
+            "bound_basis": null,
+            "claim_strength": "observed",
+            "complement_licensed": true,
+            "grounding": true,
+            "reason": "enumerated by an attributable channel inside its window, no declared gap",
+            "region": "seg_core_user",
+            "runs": [
+              "run_scanner_vuln_seg_core_user_2021_01",
+              "run_scanner_vuln_seg_core_user_2026_02"
+            ],
+            "source_system": "scanner_vuln",
+            "universe_declared_and_finite": true
+          },
+          {
+            "attribute_class": "inventory",
+            "blind_spots": [],
+            "bound": null,
+            "bound_basis": null,
+            "claim_strength": "observed",
+            "complement_licensed": true,
+            "grounding": true,
+            "reason": "enumerated by an attributable channel inside its window, no declared gap",
+            "region": "seg_dmz_ext",
+            "runs": [
+              "run_scanner_vuln_seg_dmz_ext_2021_01"
+            ],
+            "source_system": "scanner_vuln",
+            "universe_declared_and_finite": true
+          },
+          {
+            "attribute_class": "inventory",
+            "blind_spots": [],
+            "bound": null,
+            "bound_basis": null,
+            "claim_strength": "observed",
+            "complement_licensed": true,
+            "grounding": true,
+            "reason": "enumerated by an attributable channel inside its window, no declared gap",
+            "region": "seg_server_farm",
+            "runs": [
+              "run_sweep_active_seg_server_farm_2021_01",
+              "run_sweep_active_seg_server_farm_2025_04"
+            ],
+            "source_system": "sweep_active",
+            "universe_declared_and_finite": true
+          },
+          {
+            "attribute_class": "inventory",
+            "blind_spots": [],
+            "bound": null,
+            "bound_basis": null,
+            "claim_strength": "observed",
+            "complement_licensed": true,
+            "grounding": true,
+            "reason": "enumerated by an attributable channel inside its window, no declared gap",
+            "region": "seg_mgmt",
+            "runs": [
+              "run_sweep_active_seg_mgmt_2021_01"
+            ],
+            "source_system": "sweep_active",
+            "universe_declared_and_finite": true
+          },
+          {
+            "attribute_class": "inventory",
+            "blind_spots": [],
+            "bound": null,
+            "bound_basis": null,
+            "claim_strength": "unbounded",
+            "complement_licensed": false,
+            "grounding": false,
+            "reason": "witnessed only by attesting channels, which may be a numerator and never a denominator: a completed report says something was looked at, not that nothing else was",
+            "region": "seg_plant_ot",
+            "runs": [
+              "run_flow_netflow_seg_plant_ot_2021_01"
+            ],
+            "source_system": "flow_netflow*",
+            "universe_declared_and_finite": true
+          },
+          {
+            "attribute_class": "inventory",
+            "blind_spots": [],
+            "bound": null,
+            "bound_basis": null,
+            "claim_strength": "unbounded",
+            "complement_licensed": false,
+            "grounding": false,
+            "reason": "witnessed only by attesting channels, which may be a numerator and never a denominator: a completed report says something was looked at, not that nothing else was",
+            "region": "dir_corp",
+            "runs": [
+              "run_iam_corp_dir_corp_2021_01"
+            ],
+            "source_system": "iam_corp*",
+            "universe_declared_and_finite": false
+          },
+          {
+            "attribute_class": "inventory",
+            "blind_spots": [],
+            "bound": null,
+            "bound_basis": null,
+            "claim_strength": "unknown",
+            "complement_licensed": false,
+            "grounding": false,
+            "reason": "no live channel reported this class for this region at this coordinate, and no declared gap names the hole -- the one state D30 says is not representable, and which the region obligation exists to prevent",
+            "region": "dir_emea",
+            "runs": [],
+            "source_system": "",
+            "universe_declared_and_finite": false
+          }
+        ],
+        "claim_strength": "unknown",
+        "claim_strength_before_caps": "unknown",
+        "complement_licensed": false,
+        "declared_floor": "high",
+        "declared_floor_rung": null,
+        "floor_met": null,
+        "floor_state": "unresolvable",
+        "grounding": false,
+        "sentences_unavailable_below_this_rung": [
+          "safe",
+          "none",
+          "no",
+          "all",
+          "compliant"
+        ],
+        "strongest_cell": "observed",
+        "universe_declared_and_finite": true
+      },
+      "coverage_cells": [
+        {
+          "attribute_class": "inventory",
+          "region": "seg_core_user"
+        },
+        {
+          "attribute_class": "inventory",
+          "region": "seg_dmz_ext"
+        },
+        {
+          "attribute_class": "inventory",
+          "region": "seg_server_farm"
+        },
+        {
+          "attribute_class": "inventory",
+          "region": "seg_mgmt"
+        },
+        {
+          "attribute_class": "inventory",
+          "region": "seg_plant_ot"
+        },
+        {
+          "attribute_class": "inventory",
+          "region": "dir_corp"
+        },
+        {
+          "attribute_class": "inventory",
+          "region": "dir_emea"
+        }
+      ],
+      "declared_claim_strength_floor": "high",
+      "declared_default_as_of": "current",
+      "id": "Q3",
+      "inference_envelope": {
+        "declared_by": "schema/security/paths.yaml :: inference_envelope",
+        "envelope": {
+          "as_of_class": "as_thought_then",
+          "as_of_coordinate": {
+            "class": "as_thought_then",
+            "schema_version_K": "1",
+            "schema_version_source": "history",
+            "system": "2026-03-15T00:00:00Z",
+            "valid": "2026-03-15T00:00:00Z"
+          },
+          "claim_strength": "unknown",
+          "coverage_regions": [
+            "dir_corp",
+            "dir_emea",
+            "seg_core_user",
+            "seg_dmz_ext",
+            "seg_mgmt",
+            "seg_plant_ot",
+            "seg_server_farm"
+          ],
+          "rule_id": "Q3",
+          "rule_version": "paths.yaml@9349b779a642",
+          "subject_id": "<no subject chosen: entitlement>",
+          "value": {
+            "paths_answered": [],
+            "paths_refused": [
+              "standing_grant",
+              "departed_human",
+              "still_live_account"
+            ],
+            "rows_by_path": {
+              "departed_human": 0,
+              "standing_grant": 0,
+              "still_live_account": 0
+            }
+          }
+        },
+        "every_required_field_present": true,
+        "fields_beyond_the_declared_list": [],
+        "fields_unfilled": [],
+        "persistence": "forbidden",
+        "required_fields": [
+          "subject_id",
+          "rule_id",
+          "rule_version",
+          "as_of_coordinate",
+          "as_of_class",
+          "claim_strength",
+          "coverage_regions",
+          "value"
+        ]
+      },
+      "paths": [
+        {
+          "attributes_read": [
+            {
+              "attribute": "privilege.privilege_kind",
+              "op": "in",
+              "values": [
+                "directory",
+                "system"
+              ]
+            },
+            {
+              "attribute": "entitlement.is_standing",
+              "literal": "true",
+              "op": "="
+            },
+            {
+              "attribute": "entitlement.valid_to",
+              "op": "is_null"
+            }
+          ],
+          "edges_used": [
+            "grants"
+          ],
+          "kind": "privilege",
+          "path": "standing_grant",
+          "refusal": "undeclared_attribute",
+          "refusal_detail": {
+            "gates_failed": 1,
+            "undeclared_attribute": {
+              "missing": [
+                {
+                  "attribute": "entitlement.is_standing",
+                  "declared_columns": [
+                    "grant",
+                    "scope",
+                    "starts_on",
+                    "subject"
+                  ],
+                  "problem": "the column is not declared"
+                }
+              ],
+              "why": "a path that names an attribute the declared schema does not carry cannot be evaluated, and evaluating it anyway yields an empty result, which reads as a clean estate. Refused rather than returned empty."
+            }
+          },
+          "rows": 0,
+          "status": "refused"
+        },
+        {
+          "attributes_read": [],
+          "edges_used": [
+            "authorised_by"
+          ],
+          "kind": "attribution",
+          "note": "THE load-bearing step, and the reason the fold classifies rather than filters. The person is a real entity whose valid interval has ended, so the fold reports the edge's target_state as `ended` -- valid state. Drop the edge, or treat `ended` as a dangling reference, and this question returns nothing at all. The departed employee is *precisely* an expected-dead target.",
+          "path": "departed_human",
+          "refusal": "unapplied_classifier",
+          "refusal_detail": {
+            "gates_failed": 1,
+            "unapplied_classifier": {
+              "classify": "fold.target_state == 'ended'",
+              "declared_by": "classify",
+              "executed_by": "nothing in this repository. check_paths.py checks that the string is present; no module evaluates it",
+              "rows_without_the_declared_classifier": 9,
+              "why": "a declared classifier that is not applied does not widen the answer, it INVERTS it: the path returns every row it walks, under a question about departed staff. Refused rather than answered unfiltered."
+            }
+          },
+          "rows": 0,
+          "status": "refused"
+        },
+        {
+          "attributes_read": [
+            {
+              "attribute": "principal.enabled",
+              "literal": "true",
+              "op": "="
+            }
+          ],
+          "edges_used": [
+            "granted_to"
+          ],
+          "kind": "privilege",
+          "note": "An account that was disabled at the same time as the departure is not a finding. The conjunction is what makes the question a question.",
+          "path": "still_live_account",
+          "refusal": "undeclared_attribute",
+          "refusal_detail": {
+            "gates_failed": 1,
+            "undeclared_attribute": {
+              "missing": [
+                {
+                  "attribute": "principal.enabled",
+                  "declared_columns": [
+                    "account_type",
+                    "display_name",
+                    "is_enabled",
+                    "last_activity_at",
+                    "principal_key"
+                  ],
+                  "problem": "the column is not declared"
+                }
+              ],
+              "why": "a path that names an attribute the declared schema does not carry cannot be evaluated, and evaluating it anyway yields an empty result, which reads as a clean estate. Refused rather than returned empty."
+            }
+          },
+          "rows": 0,
+          "status": "refused"
+        }
+      ],
+      "refused_paths": [
+        "standing_grant",
+        "departed_human",
+        "still_live_account"
+      ],
+      "schema_declaration": {
+        "graph_schema_declares_types": 42,
+        "source": "slice/corpus/graph_schema.json"
+      },
+      "subject": null,
+      "subject_type": "entitlement",
+      "title": "Standing administrative privilege held by someone who has departed"
+    },
+    "Q4": {
+      "claim": {
+        "aggregation": "min_over_sources, read from coverage_contract.yaml defaults",
+        "caps": [
+          {
+            "ceiling": "unknown",
+            "gates_failed": [
+              "unexecutable_start"
+            ],
+            "scope": "the question's own traversal",
+            "why": "path(s) network_path could not be evaluated at this coordinate. A Claim Strength describes an OBSERVATION, and a path that cannot run is not a coverage gap over the world but a gap in the twin. The coverage layer is not permitted to supply a rung for a computation that did not happen."
+          },
+          {
+            "ceiling": "unknown",
+            "declaration_absent": null,
+            "scope": "attribute_class/sensitivity",
+            "state": "absent_from_the_model",
+            "why": "the profile declares `sensitivity` assessed and this question's coverage requirements name it, but the declared schema carries no sensitivity column on database_column and the corpus does not either. An obligation over an absent field is satisfied by construction. `policy.attribute_class_must_be_assessed` is `not_implemented`, so nothing in the catalogue can say so either way."
+          },
+          {
+            "ceiling": "observed_within_declared_gap",
+            "scope": "the artefact as a whole",
+            "why": "D50's admission gate puts a CEILING on any claim made from this artefact, and a ceiling is not a rung. Reported as a cap so the two are never confused."
+          }
+        ],
+        "cells": [
+          {
+            "attribute_class": "encryption",
+            "blind_spots": [],
+            "bound": null,
+            "bound_basis": null,
+            "claim_strength": "observed",
+            "complement_licensed": true,
+            "grounding": true,
+            "reason": "enumerated by an attributable channel inside its window, no declared gap",
+            "region": "seg_core_user",
+            "runs": [
+              "run_scanner_vuln_seg_core_user_2021_01",
+              "run_scanner_vuln_seg_core_user_2026_02"
+            ],
+            "source_system": "scanner_vuln",
+            "universe_declared_and_finite": true
+          },
+          {
+            "attribute_class": "classification",
+            "blind_spots": [],
+            "bound": null,
+            "bound_basis": null,
+            "claim_strength": "unknown",
+            "complement_licensed": false,
+            "grounding": false,
+            "reason": "no live channel reported this class for this region at this coordinate, and no declared gap names the hole -- the one state D30 says is not representable, and which the region obligation exists to prevent",
+            "region": "seg_core_user",
+            "runs": [],
+            "source_system": "",
+            "universe_declared_and_finite": true
+          },
+          {
+            "attribute_class": "sensitivity",
+            "blind_spots": [],
+            "bound": null,
+            "bound_basis": null,
+            "claim_strength": "unknown",
+            "complement_licensed": false,
+            "grounding": false,
+            "reason": "no live channel reported this class for this region at this coordinate, and no declared gap names the hole -- the one state D30 says is not representable, and which the region obligation exists to prevent",
+            "region": "seg_core_user",
+            "runs": [],
+            "source_system": "",
+            "universe_declared_and_finite": true
+          },
+          {
+            "attribute_class": "encryption",
+            "blind_spots": [],
+            "bound": null,
+            "bound_basis": null,
+            "claim_strength": "observed",
+            "complement_licensed": true,
+            "grounding": true,
+            "reason": "enumerated by an attributable channel inside its window, no declared gap",
+            "region": "seg_dmz_ext",
+            "runs": [
+              "run_scanner_vuln_seg_dmz_ext_2021_01"
+            ],
+            "source_system": "scanner_vuln",
+            "universe_declared_and_finite": true
+          },
+          {
+            "attribute_class": "classification",
+            "blind_spots": [],
+            "bound": null,
+            "bound_basis": null,
+            "claim_strength": "unknown",
+            "complement_licensed": false,
+            "grounding": false,
+            "reason": "no live channel reported this class for this region at this coordinate, and no declared gap names the hole -- the one state D30 says is not representable, and which the region obligation exists to prevent",
+            "region": "seg_dmz_ext",
+            "runs": [],
+            "source_system": "",
+            "universe_declared_and_finite": true
+          },
+          {
+            "attribute_class": "sensitivity",
+            "blind_spots": [],
+            "bound": null,
+            "bound_basis": null,
+            "claim_strength": "unknown",
+            "complement_licensed": false,
+            "grounding": false,
+            "reason": "no live channel reported this class for this region at this coordinate, and no declared gap names the hole -- the one state D30 says is not representable, and which the region obligation exists to prevent",
+            "region": "seg_dmz_ext",
+            "runs": [],
+            "source_system": "",
+            "universe_declared_and_finite": true
+          },
+          {
+            "attribute_class": "encryption",
+            "blind_spots": [],
+            "bound": null,
+            "bound_basis": null,
+            "claim_strength": "unknown",
+            "complement_licensed": false,
+            "grounding": false,
+            "reason": "no live channel reported this class for this region at this coordinate, and no declared gap names the hole -- the one state D30 says is not representable, and which the region obligation exists to prevent",
+            "region": "attribute_regions/encryption",
+            "runs": [],
+            "source_system": "",
+            "universe_declared_and_finite": false
+          },
+          {
+            "attribute_class": "classification",
+            "blind_spots": [
+              "spot_classification_gap"
+            ],
+            "bound": null,
+            "bound_basis": null,
+            "claim_strength": "observed_within_declared_gap",
+            "complement_licensed": false,
+            "grounding": false,
+            "reason": "declared unobserved: spot_classification_gap",
+            "region": "attribute_regions/classification",
+            "runs": [],
+            "source_system": "",
+            "universe_declared_and_finite": false
+          },
+          {
+            "attribute_class": "sensitivity",
+            "blind_spots": [],
+            "bound": null,
+            "bound_basis": null,
+            "claim_strength": "unknown",
+            "complement_licensed": false,
+            "grounding": false,
+            "reason": "no live channel reported this class for this region at this coordinate, and no declared gap names the hole -- the one state D30 says is not representable, and which the region obligation exists to prevent",
+            "region": "attribute_regions/sensitivity",
+            "runs": [],
+            "source_system": "",
+            "universe_declared_and_finite": false
+          }
+        ],
+        "claim_strength": "unknown",
+        "claim_strength_before_caps": "unknown",
+        "complement_licensed": false,
+        "declared_floor": "medium",
+        "declared_floor_rung": null,
+        "floor_met": null,
+        "floor_state": "unresolvable",
+        "grounding": false,
+        "sentences_unavailable_below_this_rung": [
+          "safe",
+          "none",
+          "no",
+          "all",
+          "compliant"
+        ],
+        "strongest_cell": "observed",
+        "universe_declared_and_finite": true
+      },
+      "coverage_cells": [
+        {
+          "attribute_class": "encryption",
+          "region": "seg_core_user"
+        },
+        {
+          "attribute_class": "classification",
+          "region": "seg_core_user"
+        },
+        {
+          "attribute_class": "sensitivity",
+          "region": "seg_core_user"
+        },
+        {
+          "attribute_class": "encryption",
+          "region": "seg_dmz_ext"
+        },
+        {
+          "attribute_class": "classification",
+          "region": "seg_dmz_ext"
+        },
+        {
+          "attribute_class": "sensitivity",
+          "region": "seg_dmz_ext"
+        },
+        {
+          "attribute_class": "encryption",
+          "region": "attribute_regions/encryption"
+        },
+        {
+          "attribute_class": "classification",
+          "region": "attribute_regions/classification"
+        },
+        {
+          "attribute_class": "sensitivity",
+          "region": "attribute_regions/sensitivity"
+        }
+      ],
+      "declared_claim_strength_floor": "medium",
+      "declared_default_as_of": "as_known_now",
+      "id": "Q4",
+      "inference_envelope": {
+        "declared_by": "schema/security/paths.yaml :: inference_envelope",
+        "envelope": {
+          "as_of_class": "as_thought_then",
+          "as_of_coordinate": {
+            "class": "as_thought_then",
+            "schema_version_K": "1",
+            "schema_version_source": "history",
+            "system": "2026-03-15T00:00:00Z",
+            "valid": "2026-03-15T00:00:00Z"
+          },
+          "claim_strength": "unknown",
+          "coverage_regions": [
+            "attribute_regions/classification",
+            "attribute_regions/encryption",
+            "attribute_regions/sensitivity",
+            "seg_core_user",
+            "seg_dmz_ext"
+          ],
+          "rule_id": "Q4",
+          "rule_version": "paths.yaml@9349b779a642",
+          "subject_id": "<no subject chosen: database_column>",
+          "value": {
+            "paths_answered": [
+              "classification",
+              "to_datastore"
+            ],
+            "paths_refused": [
+              "network_path"
+            ],
+            "rows_by_path": {
+              "classification": 47,
+              "network_path": 0,
+              "to_datastore": 29
+            }
+          }
+        },
+        "every_required_field_present": true,
+        "fields_beyond_the_declared_list": [],
+        "fields_unfilled": [],
+        "persistence": "forbidden",
+        "required_fields": [
+          "subject_id",
+          "rule_id",
+          "rule_version",
+          "as_of_coordinate",
+          "as_of_class",
+          "claim_strength",
+          "coverage_regions",
+          "value"
+        ]
+      },
+      "paths": [
+        {
+          "attributes_read": [
+            {
+              "attribute": "database_column.is_pii",
+              "literal": "true",
+              "op": "="
+            },
+            {
+              "attribute": "database_column.is_encrypted_at_rest",
+              "literal": "false",
+              "op": "="
+            }
+          ],
+          "edges_used": [],
+          "kind": "placement",
+          "note": "An attribute-pair claim, and therefore the weakest kind. It is exactly the case D30 identified: blindness to an ATTRIBUTE is not blindness to an ENTITY, and an unobserved encryption state is not an unencrypted column. A covered region is what makes the negative claim assertable.",
+          "path": "classification",
+          "rows": 47,
+          "rows_the_filter_matches_in_the_estate": 47,
+          "status": "answered",
+          "subject_ids": [
+            "acme:database_column:acme-data-store-store-00000~173c52e384f1",
+            "acme:database_column:acme-data-store-store-00000~50fff5bc994a",
+            "acme:database_column:acme-data-store-store-00000~5e7eb28f926b",
+            "acme:database_column:acme-data-store-store-00000~904372e5c668",
+            "acme:database_column:acme-data-store-store-00000~a133213a005b",
+            "acme:database_column:acme-data-store-store-00001~01983d3bfad4",
+            "acme:database_column:acme-data-store-store-00001~30ddcf0b5fc5",
+            "acme:database_column:acme-data-store-store-00001~4055406eb91a",
+            "acme:database_column:acme-data-store-store-00001~5b276a108a06",
+            "acme:database_column:acme-data-store-store-00002~b93fea238ee8",
+            "acme:database_column:acme-data-store-store-00002~c5afe2e226a1",
+            "acme:database_column:acme-data-store-store-00003~0ee320cc4c45"
+          ]
+        },
+        {
+          "attributes_read": [],
+          "edges_used": [
+            "contains",
+            "contains"
+          ],
+          "kind": "placement",
+          "path": "to_datastore",
+          "rows": 29,
+          "status": "answered",
+          "subject_ids": [
+            "acme:data_store:store-00000~199fa6b0c449",
+            "acme:data_store:store-00003~355a60161960",
+            "acme:data_store:store-00002~a544946a70d1",
+            "acme:data_store:store-00005~d9cb14e88d51",
+            "acme:data_store:store-00001~f3e021452766",
+            "acme:data_store:store-00041~3a94689d27db",
+            "acme:data_store:store-00030~7cf56a2d81dd",
+            "acme:data_store:store-00042~20df4870412d",
+            "acme:data_store:store-00015~b90744b8b425",
+            "acme:data_store:store-00027~0c9d272f0960",
+            "acme:data_store:store-00017~0335de594a0b",
+            "acme:data_store:store-00028~16ccdbcd0364"
+          ]
+        },
+        {
+          "attributes_read": [
+            {
+              "attribute": "security_zone.zone_class",
+              "op": "in",
+              "values": [
+                "user",
+                "internet",
+                "dmz"
+              ]
+            }
+          ],
+          "edges_used": [
+            "runs_on",
+            "assigned_to",
+            "in_segment",
+            "in_zone"
+          ],
+          "kind": "placement",
+          "path": "network_path",
+          "refusal": "unexecutable_start",
+          "refusal_detail": {
+            "gates_failed": 1,
+            "unexecutable_start": {
+              "declared_by": "path.from vs question.subject_type",
+              "note": "",
+              "path_starts_at": "data_store",
+              "question_subject_type": "database_column",
+              "rows_without_the_continuation": 3,
+              "why": "this path's start type is not the question's subject type, so it cannot be walked from the subject and no key says what it should be walked from instead. Its own note may say so in prose; prose is not a key."
+            }
+          },
+          "rows": 0,
+          "status": "refused"
+        }
+      ],
+      "refused_paths": [
+        "network_path"
+      ],
+      "schema_declaration": {
+        "graph_schema_declares_types": 42,
+        "source": "slice/corpus/graph_schema.json"
+      },
+      "subject": null,
+      "subject_type": "database_column",
+      "title": "PII columns unencrypted at rest behind a user-facing subnet"
+    }
+  },
+  "retrospective_diff": {
+    "Q1": {
+      "claim_strength_as_known_now": "unknown",
+      "claim_strength_as_thought_then": "unknown",
+      "paths": {
+        "ownership": {
+          "in_as_known_now_only": [
+            "acme:person:e000001~5796efe72eb7",
+            "acme:person:e000003~83735a7e8e57",
+            "acme:person:e000014~6f39fd8c9de7",
+            "acme:person:e000018~dbbf4cc2e0b1"
+          ],
+          "in_as_thought_then_only": [
+            "acme:person:e000005~18f5810cc064"
+          ],
+          "moved": true,
+          "relationship_cohort": {
+            "member_of": {
+              "as_known_now": 629,
+              "as_thought_then": 627
+            },
+            "operated_by": {
+              "as_known_now": 1056,
+              "as_thought_then": 1022
+            }
+          },
+          "rows_as_known_now": 13,
+          "rows_as_thought_then": 9,
+          "why_it_did_not_move": null
+        },
+        "reachability_by_attribute": {
+          "moved": false,
+          "rows_as_known_now": 0,
+          "rows_as_thought_then": 0
+        },
+        "reachability_by_observed_path": {
+          "moved": false,
+          "relationship_cohort": {
+            "assigned_to": {
+              "as_known_now": 378,
+              "as_thought_then": 370
+            },
+            "in_segment": {
+              "as_known_now": 378,
+              "as_thought_then": 370
+            },
+            "in_zone": {
+              "as_known_now": 59,
+              "as_thought_then": 59
+            }
+          },
+          "rows_as_known_now": 2,
+          "rows_as_thought_then": 2,
+          "why_it_did_not_move": null
+        },
+        "software_exposure": {
+          "moved": false,
+          "relationship_cohort": {
+            "about": {
+              "as_known_now": 15,
+              "as_thought_then": 15
+            },
+            "contains": {
+              "as_known_now": 3704,
+              "as_thought_then": 3626
+            },
+            "instance_of": {
+              "as_known_now": 1212,
+              "as_thought_then": 1172
+            }
+          },
+          "rows_as_known_now": 0,
+          "rows_as_thought_then": 0,
+          "why_it_did_not_move": null
+        }
+      },
+      "paths_answered_as_known_now": [
+        "reachability_by_observed_path",
+        "ownership"
+      ],
+      "paths_answered_as_thought_then": [
+        "reachability_by_observed_path",
+        "ownership"
+      ]
+    },
+    "Q2": {
+      "claim_strength_as_known_now": "unknown",
+      "claim_strength_as_thought_then": "unknown",
+      "paths": {
+        "authority_grant": {
+          "in_as_known_now_only": [],
+          "in_as_thought_then_only": [
+            "acme:privilege:cloud-privileged-role-0022~aadf168a0484",
+            "acme:privilege:cloud-privileged-role-0027~a959c56f013d",
+            "acme:privilege:database-privileged-role-0029~8d7b429b110b",
+            "acme:privilege:directory-privileged-role-0007~1b8f03e34698",
+            "acme:privilege:network-privileged-role-0018~16885639801b",
+            "acme:privilege:network-privileged-role-0021~61974bb524ef",
+            "acme:privilege:system-privileged-role-0002~66319b668467",
+            "acme:privilege:system-privileged-role-0015~4099e0906929"
+          ],
+          "moved": true,
+          "relationship_cohort": {
+            "granted_to": {
+              "as_known_now": 99,
+              "as_thought_then": 99
+            },
+            "grants": {
+              "as_known_now": 99,
+              "as_thought_then": 99
+            }
+          },
+          "rows_as_known_now": 2,
+          "rows_as_thought_then": 12,
+          "why_it_did_not_move": null
+        },
+        "authority_scope": {
+          "moved": false,
+          "relationship_cohort": {
+            "granted_on": {
+              "as_known_now": 112,
+              "as_thought_then": 0
+            }
+          },
+          "rows_as_known_now": 0,
+          "rows_as_thought_then": 0,
+          "why_it_did_not_move": null
+        },
+        "exposed_data": {
+          "moved": false,
+          "relationship_cohort": {
+            "exposes": {
+              "as_known_now": 30,
+              "as_thought_then": 30
+            },
+            "flow_destination": {
+              "as_known_now": 30,
+              "as_thought_then": 30
+            }
+          },
+          "rows_as_known_now": 0,
+          "rows_as_thought_then": 0,
+          "why_it_did_not_move": "every relationship type this path walks has the SAME selected row count at (V, S=September) and at (V, S=March), so a walk over it cannot return a different number. The retrospective difference is real at the fold and absent here because these paths traverse relationship types with no belief that was superseded between the two system times."
+        },
+        "group_authority": {
+          "moved": false,
+          "relationship_cohort": {
+            "granted_on": {
+              "as_known_now": 112,
+              "as_thought_then": 0
+            },
+            "granted_to": {
+              "as_known_now": 99,
+              "as_thought_then": 99
+            },
+            "member_of": {
+              "as_known_now": 629,
+              "as_thought_then": 627
+            }
+          },
+          "rows_as_known_now": 0,
+          "rows_as_thought_then": 0,
+          "why_it_did_not_move": null
+        },
+        "transitive_services": {
+          "moved": false,
+          "rows_as_known_now": 0,
+          "rows_as_thought_then": 0
+        }
+      },
+      "paths_answered_as_known_now": [
+        "authority_grant"
+      ],
+      "paths_answered_as_thought_then": [
+        "authority_grant"
+      ]
+    },
+    "Q3": {
+      "claim_strength_as_known_now": "unknown",
+      "claim_strength_as_thought_then": "unknown",
+      "paths": {
+        "departed_human": {
+          "moved": false,
+          "relationship_cohort": {
+            "authorised_by": {
+              "as_known_now": 99,
+              "as_thought_then": 99
+            }
+          },
+          "rows_as_known_now": 0,
+          "rows_as_thought_then": 0,
+          "why_it_did_not_move": "every relationship type this path walks has the SAME selected row count at (V, S=September) and at (V, S=March), so a walk over it cannot return a different number. The retrospective difference is real at the fold and absent here because these paths traverse relationship types with no belief that was superseded between the two system times."
+        },
+        "standing_grant": {
+          "moved": false,
+          "relationship_cohort": {
+            "grants": {
+              "as_known_now": 99,
+              "as_thought_then": 99
+            }
+          },
+          "rows_as_known_now": 0,
+          "rows_as_thought_then": 0,
+          "why_it_did_not_move": "every relationship type this path walks has the SAME selected row count at (V, S=September) and at (V, S=March), so a walk over it cannot return a different number. The retrospective difference is real at the fold and absent here because these paths traverse relationship types with no belief that was superseded between the two system times."
+        },
+        "still_live_account": {
+          "moved": false,
+          "relationship_cohort": {
+            "granted_to": {
+              "as_known_now": 99,
+              "as_thought_then": 99
+            }
+          },
+          "rows_as_known_now": 0,
+          "rows_as_thought_then": 0,
+          "why_it_did_not_move": "every relationship type this path walks has the SAME selected row count at (V, S=September) and at (V, S=March), so a walk over it cannot return a different number. The retrospective difference is real at the fold and absent here because these paths traverse relationship types with no belief that was superseded between the two system times."
+        }
+      },
+      "paths_answered_as_known_now": [],
+      "paths_answered_as_thought_then": []
+    },
+    "Q4": {
+      "claim_strength_as_known_now": "unknown",
+      "claim_strength_as_thought_then": "unknown",
+      "paths": {
+        "classification": {
+          "moved": false,
+          "rows_as_known_now": 47,
+          "rows_as_thought_then": 47
+        },
+        "network_path": {
+          "moved": false,
+          "relationship_cohort": {
+            "assigned_to": {
+              "as_known_now": 378,
+              "as_thought_then": 370
+            },
+            "in_segment": {
+              "as_known_now": 378,
+              "as_thought_then": 370
+            },
+            "in_zone": {
+              "as_known_now": 59,
+              "as_thought_then": 59
+            },
+            "runs_on": {
+              "as_known_now": 166,
+              "as_thought_then": 158
+            }
+          },
+          "rows_as_known_now": 0,
+          "rows_as_thought_then": 0,
+          "why_it_did_not_move": null
+        },
+        "to_datastore": {
+          "in_as_known_now_only": [
+            "acme:data_store:store-00034~a13ca0592528"
+          ],
+          "in_as_thought_then_only": [
+            "acme:data_store:store-00028~16ccdbcd0364"
+          ],
+          "moved": true,
+          "relationship_cohort": {
+            "contains": {
+              "as_known_now": 3704,
+              "as_thought_then": 3626
+            }
+          },
+          "rows_as_known_now": 31,
+          "rows_as_thought_then": 29,
+          "why_it_did_not_move": null
+        }
+      },
+      "paths_answered_as_known_now": [
+        "classification",
+        "to_datastore"
+      ],
+      "paths_answered_as_thought_then": [
+        "classification",
+        "to_datastore"
+      ]
+    },
+    "_fold_state_populations": {
+      "as_known_now": {
+        "edge_states": {
+          "asserted": 11913,
+          "ended": 35,
+          "not_yet_known": 6334,
+          "retrospective_gap": 3568
+        },
+        "edges": 11913,
+        "entities": 4325,
+        "entity_ledger_rows": 7110,
+        "entity_states": {
+          "ended": 63,
+          "not_yet_known": 1700,
+          "present": 4325,
+          "retrospective_gap": 1022
+        },
+        "estate_state": "read",
+        "target_states": {
+          "ended": 132,
+          "not_yet_known": 0,
+          "present": 11596,
+          "retrospective_gap": 185,
+          "unknown": 0
+        },
+        "unknown_at_s": 1700
+      },
+      "as_thought_then": {
+        "edge_states": {
+          "asserted": 11554,
+          "ended": 35,
+          "not_yet_known": 10258,
+          "retrospective_gap": 3
+        },
+        "edges": 11554,
+        "entities": 4244,
+        "entity_ledger_rows": 7110,
+        "entity_states": {
+          "ended": 44,
+          "not_yet_known": 2713,
+          "present": 4244,
+          "retrospective_gap": 109
+        },
+        "estate_state": "read",
+        "target_states": {
+          "ended": 73,
+          "not_yet_known": 0,
+          "present": 11237,
+          "retrospective_gap": 244,
+          "unknown": 0
+        },
+        "unknown_at_s": 2713
+      }
+    },
+    "_reading": "The fold's own populations move substantially between the two readings of the SAME valid time, so K = f(S) and the retrospective axis are both live. The question-level diff is empty because the paths that answered walk relationship types whose selected cohort is identical at both system times -- which is a property of this corpus, stated per path above, and NOT a demonstration that asking now and asking then agree. A reader who wanted the question-level difference would need a corpus whose canonical questions traverse a belief that was superseded; that is a generator property and it is named here rather than left for someone to infer from an empty dict."
+  }
+}
